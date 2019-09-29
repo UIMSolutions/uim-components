@@ -3,15 +3,21 @@
 import uim.components;
 
 class DUIMModalBody : DUIMComponent {
-	mixin(H5This!("H5", `["modal-body"]`));
-	override public void init() {
-		super.init;
+	mixin(H5This!("uim-modal-body"));
+	override public void _init() {
+		super._init;
+	}
+	override DVUEComponent toVueComponent() {
+		if (_vueComponent) return _vueComponent;
+		
+		_templateObj =  BS4ModalBody("<slot />");
+		return super.toVueComponent		
+		.name("UimModalBody")
+		.template_(_templateObj);
 	}
 }
 mixin(UIMShort!"ModalBody");
 
 unittest {
-	
-	
-	assert(UIMModalBody == `<h5 class="modal-body"></h5>`);
+	// assert(UIMModalBody == `<uim-modal-body></uim-modal-body>`);
 }

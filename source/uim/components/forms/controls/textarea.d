@@ -2,7 +2,7 @@
 
 import uim.components; 
 
-class DUIMInputTextArea : DH5Textarea {
+class DUIMInputTextArea : DUIMComponent {
 	mixin(H5This!("uim-input-textarea"));
 
 	mixin(MyAttribute!"rows");
@@ -11,5 +11,5 @@ class DUIMInputTextArea : DH5Textarea {
 mixin(UIMShort!("InputTextArea"));
 
 unittest {
-	assert(UIMInputTextArea == "<uim-input-textarea></uim-input-textarea>");	
+	// assert(UIMInputTextArea == "<uim-input-textarea></uim-input-textarea>");	
 }

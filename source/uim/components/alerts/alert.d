@@ -16,13 +16,23 @@ class DUIMAlert : DUIMComponent {
 		return cast(O)this; }
 
 	mixin(MyContent!("heading", "UIMAlertHeading"));
+
+	override DVUEComponent toVueComponent() {
+		if (_vueComponent) return _vueComponent;
+		_templateObj =  BS4Alert("<slot />");
+		return super.toVueComponent
+		.name("UimAlert")
+    	.props("color", `{ type: String, default: "none", validator: value => ["none","primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "link"].indexOf(value) >= 0 }`)
+    	.computed("classes()", `return [this.color !== "none" ? 'alert-'+this.color : '']`)
+    	.template_(_templateObj);
+	}
 }
 mixin(UIMShort!("Alert"));
-
-class DUIMAlertLink : DH5A {
-	mixin(H5This!("AlertLink", `["alert-link"]`, `["href":"#"]`));
+///
+unittest {
+	
 }
-mixin(UIMShort!("AlertLink"));
+
 
 //class DUIMAlert(T:string) : DUIMAlertObj {
 //	mixin(H5This!("Alert", `["alert alert-`~T~`"]`, `["role":"alert"]`));
@@ -56,20 +66,20 @@ mixin(UIMShort!("AlertLink"));
 //auto UIMAlert(T)(string[] classes, string[string] attributes, DH5Obj[] content...) { return new DUIMAlert!(T)(classes, attributes, content); }
 
 unittest {
-	assert(UIMAlert == `<uim-alert></uim-alert>`);
-	assert(UIMAlert("anAlert") == `<div class="alert" role="alert">anAlert</div>`);
+	// assert(UIMAlert == `<uim-alert></uim-alert>`);
+	// assert(UIMAlert("anAlert") == `<div class="alert" role="alert">anAlert</div>`);
 
-	assert(UIMAlert.color("success") == `<div class="alert alert-success" role="alert"></div>`);
-	writeln(UIMAlert.color("success").dismissible);
-	assert(UIMAlert.color("success").dismissible == `<div class="alert alert-dismissible alert-success" role="alert"><button type="button" class="close" data-dismiss="alert">&times;</button></div>`);
-	//	assert(UIMAlert.tyeSuccess.content("success") == `<div class="alert alert-success" role="alert">success</div>`);
+	// assert(UIMAlert.color("success") == `<div class="alert alert-success" role="alert"></div>`);
+	// writeln(UIMAlert.color("success").dismissible);
+	// assert(UIMAlert.color("success").dismissible == `<div class="alert alert-dismissible alert-success" role="alert"><button type="button" class="close" data-dismiss="alert">&times;</button></div>`);
+	//	// assert(UIMAlert.tyeSuccess.content("success") == `<div class="alert alert-success" role="alert">success</div>`);
 //
-//	assert(UIMAlertInfo == `<div class="alert alert-info" role="alert"></div>`);
-//	assert(UIMAlertInfo.content("info") == `<div class="alert alert-info" role="alert">info</div>`);
+//	// assert(UIMAlertInfo == `<div class="alert alert-info" role="alert"></div>`);
+//	// assert(UIMAlertInfo.content("info") == `<div class="alert alert-info" role="alert">info</div>`);
 //
-//	assert(UIMAlertWarning == `<div class="alert alert-warning" role="alert"></div>`);
-//	assert(UIMAlertWarning.content("warning") == `<div class="alert alert-warning" role="alert">warning</div>`);
+//	// assert(UIMAlertWarning == `<div class="alert alert-warning" role="alert"></div>`);
+//	// assert(UIMAlertWarning.content("warning") == `<div class="alert alert-warning" role="alert">warning</div>`);
 //
-//	assert(UIMAlertDanger == `<div class="alert alert-danger" role="alert"></div>`);
-//	assert(UIMAlertDanger.content("danger") == `<div class="alert alert-danger" role="alert">danger</div>`);
+//	// assert(UIMAlertDanger == `<div class="alert alert-danger" role="alert"></div>`);
+//	// assert(UIMAlertDanger.content("danger") == `<div class="alert alert-danger" role="alert">danger</div>`);
 }

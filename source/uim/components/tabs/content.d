@@ -10,5 +10,5 @@ class DUIMTabContent : DUIMComponent {
 mixin(UIMShort!"TabContent");
 
 unittest {
-	assert(UIMTabContent == `<uim-tab-content></uim-tab-content>`);
+	// assert(UIMTabContent == `<uim-tab-content></uim-tab-content>`);
 }

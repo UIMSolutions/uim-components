@@ -65,7 +65,7 @@ template UIMFunc(string left, string right) {
 }
 
 template UIMThis(string bsName, string classes = null, string attributes = null) {
-	const char[] strClasses = (classes) ? "_classes.add("~classes~");" : "";
+	const char[] strClasses = (classes) ? "_classes("~classes~");" : "";
 	const char[] strAttributes = (attributes)? "_attributes.add("~attributes~");" : "";
 	
 	const char[] UIMThis = `

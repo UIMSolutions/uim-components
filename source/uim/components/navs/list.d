@@ -4,8 +4,8 @@ import uim.components;
 
 class DUIMNavList : DUIMComponent {
 	mixin(H5This!("uim-nav-list"));
-	override public void init() {
-		super.init;
+	override public void _init() {
+		super._init;
 	}
 	mixin(MyContent!("item", "UIMNavItem"));
 	O vertical(this O)(bool mode = true) { return this.classes("flex-column"); }
@@ -17,5 +17,5 @@ class DUIMNavList : DUIMComponent {
 mixin(UIMShort!"NavList");
 
 unittest {
-	assert(UIMNavList == `<uim-nav-list></uim-nav-list>`);
+	// assert(UIMNavList == `<uim-nav-list></uim-nav-list>`);
 }

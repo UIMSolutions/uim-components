@@ -11,15 +11,17 @@ class DUIMCard : DUIMComponent {
 	mixin(MyContent!("image", "UIMCardImage"));
 	mixin(MyContent!("bdy", "UIMCardBody"));
 
-	auto toVue() {
-		return super.toVue
+	override DVUEComponent toVueComponent() {
+		if (_vueComponent) return _vueComponent;
+
+		_templateObj =  BS4Card("<slot />");
+		return super.toVueComponent		
 		.name("UimCard")
-    	.computed("classes()", `return [""]`)
-    	.template_(BS4Card([":class":"this.classes"], "<slot />"));
+    .template_(_templateObj);
 	}
 }
 mixin(UIMShort!"Card");
 
 unittest {
-	assert(UIMCard == `<uim-card></uim-card>`);
+	// assert(UIMCard == `<uim-card></uim-card>`);
 }

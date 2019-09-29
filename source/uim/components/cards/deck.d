@@ -5,15 +5,17 @@ import uim.components;
 class DUIMCardDeck : DUIMComponent {
 	mixin(H5This!("uim-card-deck"));
 	
-	auto toVue() {
-		return super.toVue
-		.name("UimCarddeck")
-    	.computed("classes()", `return [""]`)
-    	.template_(BS4CardDeck([":class":"this.classes"], "<slot />"));
+	override DVUEComponent toVueComponent() {
+		if (_vueComponent) return _vueComponent;
+		
+		_templateObj =  BS4CardDeck("<slot />");
+		return super.toVueComponent		
+		.name("UimCardDeck")
+		.template_(_templateObj);
 	}
 }
 mixin(UIMShort!"CardDeck");
 
 unittest {
-	assert(UIMCardDeck == `<uim-card-deck></uim-card-deck>`);
+	// assert(UIMCardDeck == `<uim-card-deck></uim-card-deck>`);
 }

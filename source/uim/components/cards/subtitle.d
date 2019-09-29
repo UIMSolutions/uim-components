@@ -5,15 +5,16 @@ import uim.components;
 class DUIMCardSubtitle : DUIMComponent {
 	mixin(H5This!("uim-card-subtitle"));
 
-	auto toVue() {
-		return super.toVue
+	override DVUEComponent toVueComponent() {
+		if (_vueComponent) return _vueComponent;
+		_templateObj =  BS4CardSubtitle("<slot />");
+		return super.toVueComponent		
 		.name("UimCardSubtitle")
-    	.computed("classes()", `return [""]`)
-    	.template_(BS4CardSubtitle([":class":"this.classes"], "<slot />"));
+    .template_(_templateObj);
 	}
 }
 mixin(UIMShort!"CardSubtitle");
 
 unittest {
-	assert(UIMCardSubtitle == `<uim-card-subtitle></uim-card-subtitle>`);
+	// assert(UIMCardSubtitle == `<uim-card-subtitle></uim-card-subtitle>`);
 }

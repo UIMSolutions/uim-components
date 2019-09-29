@@ -4,18 +4,22 @@ import uim.components;
 
 class DUIMDropdown : DUIMComponent {
 	mixin(H5This!("DIV", `["dropdown"]`));
-	override public void init() {
-		super.init;
-	}	
+
 	mixin(MyContent!("menu", "UIMDropdownMenu"));
 	mixin(MyContent!("toggleLink", "UIMToggleLink"));
+
+	override DVUEComponent toVueComponent() {
+		if (_vueComponent) return _vueComponent;
+		
+		_templateObj =  BS4Dropdown(_id, _classes, _attributes, "<slot />");
+		return super.toVueComponent		
+		.name("UimDropdown")
+		.template_(_templateObj);
+	}
 }
 mixin(UIMShort!"Dropdown");
 
 unittest {
-	
-	
-	assert(UIMDropdown == `<div class="dropdown"></div>`);
-	assert(UIMDropdown.id("id") == `<div id="id" class="dropdown"></div>`);
-
+	// assert(UIMDropdown == `<uim-dropdown></uim-dropdown>`);
+	// assert(UIMDropdown.id("id") == `<uim-dropdown id="id"></uim-dropdown>`);
 }

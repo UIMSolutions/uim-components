@@ -5,15 +5,15 @@ import uim.components;
 class DUIMCardDeckWrapper : DUIMComponent {
 	mixin(H5This!("uim-card-deck-wrapper"));
 
-	auto toVue() {
-		return super.toVue
+	override DVUEComponent toVueComponent() {
+		return super.toVueComponent
 		.name("UimCardDeckWrapper")
     	.computed("classes()", `return [""]`)
-    	.template_(BS4DeckWrapper([":class":"this.classes"], "<slot />"));
+    	.template_(BS4CardDeckWrapper([":class":"this.classes"], "<slot />"));
 	}
 }
 mixin(UIMShort!"CardDeckWrapper");
 
 unittest {
-	assert(UIMCardDeckWrapper == `<uim-card-deck-wrapper></uim-card-deck-wrapper>`);
+	// assert(UIMCardDeckWrapper == `<uim-card-deck-wrapper></uim-card-deck-wrapper>`);
 }

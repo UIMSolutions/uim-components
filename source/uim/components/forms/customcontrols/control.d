@@ -8,5 +8,5 @@ class DUIMCustomControl : DUIMComponent {
 mixin(UIMShort!"CustomControl");
 
 unittest {
-	assert(UIMInputTel == "<uim-custom-control></uim-custom-control>");	
+	// assert(UIMCustomControl == "<uim-custom-control></uim-custom-control>");	
 }

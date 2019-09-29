@@ -4,8 +4,8 @@ import uim.components;
 
 class DUIMListGroupUL : DUIMComponent {
 	mixin(H5This!("UL", `["list-group"]`));
-	override public void init() {
-		super.init;
+	override public void _init() {
+		super._init;
 	}
 	mixin(MyContent!("item", "UIMListGroupItem"));
 }
@@ -14,5 +14,5 @@ mixin(UIMShort!"ListGroupUL");
 unittest {
 	
 	
-	assert(UIMListGroupUL == `<ul class="list-group"></ul>`);
+	// assert(UIMListGroupUL == `<ul class="list-group"></ul>`);
 }

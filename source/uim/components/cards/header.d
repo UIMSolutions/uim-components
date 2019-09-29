@@ -5,15 +5,17 @@ import uim.components;
 class DUIMCardHeader : DUIMComponent {
 	mixin(H5This!("uim-card-header"));
 
-	auto toVue() {
-		return super.toVue
+	override DVUEComponent toVueComponent() {
+		if (_vueComponent) return _vueComponent;
+		
+		_templateObj =  BS4CardHeader("<slot />");
+		return super.toVueComponent		
 		.name("UimCardHeader")
-    	.computed("classes()", `return [""]`)
-    	.template_(BS4CardHeader([":class":"this.classes"], "<slot />"));
+		.template_(_templateObj);
 	}
 }
 mixin(UIMShort!"CardHeader");
 
 unittest {
-	assert(UIMCardHeader == `<uim-card-header></uim-card-header>`);
+	// assert(UIMCardHeader == `<uim-card-header></uim-card-header>`);
 }

@@ -2,10 +2,10 @@
 
 import uim.components;
 
-class DUIMProgressBar : DUIMComponent {
+class DUIMProgressbar : DUIMComponent {
 	mixin(H5This!("uim-progress-bar"));
-	override public void init() {
-		super.init;
+	override public void _init() {
+		super._init;
 	}
 	O valueNow(this O)(string value) { return this.attributes(["aria-valuenow":value]); }
 	O valueMin(this O)(string value) { return this.attributes(["aria-valuemin":value]); }
@@ -13,9 +13,18 @@ class DUIMProgressBar : DUIMComponent {
 	O color(this O)(string colorName) { return this.classes("bg-"~colorName); }
 	O striped(this O)(bool mode = true) { return this.classes("progress-bar-striped"); }
 	O animated(this O)(bool mode = true) { return this.classes("progress-bar-animated"); }
+
+	override DVUEComponent toVueComponent() {
+		if (_vueComponent) return _vueComponent;
+		
+		_templateObj =  BS4Progressbar("<slot />");
+		return super.toVueComponent		
+		.name("UimProgressbar")
+		.template_(_templateObj);
+	}
 }
-mixin(UIMShort!"ProgressBar");
+mixin(UIMShort!"Progressbar");
 
 unittest {
-	assert(UIMProgressBar == `<uim-progress-bar></uim-progress-bar>`);
+	// assert(UIMProgressbar == `<uim-progress-bar></uim-progress-bar>`);
 }

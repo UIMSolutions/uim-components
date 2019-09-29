@@ -2,8 +2,8 @@
 
 import uim.components; 
 
-class DUIMInput : DH5Input {
-	mixin(H5This!("Input", `["form-control"]`));	
+class DUIMInput : DUIMComponent {
+	mixin(H5This!("uim-input"));	
 }
 mixin(UIMShort!("Input"));
 

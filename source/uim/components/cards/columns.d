@@ -5,14 +5,16 @@ import uim.components;
 class DUIMCardColumns : DUIMComponent {
 	mixin(H5This!("uim-card-columns"));
 	
-	auto toVue() {
-		return super.toVue
+	override DVUEComponent toVueComponent() {
+		if (_vueComponent) return _vueComponent;
+		
+		_templateObj =  BS4CardColumns("<slot />");
+		return super.toVueComponent		
 		.name("UimCardColumns")
-    	.computed("classes()", `return [""]`)
-    	.template_(BS4CardColumns([":class":"this.classes"], "<slot />"));
+		.template_(_templateObj);
 	}
 }
 mixin(UIMShort!"CardColumns");
 unittest {
-	assert(UIMCardColumns == `<uim-card-columns></uim-card-columns>`);
+	// assert(UIMCardColumns == `<uim-card-columns></uim-card-columns>`);
 }

@@ -2,7 +2,7 @@
 
 import uim.components; 
 
-class DUIMInputSelect : DH5Select {
+class DUIMInputSelect : DUIMComponent {
 	mixin(H5This!("uim-input-select"));	
 
 	mixin(MyContent!("option", "H5Option"));
@@ -13,9 +13,18 @@ class DUIMInputSelect : DH5Select {
 		}
 		return cast(O)this;	
 	}
+
+	override DVUEComponent toVueComponent() {
+		if (_vueComponent) return _vueComponent;
+		
+		_templateObj =  BS4InputButton("slot");
+		return super.toVueComponent		
+		.name("UimInputButton")
+		.template_(_templateObj);
+	}
 }
 mixin(UIMShort!("InputSelect"));
 
 unittest {
-	assert(UIMInputSelect == "<uim-input-select></uim-input-select>");	
+	// assert(UIMInputSelect == "<uim-input-select></uim-input-select>");	
 }

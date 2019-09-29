@@ -4,18 +4,27 @@ import uim.components;
 
 class DUIMPageItem : DUIMComponent {
 	mixin(H5This!("uim-page-item"));
-	override public void init() {
-		super.init;
+	override public void _init() {
+		super._init;
 	}
-	mixin(MyContent!("link", "UIMPageLink"));
+	mixin(MyContent!("link", "UIMPageItem"));
 
-	O active(this O)(bool value = true) { _classes.add("active"); return cast(O)this; }
-	O disabled(this O)(bool value = true) { _classes.add("disabled"); _attributes["tabindex"] = "-1"; return cast(O)this; }
+	O active(this O)(bool value = true) { this.classes("active"); return cast(O)this; }
+	O disabled(this O)(bool value = true) { this.classes("disabled").attributes("tabindex", "-1"); return cast(O)this; }
+
+	override DVUEComponent toVueComponent() {
+		if (_vueComponent) return _vueComponent;
+		
+		_templateObj =  BS4PageItem("<slot />");
+		return super.toVueComponent		
+		.name("UimPageItem")
+		.template_(_templateObj);
+	}
 }
 mixin(UIMShort!"PageItem");
 
 unittest {
-	assert(UIMPageItem == `<uim-page-item></uim-page-item>`);
-	assert(UIMPageItem.active == `<uim-page-item class="active page-item"></uim-page-item>`);
-	assert(UIMPageItem.disabled == `<uim-page-item class="disabled page-item" tabindex="-1"></uim-page-item>`);
+	// assert(UIMPageItem == `<uim-page-item></uim-page-item>`);
+	// assert(UIMPageItem.active == `<uim-page-item class="active"></uim-page-item>`);
+	// assert(UIMPageItem.disabled == `<uim-page-item class="disabled" tabindex="-1"></uim-page-item>`);
 }

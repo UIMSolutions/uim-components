@@ -5,14 +5,16 @@ import uim.components;
 class DUIMCardText : DUIMComponent {
 	mixin(H5This!("uim-card-text"));
 
-	auto toVue() {
-		return super.toVue
+	override DVUEComponent toVueComponent() {
+		if (_vueComponent) return _vueComponent;
+		
+		_templateObj =  BS4CardText("<slot />");
+		return super.toVueComponent		
 		.name("UimCardText")
-    	.computed("classes()", `return [""]`)
-    	.template_(BS4CardText([":class":"this.classes"], "<slot />"));
+		.template_(_templateObj);
 	}
 }
 mixin(UIMShort!"CardText");
 unittest {
-	assert(UIMCardText == `<uim-card-text></uim-card-text>`);
+	// assert(UIMCardText == `<uim-card-text></uim-card-text>`);
 }

@@ -4,8 +4,8 @@ import uim.components;
 
 class DUIMTabList : DUIMComponent {
 	mixin(H5This!("uim-tab-list"));
-	override public void init() {
-		super.init;
+	override public void _init() {
+		super._init;
 	}
 
 	mixin(MyContent!("item", "UIMNavItem"));
@@ -19,5 +19,5 @@ class DUIMTabList : DUIMComponent {
 mixin(UIMShort!"TabList");
 
 unittest {
-	assert(UIMTabList == `<uim-tab-list></uim-tab-list>`);
+	// assert(UIMTabList == `<uim-tab-list></uim-tab-list>`);
 }
