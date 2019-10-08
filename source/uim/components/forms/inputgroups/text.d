@@ -8,5 +8,5 @@ class DUIMInputGroupText : DUIMComponent {
 mixin(UIMShort!"InputGroupText");
 
 unittest {
-	// assert(UIMInputGroupText == `<uim-input-group-text></uim-input-group-text>`);
+	assert(Assert(UIMInputGroupText, `<uim-input-group-text></uim-input-group-text>`));
 }

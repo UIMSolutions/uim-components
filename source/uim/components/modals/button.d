@@ -12,13 +12,13 @@ class DUIMModalButton : DUIMComponent {
 	O keyboard(this O)(bool mode = true) { if (mode == false) _attributes["data-keyboard"] = "false"; 
 		return cast(O)this;
 	}
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4ModalButton("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimModalButton")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"ModalButton");

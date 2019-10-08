@@ -7,7 +7,7 @@ class DUIMButtonGroup : DUIMComponent {
 
 	mixin(MyAttribute!("label", "aria-label"));
 	unittest {
-		// assert(UIMButtonGroup.label("test") == `<uim-button-group aria-label="test"></uim-button-group>`);
+		assert(Assert(UIMButtonGroup.label("test"), `<uim-button-group aria-label="test"></uim-button-group>`));
 	}
 
 	mixin(MyContent!("button", "UIMButton"));
@@ -18,23 +18,23 @@ class DUIMButtonGroup : DUIMComponent {
 	unittest {
 	}
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
 		_templateObj =  BS4ButtonGroup("<slot />");
-		return super.toVueComponent
+		return super.toVUEComponent
 		.name("UimButtonGroup")
-    .props("orientation", `{ type: String, default: "horizontal", validator: value => ["horizontal", "vertical"].indexOf(value) >= 0 }`)
-    .props("size", `{ type: String, default: "normal", validator: value => ["normal", "lg", "sm"].indexOf(value) >= 0 }`)
-    .computed("classes()", `return [
+    .props("orientation", `{ type: String,default:"horizontal", validator: value => ["horizontal", "vertical"].indexOf(value) >= 0}`)
+    .props("size", `{ type: String,default:"normal", validator: value => ["normal", "lg", "sm"].indexOf(value) >= 0}`)
+    .computed("classes", `return [
     this.orientation === "horizontal" ? "btn-group" : "btn-group-vertical",
     this.size !== "normal" ? 'btn-group-'+this.size : ""];`)
-    .template_(_templateObj);
+    ;
 	}
 
 }
 mixin(UIMShort!"ButtonGroup");
 
 unittest {
-	// assert(UIMButtonGroup == `<uim-button-group></uim-button-group>`);
+	assert(Assert(UIMButtonGroup, `<uim-button-group></uim-button-group>`));
 }

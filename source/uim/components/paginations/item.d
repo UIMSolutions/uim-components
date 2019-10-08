@@ -12,19 +12,19 @@ class DUIMPageItem : DUIMComponent {
 	O active(this O)(bool value = true) { this.classes("active"); return cast(O)this; }
 	O disabled(this O)(bool value = true) { this.classes("disabled").attributes("tabindex", "-1"); return cast(O)this; }
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4PageItem("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimPageItem")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"PageItem");
 
 unittest {
-	// assert(UIMPageItem == `<uim-page-item></uim-page-item>`);
-	// assert(UIMPageItem.active == `<uim-page-item class="active"></uim-page-item>`);
-	// assert(UIMPageItem.disabled == `<uim-page-item class="disabled" tabindex="-1"></uim-page-item>`);
+	assert(Assert(UIMPageItem, `<uim-page-item></uim-page-item>`));
+	assert(Assert(UIMPageItem.active, `<uim-page-item class="active"></uim-page-item>`));
+	assert(Assert(UIMPageItem.disabled, `<uim-page-item class="disabled" tabindex="-1"></uim-page-item>`));
 }

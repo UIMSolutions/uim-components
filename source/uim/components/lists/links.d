@@ -9,17 +9,17 @@ class DUIMListLinks : DUIMComponent {
 	}
 	mixin(MyContent!("item", "UIMListGroupItem"));
 	
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4ListLinks("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimListLinks")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"ListLinks");
 
 unittest {
-	// assert(UIMListLinks == `<ul class="list-group"></ul>`);
+	assert(Assert(UIMListLinks, `<uim-list-links></uim-list-links>`));
 }

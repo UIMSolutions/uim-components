@@ -14,5 +14,5 @@ mixin(UIMShort!"ListGroupUL");
 unittest {
 	
 	
-	// assert(UIMListGroupUL == `<ul class="list-group"></ul>`);
+	assert(Assert(UIMListGroupUL, `<ul class="list-group"></ul>`));
 }

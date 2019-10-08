@@ -5,17 +5,17 @@ import uim.components;
 class DUIMDropdownHeader : DUIMComponent {
 	mixin(H5This!("uim-dropdown-header"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4DropdownHeader("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimDropdownHeader")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"DropdownHeader");
 
 unittest {
-	// assert(UIMDropdownHeader == `<uim-dropdown-header></uim-dropdown-header>`);
+	assert(Assert(UIMDropdownHeader, `<uim-dropdown-header></uim-dropdown-header>`));
 }

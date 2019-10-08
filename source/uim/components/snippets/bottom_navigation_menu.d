@@ -1,0 +1,1 @@
+module uim.components.snippets.bottom_navigation_menu;

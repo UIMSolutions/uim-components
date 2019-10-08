@@ -5,15 +5,16 @@ import uim.components;
 class DUIMCardLink : DUIMComponent {
 	mixin(H5This!("uim-card-link"));
 
-	override DVUEComponent toVueComponent() {
-		return super.toVueComponent
-		.name("UimCardLink")
-    	.computed("classes()", `return [""]`)
-    	.template_(BS4CardLink([":class":"this.classes"], "<slot />"));
+	override DVUEComponent toVUEComponent() {	
+		if (_vueComponent) return _vueComponent;
+		
+		_templateObj =  BS4CardLink("<slot />");
+		return super.toVUEComponent		
+		.name("UimCardLink");
 	}
 }
 mixin(UIMShort!"CardLink");
 
 unittest {
-	// assert(UIMCardLink == `<uim-card-link></uim-card-link>`);
+	assert(Assert(UIMCardLink, `<uim-card-link></uim-card-link>`));
 }

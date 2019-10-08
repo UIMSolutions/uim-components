@@ -11,17 +11,17 @@ class DUIMPagination : DUIMComponent {
 	O right(this O)(string aSize) { return this.classes("justify-content-end"); }
 	O size(this O)(string aSize) { return this.classes("pagination-"~aSize); }
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4Pagination("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimPagination")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"Pagination");
 
 unittest {
-	// assert(UIMPagination == `<uim-pagination></uim-pagination>`);
+	assert(Assert(UIMPagination, `<uim-pagination></uim-pagination>`));
 }

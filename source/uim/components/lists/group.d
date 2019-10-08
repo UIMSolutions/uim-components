@@ -8,17 +8,17 @@ class DUIMListGroup : DUIMComponent {
 	mixin(MyContent!("link", "UIMListGroupLink"));
 	mixin(MyContent!("button", "UIMListGroupButton"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4ListGroup("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimListGroup")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"ListGroup");
 
 unittest {
-	// assert(UIMListGroup == `<uim-list-group></uim-list-group>`);
+	assert(Assert(UIMListGroup, `<uim-list-group></uim-list-group>`));
 }

@@ -10,5 +10,5 @@ class DUIMInputGroupAppend : DUIMComponent {
 mixin(UIMShort!"InputGroupAppend");
 
 unittest {
-	// assert(UIMInputGroupAppend == `<uim-input-group-append></uim-input-group-append>`);
+	assert(Assert(UIMInputGroupAppend, `<uim-input-group-append></uim-input-group-append>`));
 }

@@ -5,17 +5,17 @@ import uim.components;
 class DUIMInputHidden : DUIMComponent {
 	mixin(H5This!("uim-input-hidden"));	
 	
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4InputHidden();
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimInputHidden")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!("InputHidden"));
 
 unittest {
-	// assert(UIMInputHidden == "<uim-input-hidden></uim-input-hidden>");	
+	assert(Assert(UIMInputHidden, "<uim-input-hidden></uim-input-hidden>"));	
 }

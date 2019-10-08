@@ -5,17 +5,17 @@ import uim.components;
 class DUIMNavbarNav : DUIMComponent {
 	mixin(H5This!("uim-navbar-nav"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4NavbarNav("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimNavbarNav")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"NavbarNav");
 
 unittest {
-	// assert(UIMNavbarNav == `<uim-navbar-nav></uim-navbar-nav>`);
+	assert(Assert(UIMNavbarNav, `<uim-navbar-nav></uim-navbar-nav>`));
 }

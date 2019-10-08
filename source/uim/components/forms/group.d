@@ -42,17 +42,17 @@ class DUIMFormGroup : DUIMComponent {
 	mixin(MyContent!("inputUrl", "UIMInputUrl"));
 	mixin(MyContent!("inputWeek", "UIMInputWeek"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4FormGroup("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimFormGroup")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"FormGroup");
 
 unittest {
-	// assert(UIMFormGroup == `<uim-form-group></uim-form-group>`);
+	assert(Assert(UIMFormGroup, `<uim-form-group></uim-form-group>`));
 }

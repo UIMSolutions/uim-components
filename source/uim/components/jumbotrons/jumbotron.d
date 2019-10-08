@@ -5,17 +5,16 @@ import uim.components;
 class DUIMJumbotron : DUIMComponent {
 	mixin(H5This!("uim-jumbotron"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4Jumbotron("<slot />");
-		return super.toVueComponent		
-		.name("UimJumbotron")
-		.template_(_templateObj);
+		return super.toVUEComponent		
+		.name("UimJumbotron");
 	}
 }
 mixin(UIMShort!"Jumbotron");
 
 unittest {
-	// assert(UIMJumbotron == `<uim-jumbotron></uim-jumbotron>`);
+	assert(Assert(UIMJumbotron, `<uim-jumbotron></uim-jumbotron>`));
 }

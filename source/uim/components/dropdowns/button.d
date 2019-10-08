@@ -5,10 +5,10 @@ import uim.components;
 class DUIMDropdownButton : DUIMComponent {
 	mixin(H5This!("uim-dropdown-item"));
 
-	override DVUEComponent toVueComponent() {
-		return super.toVueComponent
+	override DVUEComponent toVUEComponent() {
+		return super.toVUEComponent
 		.name("UimDropdownButton")
-    	.computed("classes()", `return [""]`)
+    	.computed("classes", `return [""]`)
     	.template_(BS4DropdownButton([":class":"this.classes"], "<slot />"));
 	}
 
@@ -16,5 +16,5 @@ class DUIMDropdownButton : DUIMComponent {
 mixin(UIMShort!"DropdownButton");
 
 unittest {
-	// assert(UIMDropdownButton == `<uim-dropdown-item></uim-dropdown-item>`);
+	assert(Assert(UIMDropdownButton, `<uim-dropdown-item></uim-dropdown-item>`));
 }

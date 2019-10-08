@@ -5,17 +5,17 @@ import uim.components;
 class DUIMInputMonth : DUIMComponent {
 	mixin(H5This!("uim-input-month"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4InputMonth();
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimInputMonth")
-		.template_(_templateObj);
+		;
 	}	
 }
 mixin(UIMShort!("InputMonth"));
 
 unittest {
-	// assert(UIMInputMonth == "<uim-input-month></uim-input-month>");	
+	assert(Assert(UIMInputMonth, "<uim-input-month></uim-input-month>"));	
 }

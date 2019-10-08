@@ -9,19 +9,35 @@ class DUIMCard : DUIMComponent {
 	O inverse(this O)() { return this.classes("card-inverse"); }
 
 	mixin(MyContent!("image", "UIMCardImage"));
-	mixin(MyContent!("bdy", "UIMCardBody"));
+	unittest {}
 
-	override DVUEComponent toVueComponent() {
+	mixin(MyContent!("header", "UIMCardHeader"));
+	unittest {
+		assert(Assert(UIMCard.header, `<uim-card><uim-card-header></uim-card-header></uim-card>`));
+	}
+
+	mixin(MyContent!("body_", "UIMCardBody"));
+	unittest {
+		assert(Assert(UIMCard.body_, `<uim-card><uim-card-body></uim-card-body></uim-card>`));
+	}
+
+	mixin(MyContent!("footer", "UIMCardFooter"));
+	unittest {
+		assert(Assert(UIMCard.footer, `<uim-card><uim-card-footer></uim-card-footer></uim-card>`));
+	}
+
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
 		_templateObj =  BS4Card("<slot />");
-		return super.toVueComponent		
-		.name("UimCard")
-    .template_(_templateObj);
+		return super.toVUEComponent		
+		.name("UimCard");
 	}
 }
 mixin(UIMShort!"Card");
 
 unittest {
-	// assert(UIMCard == `<uim-card></uim-card>`);
+	assert(Assert(UIMCard, `<uim-card></uim-card>`));
+	assert(Assert(UIMCard.header.body_.footer, `<uim-card><uim-card-header></uim-card-header><uim-card-body>`~
+	`</uim-card-body><uim-card-footer></uim-card-footer></uim-card>`));
 }

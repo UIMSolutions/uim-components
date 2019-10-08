@@ -13,5 +13,5 @@ class DUIMNavLink : DUIMComponent {
 mixin(UIMShort!"NavLink");
 
 unittest {
-	// assert(UIMNavLink == `<uim-nav-link></uim-nav-link>`);
+	assert(Assert(UIMNavLink, `<uim-nav-link></uim-nav-link>`));
 }

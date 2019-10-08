@@ -5,17 +5,16 @@ import uim.components;
 class DUIMInputSubmit : DUIMComponent {
 	mixin(H5This!("uim-input-submit"));	
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4InputButton();
-		return super.toVueComponent		
-		.name("UimInputButton")
-		.template_(_templateObj);
+		return super.toVUEComponent		
+		.name("UimInputButton");
 	}
 }
 mixin(UIMShort!("InputSubmit"));
 
 unittest {
-	// assert(UIMInputSubmit == "<uim-input-submit></uim-input-submit>");	
+	assert(Assert(UIMInputSubmit, "<uim-input-submit></uim-input-submit>"));	
 }

@@ -7,17 +7,17 @@ class DUIMModalBody : DUIMComponent {
 	override public void _init() {
 		super._init;
 	}
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4ModalBody("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimModalBody")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"ModalBody");
 
 unittest {
-	// assert(UIMModalBody == `<uim-modal-body></uim-modal-body>`);
+	assert(Assert(UIMModalBody, `<uim-modal-body></uim-modal-body>`));
 }

@@ -9,16 +9,16 @@ class DUIMAlertHeading : DUIMComponent {
 		if ((size > 0) && (size < 7)) _tag = "h"~to!string(size);
 		return cast(O)this;
 	}
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		_templateObj =  BS4AlertHeading("<slot />");
-		return super.toVueComponent
+		return super.toVUEComponent
     .name("UimAlertHeading")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!("AlertHeading"));
 
 unittest {
-	// assert(UIMAlertHeading == "<uim-alert-heading></uim-alert-heading>");
+	assert(Assert(UIMAlertHeading, "<uim-alert-heading></uim-alert-heading>"));
 }

@@ -5,17 +5,17 @@ import uim.components;
 class DUIMModalFooter : DUIMComponent {
 	mixin(H5This!("uim-modal-footer"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4ModalFooter("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimModalFooter")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"ModalFooter");
 
 unittest {
-	// assert(UIMModalFooter == `<uim-modal-footer></uim-modal-footer>`);
+	assert(Assert(UIMModalFooter, `<uim-modal-footer></uim-modal-footer>`));
 }

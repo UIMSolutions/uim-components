@@ -11,19 +11,19 @@ class DUIMListGroupLink : DUIMComponent {
 	O disabled(this O)(bool value = true) { return this.classes("disabled"); }
 	O color(this O)(string aColor) { return this.classes("list-group-item-"~aColor); }
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4ListGroupLink("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimListGroupLink")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"ListGroupLink");
 
 unittest {
-	// assert(UIMListGroupLink == `<uim-list-group-item"></uim-list-group-item>`);
-	// assert(UIMListGroupLink.active == `<a class="active list-group-item list-group-item-action"></a>`);
-	// assert(UIMListGroupLink.disabled == `<a class="disabled list-group-item list-group-item-action"></a>`);
+	assert(Assert(UIMListGroupLink, `<uim-list-group-item></uim-list-group-item>`));
+	assert(Assert(UIMListGroupLink.active, `<uim-list-group-item class="active list-group-item-action"></a>`));
+	assert(Assert(UIMListGroupLink.disabled, `<uim-list-group-item class="disabled  list-group-item-action"></a>`));
 }

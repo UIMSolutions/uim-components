@@ -7,17 +7,17 @@ class DUIMPageLink : DUIMComponent {
 	override public void _init() {
 		super._init;
 	}
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4PageLink("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimPageLink")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"PageLink");
 
 unittest {
-	// assert(UIMPageLink == `<uim-page-link></uim-page-link>`);
+	assert(Assert(UIMPageLink, `<uim-page-link></uim-page-link>`));
 }

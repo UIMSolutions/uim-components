@@ -5,16 +5,15 @@ import uim.components;
 class DUIMCardBlock : DUIMComponent {
 	mixin(H5This!("uim-card-block"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
 		_templateObj =  BS4CardBlock("<slot />");
-		return super.toVueComponent		
-		.name("UimCardBlock")
-		.template_(_templateObj);
+		return super.toVUEComponent		
+		.name("UimCardBlock");
 	}
 }
 mixin(UIMShort!"CardBlock");
 unittest {
-	// assert(UIMCardBlock == `<uim-card-block></uim-card-block>`);
+	assert(Assert(UIMCardBlock, `<uim-card-block></uim-card-block>`));
 }

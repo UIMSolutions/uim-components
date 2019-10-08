@@ -7,17 +7,17 @@ class DUIMNav : DUIMComponent {
 
 	mixin(MyContent!("link", "UIMNavLink"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4Nav("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimNav")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"Nav");
 
 unittest {
-	// assert(UIMNav == `<uim-nav></uim-nav>`);
+	assert(Assert(UIMNav, `<uim-nav></uim-nav>`));
 }

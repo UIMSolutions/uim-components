@@ -5,17 +5,17 @@ import uim.components;
 class DUIMNavbarText : DUIMComponent {
 	mixin(H5This!("uim-navbar-text"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4NavbarText("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimNavbarText")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"NavbarText");
 
 unittest {
-	// assert(UIMNavbarText == `<uim-navbar-text></uim-navbar-text>`);
+	assert(Assert(UIMNavbarText, `<uim-navbar-text></uim-navbar-text>`));
 }

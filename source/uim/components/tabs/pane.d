@@ -7,24 +7,24 @@ class DUIMTabPane : DUIMComponent {
 
 	O active(this O)(bool value = true) { if (value) this.classes("active").attributes("aria-expanded", "true"); return cast(O)this; }
 	unittest {
-		assert(UIMTabPane.active == `<uim-tab-pane class="active" aria-expanded="true"></uim-tab-pane>`);
+		assert(Assert(UIMTabPane.active, `<uim-tab-pane class="active" aria-expanded="true"></uim-tab-pane>`));
 	}
 	
 	O fade(this O)(bool value = true) { if (value) this.classes("fade"); return cast(O)this; }
 	unittest {
-		assert(UIMTabPane.fade == `<uim-tab-pane class="fade"></uim-tab-pane>`);
+		assert(Assert(UIMTabPane.fade, `<uim-tab-pane class="fade"></uim-tab-pane>`));
 	}
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj = BS4TabPane("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimTabPane");
 	}
 }
 mixin(UIMShort!"TabPane");
 
 unittest {
-	assert(UIMTabPane == `<uim-tab-pane></uim-tab-pane>`);
+	assert(Assert(UIMTabPane, `<uim-tab-pane></uim-tab-pane>`));
 }

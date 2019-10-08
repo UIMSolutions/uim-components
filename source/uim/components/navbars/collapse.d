@@ -5,17 +5,17 @@ import uim.components;
 class DUIMNavbarCollapse : DUIMComponent {
 	mixin(H5This!("uim-navbar-collapse"));
 
-		override DVUEComponent toVueComponent() {
+		override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4NavbarCollapse("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimNavbarCollapse")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"NavbarCollapse");
 
 unittest {
-	// assert(UIMNavbarCollapse == `<uim-navbar-collapse></uim-navbar-collapse>`);
+	assert(Assert(UIMNavbarCollapse, `<uim-navbar-collapse></uim-navbar-collapse>`));
 }

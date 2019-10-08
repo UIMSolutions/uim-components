@@ -5,17 +5,17 @@ import uim.components;
 class DUIMTableHeader : DUIMComponent {
 	mixin(H5This!("uim-table-header"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4TableHeader("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimTableHeader")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"TableHeader");
 
 unittest {
-	// assert(UIMTableHeader == `<uim-table-header></uim-table-header>`);
+	assert(Assert(UIMTableHeader, `<uim-table-header></uim-table-header>`));
 }

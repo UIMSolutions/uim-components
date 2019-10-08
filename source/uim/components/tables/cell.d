@@ -5,17 +5,17 @@ import uim.components;
 class DUIMTableCell : DUIMComponent {
 	mixin(H5This!("uim-table-cell"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4TableCell("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimTableCell")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"TableCell");
 
 unittest {
-	// assert(UIMTableCell == `<uim-table-cell></uim-table-cell>`);
+	assert(Assert(UIMTableCell, `<uim-table-cell></uim-table-cell>`));
 }

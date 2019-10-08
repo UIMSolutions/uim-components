@@ -14,17 +14,17 @@ class DUIMProgressbar : DUIMComponent {
 	O striped(this O)(bool mode = true) { return this.classes("progress-bar-striped"); }
 	O animated(this O)(bool mode = true) { return this.classes("progress-bar-animated"); }
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4Progressbar("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimProgressbar")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"Progressbar");
 
 unittest {
-	// assert(UIMProgressbar == `<uim-progress-bar></uim-progress-bar>`);
+	assert(Assert(UIMProgressbar, `<uim-progress-bar></uim-progress-bar>`));
 }

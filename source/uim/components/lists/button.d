@@ -10,17 +10,17 @@ class DUIMListGroupButton : DUIMComponent {
 
 	O color(this O)(string aColor) { this.classes("list-group-item-"~aColor); return cast(O)this; }
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4ListGroupButton("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimListGroupButton")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"ListGroupButton");
 
 unittest {
-	// assert(UIMListGroupButton == `<uim-list-group-button></uim-list-group-button>`);
+	assert(Assert(UIMListGroupButton, `<uim-list-group-button></uim-list-group-button>`));
 }

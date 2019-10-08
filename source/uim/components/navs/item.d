@@ -8,17 +8,17 @@ class DUIMNavItem : DUIMComponent {
 	O dropdown(this O)(bool mode = true) { return this.classes("dropdown"); }
 	mixin(MyContent!("link", "UIMNavLink"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4ListGroup("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimListGroup")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"NavItem");
 
 unittest {
-	// assert(UIMNavItem == `<uim-nav-item></uim-nav-item>`);
+	assert(Assert(UIMNavItem, `<uim-nav-item></uim-nav-item>`));
 }

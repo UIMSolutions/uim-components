@@ -10,22 +10,22 @@ class DUIMBreadcrumbLink : DUIMComponent {
 
 	mixin(TProperty!("string", "text"));
 	unittest {
-		// assert(UIMBreadcrumbLink.text("test").url("#") == `<li class="breadcrumb-item"><a href="#">test</a></li>`);
+		assert(Assert(UIMBreadcrumbLink.text("test").url("#"), `<uim-breadcrumb-link href="#">test</uim-breadcrumb-link>`));
 	}
 
 	mixin(TProperty!("string", "url"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		_templateObj =  BS4BreadcrumbLink([":class":"this.classes", ":style": "this.styles", ":href":"this.href"], "<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimBreadcrumbLink")
-    	.props("href", `{ type: String, default: '#' }`)
-    	.template_(_templateObj);
+    .props("href", `{ type: String,default:'#'}`)
+    	;
 	}
 }
 mixin(UIMShort!"BreadcrumbLink");
 
 unittest {
-	// assert(UIMBreadcrumbLink == `<uim-breadcrumb-link></uim-breadcrumb-link>`);
+	assert(Assert(UIMBreadcrumbLink, `<uim-breadcrumb-link></uim-breadcrumb-link>`));
 }

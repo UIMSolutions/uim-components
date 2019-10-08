@@ -5,17 +5,17 @@ import uim.components;
 class DUIMFormCheckLabel : DUIMComponent {
 	mixin(H5This!("uim-form-check-label"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4FormCheckLabel("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimFormCheckLabel")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"FormCheckLabel");
 
 unittest {
-	// assert(UIMFormCheckLabel == `<uim-form-check-label></uim-form-check-label>`);
+	assert(Assert(UIMFormCheckLabel, `<uim-form-check-label></uim-form-check-label>`));
 }

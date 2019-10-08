@@ -6,35 +6,35 @@ class DUIMModalDialog : DUIMComponent {
 	mixin(H5This!("uim-modal-dialog"));
 
 	unittest {
-		// assert(UIMModalDialog == `<div class="modal-dialog" role="document"></div>`);
+		assert(Assert(UIMModalDialog, `<uim-modal-dialog></uim-modal-dialog>`));
 	}
 
 	O fade(this O)(bool mode = true) { return this.classes("fade"); }
 	unittest {
-		// assert(UIMModalDialog.fade == `<div class="fade modal-dialog" role="document"></div>`);
+		assert(Assert(UIMModalDialog.fade, `<uim-modal-dialog class="fade"></uim-modal-dialog>`));
 	}
 
 	O size(this O)(string aSize) { return this.classes("modal-"~aSize); }
 	unittest {
-		// assert(UIMModalDialog.size("sm") == `<div class="modal-dialog modal-sm" role="document"></div>`);
+		assert(Assert(UIMModalDialog.size("sm"), `<uim-modal-dialog class="modal-sm"></uim-modal-dialog>`));
 	}
 
 	O centered(this O)(bool mode = true) { return this.classes("modal-dialog-centered"); }
 	unittest {
-		// assert(UIMModalDialog.centered == `<div class="modal-dialog modal-dialog-centered" role="document"></div>`);
+		assert(Assert(UIMModalDialog.centered, `<uim-modal-dialog class="modal-dialog-centered"></uim-modal-dialog>`));
 	}
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4ModalDialog("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimModalDialog")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"ModalDialog");
 
 unittest {
-	// assert(UIMModalDialog == "<uim-modal-dialog></uim-modal-dialog>");
+	assert(Assert(UIMModalDialog, "<uim-modal-dialog></uim-modal-dialog>"));
 }

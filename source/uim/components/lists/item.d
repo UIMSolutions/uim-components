@@ -3,25 +3,23 @@
 import uim.components;
 
 class DUIMListGroupItem : DUIMComponent {
-	mixin(H5This!("LI", `["list-group-item"]`));
+	mixin(H5This!("uim-list-group-item"));
 	override public void _init() {
 		super._init;
 	}
 	O color(this O)(string aColor) { this.classes("list-group-item-"~aColor); return cast(O)this; }
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4ListGroupItem("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimListGroupItem")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"ListGroupItem");
 
 unittest {
-	
-	
-	// assert(UIMListGroupItem == `<li class="list-group-item"></li>`);
+	assert(Assert(UIMListGroupItem, `<uim-list-group-item></uim-list-group-item>`));
 }

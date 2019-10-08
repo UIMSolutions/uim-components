@@ -5,32 +5,32 @@ import uim.components;
 class DUIMNavBar : DUIMComponent {
 	mixin(H5This!("uim-navbar"));
 
-	O light(this O)(bool value = true) { return this.classes("navbar-light"); }
+	O light(this O)(bool value = true) { if (value) this.classes("navbar-light"); return cast(O)this; }
 	unittest {
-		// assert(UIMNavBar.light == `<nav class="navbar navbar-light"></nav>`);
+		assert(Assert(UIMNavBar.light, `<uim-navbar class="navbar-light"></uim-navbar>`));
 	}
 	
-	O dark(this O)(bool value = true) { return this.classes("navbar-dark"); }
+	O dark(this O)(bool value = true) { if (value) this.classes("navbar-dark"); return cast(O)this; }
 	unittest {
-		// assert(UIMNavBar.dark == `<nav class="navbar navbar-dark"></nav>`);
+		assert(Assert(UIMNavBar.dark, `<uim-navbar class="navbar-dark"></uim-navbar>`));
 	}
 
-	O expand(this O)(string screenSize) { return this.classes("navbar-expand-"~screenSize); }
+	O expand(this O)(string screenSize) { if (screenSize) this.classes("navbar-expand-"~screenSize); return cast(O)this; }
 	unittest {
-		// assert(UIMNavBar.expand("lg") == `<uim-navbar class="navbar-expand-lg"></uim-navbar>`);
+		assert(Assert(UIMNavBar.expand("lg"), `<uim-navbar class="navbar-expand-lg"></uim-navbar>`));
 	}
 	
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4Navbar("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimNavbar")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"NavBar");
 
 unittest {
-	// assert(UIMNavBar == `<uim-navbar></uim-navbar>`);
+	assert(Assert(UIMNavBar, `<uim-navbar></uim-navbar>`));
 }

@@ -9,17 +9,17 @@ class DUIMModalContent : DUIMComponent {
 	}
 	O fade(this O)(bool mode = true) { return this.classes("fade"); }
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4ModalContent("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimModalContent")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"ModalContent");
 
 unittest {
-	// assert(UIMModalContent == `<uim-modal-content></uim-modal-content>`);
+	assert(Assert(UIMModalContent, `<uim-modal-content></uim-modal-content>`));
 }

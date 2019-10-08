@@ -7,17 +7,17 @@ class DUIMComponent : DH5Obj {
 
 	O margin(this O)(string aMargin) { this.classes("m"~aMargin); return cast(O)this; }
 	unittest {
-		assert(UIMComponent.margin("t-2") == `<uim-div class="mt-2"></uim-div>`);
+		assert(Assert(UIMComponent.margin("t-2"), `<uim-div class="mt-2"></uim-div>`));
 	}
 
 	O padding(this O)(string aPadding) { this.classes("p"~aPadding); return cast(O)this; }
 	unittest {
-		assert(UIMComponent.padding("t-2") == `<uim-div class="pt-2"></uim-div>`);
+		assert(Assert(UIMComponent.padding("t-2"), `<uim-div class="pt-2"></uim-div>`));
 	}
 
 	O text(this O)(string textLayout) { this.classes("text-"~textLayout); return cast(O)this; }
 	unittest {
-		assert(UIMComponent.text("center") == `<uim-div class="text-center"></uim-div>`);
+		assert(Assert(UIMComponent.text("center"), `<uim-div class="text-center"></uim-div>`));
 	}
 
 	auto toAngular() {
@@ -30,17 +30,20 @@ class DUIMComponent : DH5Obj {
 		return null;
 	}
 
+	/// Root obj for template
 	DH5Obj _templateObj = H5Div;
-	O templteObj(this O)(DH5Obj anObj) { _templateOb = anObj; return cast(O)this; } 
+	O templateObj(this O)(DH5Obj anObj) { _templateObj = anObj; return cast(O)this; } 
 
 	/// Export component to VueComponent 
 	protected DVUEComponent _vueComponent;
-	DVUEComponent toVueComponent() {
+	DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
+		
 		_vueComponent = VUEComponent
-	    .computed("classes()", `return []`)
-    	.computed("styles()", `return []`)
-			.template_(_templateObj);
+		.computed("classes", `return [];`)
+		.computed("styles", `return [];`)
+		.template_(_templateObj.toHTML);
+		
 		return _vueComponent;
 	}
 
@@ -49,7 +52,6 @@ class DUIMComponent : DH5Obj {
 	} 
 }
 mixin(UIMShort!"Component");
-///
 unittest {
-	assert(UIMComponent == "<uim-div></uim-div>");
+	assert(Assert(UIMComponent, "<uim-div></uim-div>"));
 }

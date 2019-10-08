@@ -3,13 +3,11 @@
 import uim.components;
 
 class DUIMTogglelink : DUIMComponent {
-	mixin(H5This!("A", `["btn", "dropdown-toggle"]`, `["aria-haspopup":"true", "aria-expanded":"false"]`));
-	override public void _init() {
-		super._init;
-	}	
+	mixin(H5This!("uim-dropdown-toggle-link"));
+
 	unittest {
-		// assert(UIMTogglelink == `<a class="btn dropdown-toggle" aria-expanded="false" aria-haspopup="true" type="button"></a>`);
-		// assert(UIMTogglelink.id("id") == `<a id="id" class="btn dropdown-toggle" aria-expanded="false" aria-haspopup="true" type="button"></a>`);
+		assert(Assert(UIMTogglelink, `<uim-dropdown-toggle-link></uim-dropdown-toggle-link>`));
+		assert(Assert(UIMTogglelink.id("id"), `<uim-dropdown-toggle-link id="id"></uim-dropdown-toggle-link>`));
 	}
 }
 mixin(UIMShort!"Togglelink");

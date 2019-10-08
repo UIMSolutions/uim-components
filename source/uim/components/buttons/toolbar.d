@@ -8,16 +8,16 @@ class DUIMButtonToolbar : DUIMComponent {
 	mixin(MyAttribute!("label", "aria-label"));
 	mixin(MyContent!("group", "UIMButtonGroup"));
 
-	override DVUEComponent toVueComponent() {
-		return super.toVueComponent
+	override DVUEComponent toVUEComponent() {
+		return super.toVUEComponent
 		.name("UimButtonToolbar")
-    	.computed("classes()", `return [""]`)
+    	.computed("classes", `return [""]`)
     	.template_(BS4ButtonToolbar([":class":"this.classes"], "<slot />"));
 	}
 }
 mixin(UIMShort!"ButtonToolbar");
 
 unittest {
-	// assert(UIMButtonToolbar == `<uim-button-toolbar></uim-button-toolbar>`);
-	// assert(UIMButtonToolbar.label("hallo") == `<uim-button-toolbar aria-label="hallo"></uim-button-toolbar>`);
+	assert(Assert(UIMButtonToolbar, `<uim-button-toolbar></uim-button-toolbar>`));
+	assert(Assert(UIMButtonToolbar.label("hallo"), `<uim-button-toolbar aria-label="hallo"></uim-button-toolbar>`));
 }

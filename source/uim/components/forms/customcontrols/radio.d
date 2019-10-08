@@ -5,17 +5,17 @@ import uim.components;
 class DUIMCustomRadio : DUIMComponent {
 	mixin(H5This!("uim-custom-radio"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4CustomRadio();
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimCustomRadio")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"CustomRadio");
 
 unittest {
-	// assert(UIMCustomRadio == "<uim-custom-radio></uim-custom-radio>");	
+	assert(Assert(UIMCustomRadio, "<uim-custom-radio></uim-custom-radio>"));	
 }

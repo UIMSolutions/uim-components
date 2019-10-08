@@ -5,17 +5,16 @@ import uim.components;
 class DUIMInputTel : DUIMComponent {
 	mixin(H5This!("uim-input-tel"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4InputTel();
-		return super.toVueComponent		
-		.name("UimInputTel")
-		.template_(_templateObj);
+		return super.toVUEComponent		
+		.name("UimInputTel");
 	}	
 }
 mixin(UIMShort!("InputTel"));
 
 unittest {
-	// assert(UIMInputTel == "<uim-input-tel></uim-input-tel>");	
+	assert(Assert(UIMInputTel, "<uim-input-tel></uim-input-tel>"));	
 }

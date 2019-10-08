@@ -17,5 +17,5 @@ class DUIMNavList : DUIMComponent {
 mixin(UIMShort!"NavList");
 
 unittest {
-	// assert(UIMNavList == `<uim-nav-list></uim-nav-list>`);
+	assert(Assert(UIMNavList, `<uim-nav-list></uim-nav-list>`));
 }

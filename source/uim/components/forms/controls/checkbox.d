@@ -5,17 +5,17 @@ import uim.components;
 class DUIMInputCheckbox : DUIMComponent {
 	mixin(H5This!("uim-input-checkbox"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4InputCheckbox();
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimInputCheckbox")
-		.template_(_templateObj);
+		;
 	}	
 }
 mixin(UIMShort!("InputCheckbox"));
 
 unittest {
-	// assert(UIMInputCheckbox == "<uim-input-checkbox></uim-input-checkbox>");	
+	assert(Assert(UIMInputCheckbox, "<uim-input-checkbox></uim-input-checkbox>"));	
 }

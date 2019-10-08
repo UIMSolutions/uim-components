@@ -5,17 +5,17 @@ import uim.components;
 class DUIMInputColor : DUIMComponent {
 	mixin(H5This!("uim-input-color"));	
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4InputColor();
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimInputColor")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!("InputColor"));
 
 unittest {
-	// assert(UIMInputColor == "<uim-input-color></uim-input-color>");
+	assert(Assert(UIMInputColor, "<uim-input-color></uim-input-color>"));
 }

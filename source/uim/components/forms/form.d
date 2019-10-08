@@ -9,17 +9,17 @@ class DUIMForm : DUIMComponent {
 
 	mixin(MyContent!("formGroup", "UIMFormGroup"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4Form("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimForm")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"Form");
 
 unittest {
-	// assert(UIMForm == `<uim-form></uim-form>`);
+	assert(Assert(UIMForm, `<uim-form></uim-form>`));
 }

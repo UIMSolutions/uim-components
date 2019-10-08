@@ -7,20 +7,19 @@ class DUIMContainer : DUIMComponent {
 
 	mixin(MyContent!("row", "UIMRow"));
 	unittest {
-		assert(UIMContainer.row == `<uim-container><uim-row></uim-row></uim-container>`);
+		assert(Assert(UIMContainer.row, `<uim-container><uim-row></uim-row></uim-container>`));
 	}
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4Container("<slot />");
-		return super.toVueComponent		
-		.name("UimContainer")
-		.template_(_templateObj);
+		return super.toVUEComponent		
+		.name("UimContainer");
 	}
 }
 mixin(UIMShort!"Container");
 
 unittest {
-	assert(UIMContainer == `<uim-container></uim-container>`);
+	assert(Assert(UIMContainer, `<uim-container></uim-container>`));
 }

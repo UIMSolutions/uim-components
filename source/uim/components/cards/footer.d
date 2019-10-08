@@ -5,16 +5,15 @@ import uim.components;
 class DUIMCardFooter : DUIMComponent {
 	mixin(H5This!("uim-card-footer"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4CardFooter("<slot />");
-		return super.toVueComponent		
-		.name("UimCardFooter")
-		.template_(_templateObj);
+		_templateObj = BS4CardFooter("<slot />");
+		return super.toVUEComponent		
+		.name("UimCardFooter");
 	}
 }
 mixin(UIMShort!"CardFooter");
 unittest {
-	// assert(UIMCardFooter == `<uim-card-footer></uim-card-footer>`);
+	assert(Assert(UIMCardFooter, `<uim-card-footer></uim-card-footer>`));
 }

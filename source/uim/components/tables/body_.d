@@ -7,20 +7,20 @@ class DUIMTableBody : DUIMComponent {
 
 	mixin(MyContent!("row", "UIMTableRow"));
 	unittest {
-		assert(UIMTableBody.row == `<uim-table-body><uim-table-row></uim-table-row></uim-table-body>`);
+		assert(Assert(UIMTableBody.row, `<uim-table-body><uim-table-row></uim-table-row></uim-table-body>`));
 	}	
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4TableBody("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimTableBody")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"TableBody");
 
 unittest {
-	// assert(UIMTableBody == `<uim-table-body></uim-table-body>`);
+	assert(Assert(UIMTableBody, `<uim-table-body></uim-table-body>`));
 }

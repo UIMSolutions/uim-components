@@ -5,17 +5,16 @@ import uim.components;
 class DUIMInputText : DUIMComponent {
 	mixin(H5This!("uim-input-text"));	
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4InputText();
-		return super.toVueComponent		
-		.name("UimInputText")
-		.template_(_templateObj);
+		return super.toVUEComponent		
+		.name("UimInputText");
 	}
 }
 mixin(UIMShort!("InputText"));
 
 unittest {
-	// assert(UIMInputText == "<uim-input-text></uim-input-text>");	
+	assert(Assert(UIMInputText, "<uim-input-text></uim-input-text>"));	
 }

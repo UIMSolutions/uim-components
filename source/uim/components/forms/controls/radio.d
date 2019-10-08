@@ -5,17 +5,17 @@ import uim.components;
 class DUIMInputRadio : DUIMComponent {
 	mixin(H5This!("uim-input-radio"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4InputRadio();
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimInputRadio")
-		.template_(_templateObj);
+		;
 	}	
 }
 mixin(UIMShort!("InputRadio"));
 
 unittest {
-	// assert(UIMInputRadio == "<uim-input-radio></uim-input-radio>");	
+	assert(Assert(UIMInputRadio, "<uim-input-radio></uim-input-radio>"));	
 }

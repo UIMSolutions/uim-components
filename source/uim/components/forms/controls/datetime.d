@@ -5,17 +5,17 @@ import uim.components;
 class DUIMInputDateTime : DUIMComponent {
 	mixin(H5This!("uim-input-datetime"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4InputDateTime();
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimInputDateTime")
-		.template_(_templateObj);
+		;
 	}	
 }
 mixin(UIMShort!("InputDateTime"));
 
 unittest {
-	// assert(UIMInputDateTime == "<uim-input-datetime></uim-input-datetime>");	
+	assert(Assert(UIMInputDateTime, "<uim-input-datetime></uim-input-datetime>"));	
 }

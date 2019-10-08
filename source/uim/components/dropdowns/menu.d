@@ -9,17 +9,17 @@ class DUIMDropdownMenu : DUIMComponent {
 	mixin(MyContent!("header", "UIMMenu"));
 	mixin(MyContent!("item", "UIMDropdownItem"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4DropdownMenu("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimDropdownMenu")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"DropdownMenu");
 
 unittest {
-	// assert(UIMDropdownMenu == `<uim-dropdown-menu></uim-dropdown-menu>`);
+	assert(Assert(UIMDropdownMenu, `<uim-dropdown-menu></uim-dropdown-menu>`));
 }

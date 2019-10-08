@@ -5,17 +5,17 @@ import uim.components;
 class DUIMModalTitle : DUIMComponent {
 	mixin(H5This!("uim-modal-title"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4ModalTitle("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimModalTitle")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"ModalTitle");
 
 unittest {
-	// assert(UIMModalTitle == `<uim-modal-title></uim-modal-title>`);
+	assert(Assert(UIMModalTitle, `<uim-modal-title></uim-modal-title>`));
 }

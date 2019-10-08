@@ -7,17 +7,17 @@ class DUIMProgress : DUIMComponent {
 	override public void _init() {
 		super._init;
 	}
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4Progress("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimProgress")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"Progress");
 
 unittest {
-	// assert(UIMProgress == `<uim-progress></uim-progress>`);
+	assert(Assert(UIMProgress, `<uim-progress></uim-progress>`));
 }

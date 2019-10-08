@@ -5,17 +5,17 @@ import uim.components;
 class DUIMInputPassword : DUIMComponent {
 	mixin(H5This!("uim-input-password"));
 	
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4InputPassword();
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimInputPassword")
-		.template_(_templateObj);
+		;
 	}	
 }
 mixin(UIMShort!("InputPassword"));
 
 unittest {
-	// assert(UIMInputPassword == "<uim-input-password></uim-input-password>");		
+	assert(Assert(UIMInputPassword, "<uim-input-password></uim-input-password>"));		
 }

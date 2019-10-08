@@ -10,5 +10,5 @@ class DUIMInputGroupPrepend : DUIMComponent {
 mixin(UIMShort!"InputGroupPrepend");
 
 unittest {
-	// assert(UIMInputGroupPrepend == `<uim-input-group-prepend></uim-input-group-prepend>`);
+	assert(Assert(UIMInputGroupPrepend, `<uim-input-group-prepend></uim-input-group-prepend>`));
 }

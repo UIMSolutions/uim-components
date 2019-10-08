@@ -8,13 +8,13 @@ class DUIMModalHeader : DUIMComponent {
 		super._init;
 	}
 	
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4ModalHeader("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimModalHeader")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"ModalHeader");
@@ -22,5 +22,5 @@ mixin(UIMShort!"ModalHeader");
 unittest {
 	
 	
-	// assert(UIMModalHeader == `<div class="modal-header"></div>`);
+	assert(Assert(UIMModalHeader, `<div class="modal-header"></div>`));
 }

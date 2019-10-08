@@ -7,11 +7,11 @@ class DUIMInputGroup : DUIMComponent {
 	
 	O size(this O)(string sizeName) { return this.classes("input-group-"~sizeName); }
 	unittest {
-		// assert(UIMInputGroup.size("sm") == `<div class="input-group input-group-sm"></div>`);
+		assert(Assert(UIMInputGroup.size("sm"), `<uim-input-group class="input-group-sm"></uim-input-group>`));
 	}
 }
 mixin(UIMShort!"InputGroup");
 
 unittest {
-	// assert(UIMInputGroup == `<uim-input-group></uim-input-group>`);
+	assert(Assert(UIMInputGroup, `<uim-input-group></uim-input-group>`));
 }

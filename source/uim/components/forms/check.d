@@ -14,5 +14,5 @@ class DUIMFormCheck : DUIMComponent {
 mixin(UIMShort!"FormCheck");
 
 unittest {
-	// assert(UIMFormCheck == `<uim-form-check></uim-form-check>`);
+	assert(Assert(UIMFormCheck, `<uim-form-check></uim-form-check>`));
 }

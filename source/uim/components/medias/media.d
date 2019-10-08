@@ -5,17 +5,17 @@ import uim.components;
 class DUIMMedia : DUIMComponent {
 	mixin(H5This!("uim-media"));
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4Media("<slot />");
-		return super.toVueComponent		
+		return super.toVUEComponent		
 		.name("UimMedia")
-		.template_(_templateObj);
+		;
 	}
 }
 mixin(UIMShort!"Media");
 
 unittest {
-	// assert(UIMMedia == `<uim-media></uim-media>`);
+	assert(Assert(UIMMedia, `<uim-media></uim-media>`));
 }

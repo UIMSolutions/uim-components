@@ -14,17 +14,16 @@ class DUIMInputSelect : DUIMComponent {
 		return cast(O)this;	
 	}
 
-	override DVUEComponent toVueComponent() {
+	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4InputButton("slot");
-		return super.toVueComponent		
-		.name("UimInputButton")
-		.template_(_templateObj);
+		_templateObj = BS4InputSelect("<slot />");
+		return super.toVUEComponent		
+		.name("UimInputSelect");
 	}
 }
 mixin(UIMShort!("InputSelect"));
 
 unittest {
-	// assert(UIMInputSelect == "<uim-input-select></uim-input-select>");	
+	assert(Assert(UIMInputSelect, "<uim-input-select></uim-input-select>"));	
 }
