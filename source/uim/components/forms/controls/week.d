@@ -10,7 +10,7 @@ class DUIMInputWeek : DUIMComponent {
 		
 		_templateObj =  BS4InputWeek();
 		return super.toVUEComponent		
-		.name("UimInputWeek");
+		.name("uim-input-week");
 	}	
 }
 mixin(UIMShort!("InputWeek"));

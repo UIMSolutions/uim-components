@@ -10,7 +10,7 @@ class DUIMJumbotron : DUIMComponent {
 		
 		_templateObj =  BS4Jumbotron("<slot />");
 		return super.toVUEComponent		
-		.name("UimJumbotron");
+		.name("uim-jumbotron");
 	}
 }
 mixin(UIMShort!"Jumbotron");

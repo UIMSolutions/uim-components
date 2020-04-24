@@ -10,7 +10,7 @@ class DUIMCustomCheckbox : DUIMComponent {
 		
 		_templateObj =  BS4CustomCheckbox();
 		return super.toVUEComponent		
-		.name("UimCustomCheckbox")
+		.name("uim-custom-checkbox")
 		;
 	}
 }

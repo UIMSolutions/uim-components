@@ -2,20 +2,20 @@
 
 import uim.components; 
 
-class DUIMInputRadio : DUIMComponent {
-	mixin(H5This!("uim-input-radio"));
+class DUIMRadio : DUIMComponent {
+	mixin(H5This!("uim-radio"));
 
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4InputRadio();
+		_templateObj =  BS4Radio();
 		return super.toVUEComponent		
-		.name("UimInputRadio")
+		.name("uim-radio")
 		;
 	}	
 }
-mixin(UIMShort!("InputRadio"));
+mixin(UIMShort!("Radio"));
 
 unittest {
-	assert(Assert(UIMInputRadio, "<uim-input-radio></uim-input-radio>"));	
+	assert(Assert(UIMRadio, "<uim-radio></uim-radio>"));	
 }

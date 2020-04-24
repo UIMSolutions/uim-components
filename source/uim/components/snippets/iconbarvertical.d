@@ -31,12 +31,12 @@ class DUIMIconbarVertical : DH5Obj {
     if (active) myLink.classes("active");
     return this.content(myLink);
   }
-  override string css() {
-    return 
-`.icon-bar-vertical{width:90px;background-color:`~_backgroundColor~`;}`~
-`.icon-bar-vertical a{display:block;text-align:center;padding:16px;transition:all 0.3s ease;color:`~_textColor~`;font-size:`~_fontSize~`;}`~
-`.icon-bar-vertical a:hover{background-color:`~_hoverColor~`;}`~
-`.icon-bar-vertical a.active{background-color:`~_activeColor~`;}`;
+  override DCSSRules css() {
+    return CSSRules.rules(
+[".icon-bar-vertical": ["width":"90px", "background-color":_backgroundColor],
+".icon-bar-vertical a": ["display":"block", "text-align":"center", "padding":"16px", "transition":"all 0.3s ease","color":_textColor, "font-size":_fontSize],
+".icon-bar-vertical a:hover": ["background-color":_hoverColor],
+".icon-bar-vertical a.active": ["background-color":_activeColor]]);
   }
 
   unittest {

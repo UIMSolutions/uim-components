@@ -10,7 +10,7 @@ class DUIMInputRange : DUIMComponent {
 		
 		_templateObj =  BS4InputRange();
 		return super.toVUEComponent		
-		.name("UimInputRange");
+		.name("uim-input-range");
 	}	
 }
 mixin(UIMShort!("InputRange"));

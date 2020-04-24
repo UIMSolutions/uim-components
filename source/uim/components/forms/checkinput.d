@@ -10,7 +10,7 @@ class DUIMFormCheckInput : DUIMComponent {
 		
 		_templateObj =  BS4FormCheckInput();
 		return super.toVUEComponent		
-		.name("UimFormCheckInput")
+		.name("uim-form-checkInput")
 		;
 	}
 }

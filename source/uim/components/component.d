@@ -31,27 +31,33 @@ class DUIMComponent : DH5Obj {
 	}
 
 	/// Root obj for template
-	DH5Obj _templateObj = H5Div;
+	DH5Obj _templateObj = H5Div(H5Slot);
 	O templateObj(this O)(DH5Obj anObj) { _templateObj = anObj; return cast(O)this; } 
 
 	/// Export component to VueComponent 
+	/// _vueComponent - cache for toVUEComponent
 	protected DVUEComponent _vueComponent;
 	DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_vueComponent = VUEComponent
 		.computed("classes", `return [];`)
-		.computed("styles", `return [];`)
-		.template_(_templateObj.toHTML);
-		
+		.computed("styles", `return [];`);
+
+		if (_templateObj) {
+			_templateObj.attributes([":class":"this.classes", ":style":"this.styles"]);
+			_vueComponent.template_(_templateObj.toHTML);
+		}
 		return _vueComponent;
 	}
 
+	/// toString - export to string
 	override string toString() {
 		return super.toString;
 	} 
 }
 mixin(UIMShort!"Component");
+
 unittest {
 	assert(Assert(UIMComponent, "<uim-div></uim-div>"));
 }

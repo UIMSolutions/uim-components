@@ -10,7 +10,7 @@ class DUIMInputTel : DUIMComponent {
 		
 		_templateObj =  BS4InputTel();
 		return super.toVUEComponent		
-		.name("UimInputTel");
+		.name("uim-input-tel");
 	}	
 }
 mixin(UIMShort!("InputTel"));

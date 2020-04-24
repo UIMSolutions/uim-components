@@ -10,7 +10,7 @@ class DUIMDropdownDivider : DUIMComponent {
 		
 		_templateObj =  BS4DropdownDivider("<slot />");
 		return super.toVUEComponent		
-		.name("UimDropdownDivider")
+		.name("uim-dropdown-divider")
 		;
 	}
 }

@@ -10,7 +10,7 @@ class DUIMInputFile : DUIMComponent {
 		
 		_templateObj =  BS4InputFile();
 		return super.toVUEComponent		
-		.name("UimInputFile")
+		.name("uim-input-file")
 		;
 	}
 }

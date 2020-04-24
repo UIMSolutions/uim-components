@@ -10,7 +10,7 @@ class DUIMInputImage : DUIMComponent {
 		
 		_templateObj =  BS4InputImage();
 		return super.toVUEComponent		
-		.name("UimInputImage")
+		.name("uim-input-image")
 		;
 	}
 }

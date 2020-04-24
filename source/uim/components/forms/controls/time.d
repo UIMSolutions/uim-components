@@ -10,7 +10,7 @@ class DUIMInputTime : DUIMComponent {
 		
 		_templateObj =  BS4InputTime();
 		return super.toVUEComponent		
-		.name("UimInputTime");
+		.name("uim-input-time");
 	}	
 }
 mixin(UIMShort!("InputTime"));

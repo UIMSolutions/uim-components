@@ -14,7 +14,7 @@ class DUIMForm : DUIMComponent {
 		
 		_templateObj =  BS4Form("<slot />");
 		return super.toVUEComponent		
-		.name("UimForm")
+		.name("uim-form")
 		;
 	}
 }

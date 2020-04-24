@@ -10,7 +10,7 @@ class DUIMInputReset : DUIMComponent {
 		
 		_templateObj =  BS4InputReset();
 		return super.toVUEComponent		
-		.name("UimInputReset");
+		.name("uim-input-reset");
 	}	
 }
 mixin(UIMShort!("InputReset"));

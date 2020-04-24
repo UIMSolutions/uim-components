@@ -10,7 +10,7 @@ class DUIMDropdownLink : DUIMComponent {
 		
 		_templateObj =  BS4DropdownLink("<slot />");
 		return super.toVUEComponent		
-		.name("UimDropdownLink")
+		.name("uim-dropdown-link")
 		;
 	}
 }

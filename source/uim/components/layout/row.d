@@ -10,7 +10,7 @@ class DUIMRow : DUIMComponent {
 		
 		_templateObj =  BS4Row("<slot />");
 		return super.toVUEComponent		
-		.name("UimRow");
+		.name("uim-row");
 	}
 }
 mixin(UIMShort!"Row");

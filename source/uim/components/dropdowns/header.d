@@ -10,7 +10,7 @@ class DUIMDropdownHeader : DUIMComponent {
 		
 		_templateObj =  BS4DropdownHeader("<slot />");
 		return super.toVUEComponent		
-		.name("UimDropdownHeader")
+		.name("uim-dropdown-header")
 		;
 	}
 }

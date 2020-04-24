@@ -10,7 +10,7 @@ class DUIMInputNumber : DUIMComponent {
 		
 		_templateObj =  BS4InputButton();
 		return super.toVUEComponent		
-		.name("UimInputButton")
+		.name("uim-input-number")
 		;
 	}
 }

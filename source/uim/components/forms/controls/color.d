@@ -10,7 +10,7 @@ class DUIMInputColor : DUIMComponent {
 		
 		_templateObj =  BS4InputColor();
 		return super.toVUEComponent		
-		.name("UimInputColor")
+		.name("uim-input-color")
 		;
 	}
 }

@@ -19,7 +19,7 @@ class DUIMInputSelect : DUIMComponent {
 		
 		_templateObj = BS4InputSelect("<slot />");
 		return super.toVUEComponent		
-		.name("UimInputSelect");
+		.name("uim-input-select");
 	}
 }
 mixin(UIMShort!("InputSelect"));

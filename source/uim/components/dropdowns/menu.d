@@ -14,8 +14,7 @@ class DUIMDropdownMenu : DUIMComponent {
 		
 		_templateObj =  BS4DropdownMenu("<slot />");
 		return super.toVUEComponent		
-		.name("UimDropdownMenu")
-		;
+		.name("uim-dropdown-menu");
 	}
 }
 mixin(UIMShort!"DropdownMenu");

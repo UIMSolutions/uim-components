@@ -10,7 +10,7 @@ class DUIMFormCheckLabel : DUIMComponent {
 		
 		_templateObj =  BS4FormCheckLabel("<slot />");
 		return super.toVUEComponent		
-		.name("UimFormCheckLabel")
+		.name("uim-form-CheckLabel")
 		;
 	}
 }

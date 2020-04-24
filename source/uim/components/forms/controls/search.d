@@ -10,7 +10,7 @@ class DUIMInputSearch : DUIMComponent {
 		
 		_templateObj =  BS4InputSearch();
 		return super.toVUEComponent		
-		.name("UimInputSearch");
+		.name("uim-input-search");
 	}
 }
 mixin(UIMShort!("InputSearch"));

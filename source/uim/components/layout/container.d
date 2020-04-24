@@ -15,7 +15,7 @@ class DUIMContainer : DUIMComponent {
 		
 		_templateObj =  BS4Container("<slot />");
 		return super.toVUEComponent		
-		.name("UimContainer");
+		.name("uim-container");
 	}
 }
 mixin(UIMShort!"Container");

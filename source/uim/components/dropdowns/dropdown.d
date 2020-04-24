@@ -13,7 +13,7 @@ class DUIMDropdown : DUIMComponent {
 		
 		_templateObj =  BS4Dropdown(_id, _classes, _attributes, "<slot />");
 		return super.toVUEComponent		
-		.name("UimDropdown")
+		.name("uim-dropdown")
 		;
 	}
 }

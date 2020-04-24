@@ -10,7 +10,7 @@ class DUIMFormText : DUIMComponent {
 		
 		_templateObj =  BS4FormText();
 		return super.toVUEComponent		
-		.name("UimFormText")
+		.name("uim-form-text")
 		;
 	}
 }

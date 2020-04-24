@@ -10,7 +10,7 @@ class DUIMInputText : DUIMComponent {
 		
 		_templateObj =  BS4InputText();
 		return super.toVUEComponent		
-		.name("UimInputText");
+		.name("uim-input-text");
 	}
 }
 mixin(UIMShort!("InputText"));

@@ -10,7 +10,7 @@ class DUIMInputEmail : DUIMComponent {
 		
 		_templateObj =  BS4InputEmail();
 		return super.toVUEComponent		
-		.name("UimInputEmail")
+		.name("uim-input-email")
 		;
 	}	
 }

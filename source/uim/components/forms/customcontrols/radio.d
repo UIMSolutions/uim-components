@@ -10,7 +10,7 @@ class DUIMCustomRadio : DUIMComponent {
 		
 		_templateObj =  BS4CustomRadio();
 		return super.toVUEComponent		
-		.name("UimCustomRadio")
+		.name("uim-custom-radio")
 		;
 	}
 }

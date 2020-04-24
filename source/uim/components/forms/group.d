@@ -47,7 +47,7 @@ class DUIMFormGroup : DUIMComponent {
 		
 		_templateObj =  BS4FormGroup("<slot />");
 		return super.toVUEComponent		
-		.name("UimFormGroup")
+		.name("uim-form-group")
 		;
 	}
 }

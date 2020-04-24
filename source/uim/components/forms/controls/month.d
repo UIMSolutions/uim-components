@@ -10,7 +10,7 @@ class DUIMInputMonth : DUIMComponent {
 		
 		_templateObj =  BS4InputMonth();
 		return super.toVUEComponent		
-		.name("UimInputMonth")
+		.name("uim-input-month")
 		;
 	}	
 }

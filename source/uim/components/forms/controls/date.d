@@ -10,7 +10,7 @@ class DUIMInputDate : DUIMComponent {
 		
 		_templateObj =  BS4InputDate();
 		return super.toVUEComponent		
-		.name("UimInputDate")
+		.name("uim-input-date")
 		;
 	}	
 }

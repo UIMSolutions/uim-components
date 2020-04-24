@@ -10,7 +10,7 @@ class DUIMInputUrl : DUIMComponent {
 		
 		_templateObj =  BS4InputUrl();
 		return super.toVUEComponent		
-		.name("UimInputUrl");
+		.name("uim-input-url");
 	}
 }
 mixin(UIMShort!("InputUrl"));

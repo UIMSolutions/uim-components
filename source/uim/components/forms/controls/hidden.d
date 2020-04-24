@@ -10,7 +10,7 @@ class DUIMInputHidden : DUIMComponent {
 		
 		_templateObj =  BS4InputHidden();
 		return super.toVUEComponent		
-		.name("UimInputHidden")
+		.name("uim-input-hidden")
 		;
 	}
 }

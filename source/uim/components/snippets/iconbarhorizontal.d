@@ -26,27 +26,25 @@ class DUIMIconbarHorizontal : DUIMComponent {
     if (active) myLink.classes("active");
     return this.content(myLink);
   }
-  override string css() {
-    return 
-`.icon-bar-horizontal{width: 100%;background-color:`~_backgroundColor~`;overflow: auto;}`~
-`.icon-bar-horizontal a{float:left;text-align:center;width:20%;padding:12px 0;transition:all 0.3s ease;color:`~_textColor~`;font-size:`~_fontSize~`;}`~
-`.icon-bar-horizontal a:hover{background-color:`~_hoverColor~`;}`~
-`.icon-bar-horizontal a.active{background-color:`~_activeColor~`;}`;
+  override DCSSRules css() {
+    return CSSRules.rules(
+      [
+        ".icon-bar-horizontal": ["width": "100%", "background-color":_backgroundColor, "overflow": "auto"],
+        ".icon-bar-horizontal a": ["float":"left", "text-align":"center", "width":"20%", "padding":"12px 0", "transition":"all 0.3s ease", "color":_textColor, "font-size":_fontSize],
+        ".icon-bar-horizontal a:hover": ["background-color":_hoverColor],
+        ".icon-bar-horizontal a.active": ["background-color":_activeColor]
+      ]);
   }
 
   unittest {
     assert(Assert(UIMIconbarHorizontal.icon("fa-home", "#", true).icon("fa-search"),
-    `<div class="icon-bar"><a class="active" href="#"><i class="fa fa-home"></i></a><a href="#"><i class="fa fa-search"></i></a></div>`));
+    `<uim-iconbar-horizontal><a class="active" href="#"><i class="fa fa-home"></i></a><a href="#"><i class="fa fa-search"></i></a></uim-iconbar-horizontal>`));
   }
 
   override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
-		_templateObj = H5Div(["icon-bar-horizontal"], "<slot />")
-    .css(`.icon-bar-horizontal{width: 100%;background-color:`~_backgroundColor~`;overflow: auto;}`~
-`.icon-bar-horizontal a{float:left;text-align:center;width:20%;padding:12px 0;transition:all 0.3s ease;color:`~_textColor~`;font-size:`~_fontSize~`;}`~
-`.icon-bar-horizontal a:hover{background-color:`~_hoverColor~`;}.icon-bar-horizontal a.active{background-color:`~_activeColor~`;}`);
-
+		_templateObj = H5Div(["icon-bar-horizontal"], "<slot />");
 		return super.toVUEComponent
 		.name("UIMIconbarHorizontal");
 	}
@@ -54,5 +52,5 @@ class DUIMIconbarHorizontal : DUIMComponent {
 mixin(UIMShort!"IconbarHorizontal");
 
 unittest {
-	assert(Assert(UIMIconbarHorizontal,`<div class="icon-bar-horizontal"></div>`));
+	assert(Assert(UIMIconbarHorizontal,`<uim-iconbar-horizontal></uim-iconbar-horizontal>`));
 }

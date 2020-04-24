@@ -2,15 +2,23 @@
 
 import uim.components;
 
-class DUIMTogglelink : DUIMComponent {
-	mixin(H5This!("uim-dropdown-toggle-link"));
+class DUIMDropdownTogglelink : DUIMComponent {
+	mixin(H5This!("uim-dropdown-togglelink"));
 
 	unittest {
-		assert(Assert(UIMTogglelink, `<uim-dropdown-toggle-link></uim-dropdown-toggle-link>`));
-		assert(Assert(UIMTogglelink.id("id"), `<uim-dropdown-toggle-link id="id"></uim-dropdown-toggle-link>`));
+		assert(Assert(UIMDropdownTogglelink, `<uim-dropdown-togglelink></uim-dropdown-togglelink>`));
+		assert(Assert(UIMDropdownTogglelink.id("id"), `<uim-dropdown-togglelink id="id"></uim-dropdown-togglelink>`));
+	}
+
+	override DVUEComponent toVUEComponent() {
+		if (_vueComponent) return _vueComponent;
+		
+		_templateObj =  BS4DropdownTogglelink("<slot />");
+		return super.toVUEComponent		
+		.name("uim-dropdown-togglelink");
 	}
 }
-mixin(UIMShort!"Togglelink");
+mixin(UIMShort!"DropdownTogglelink");
 
 unittest {
 }
