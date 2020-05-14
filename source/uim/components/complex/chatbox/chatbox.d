@@ -15,5 +15,5 @@ class DUIMChatbox : DUIMComponent {
 }
 mixin(UIMShort!"Chatbox");
 unittest {
-	assert(Assert(UIMMail, `<uim-chatbox></uim-chatbox>`));
+	assert(Assert(UIMChatbox, `<uim-chatbox></uim-chatbox>`));
 }

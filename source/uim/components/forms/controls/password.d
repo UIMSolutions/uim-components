@@ -3,7 +3,7 @@
 import uim.components; 
 
 class DUIMPassword : DUIMComponent {
-	mixin(H5This!("uim-assword"));
+	mixin(H5This!("uim-password"));
 	
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;

@@ -5,11 +5,6 @@ import uim.components;
 class DUIMIconbarVertical : DH5Obj {
 	mixin(H5This!"uim-iconbar-vertical");
 
-  override void _init() {
-    super._init;
-    this.classes("icon-bar-vertical");
-  }
-
   string _backgroundColor = "#555";
   O backgroundColor(this O)(string aColor) { _backgroundColor = aColor; return cast(O)this; }
 
@@ -40,9 +35,9 @@ class DUIMIconbarVertical : DH5Obj {
   }
 
   unittest {
-    assert(Assert(UIMIconbarVertical.icon("fa-home", "#", true).icon("fa-search"),
+/*    assert(Assert(UIMIconbarVertical.icon("fa-home", "#", true).icon("fa-search"),
     `<uim-iconbar-vertical><a class="active" href="#"><i class="fa fa-home"></i></a><a href="#"><i class="fa fa-search"></i></a></uim-iconbar-vertical>`));
-  }
+*/  }
 }
 mixin(UIMShort!"IconbarVertical");
 

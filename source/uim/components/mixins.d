@@ -99,5 +99,5 @@ template UIMThis(string bsName, string classes = null, string attributes = null)
 }
 
 template UIMShort(string name) {		
-	const char[] UIMShort = h5Methods("auto UIM"~name, "new DUIM"~name);
+	const char[] UIMShort = h5Methods("auto UIM"~name, "return new DUIM"~name);
 }

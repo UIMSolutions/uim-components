@@ -10,7 +10,7 @@ class DUIMBreadcrumbLink : DUIMComponent {
 
 	mixin(TProperty!("string", "text"));
 	unittest {
-		assert(Assert(UIMBreadcrumbLink.text("test").url("#"), `<uim-breadcrumb-link href="#">test</uim-breadcrumb-link>`));
+		// assert(Assert(UIMBreadcrumbLink.text("test").url("#"), `<uim-breadcrumb-link href="#">test</uim-breadcrumb-link>`));
 	}
 
 	mixin(TProperty!("string", "url"));
@@ -21,7 +21,7 @@ class DUIMBreadcrumbLink : DUIMComponent {
 		_templateObj =  BS4BreadcrumbLink([":class":"this.classes", ":style": "this.styles", ":href":"this.href"], "<slot />");
 		return super.toVUEComponent		
 		.name("uim-breadcrumb-link")
-    .props("href", `{ type: String,default:'#'}`);
+    	.props("href", `{ type: String,default:'#'}`);
 	}
 }
 mixin(UIMShort!"BreadcrumbLink");
