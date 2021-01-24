@@ -8,7 +8,7 @@ class DUIMTableHeader : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4TableHeader("<slot />");
+		_templateObj =  BS5TableHeader("<slot />");
 		return super.toVUEComponent		
 		.name("uim-TableHeader")
 		;

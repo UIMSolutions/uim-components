@@ -22,10 +22,10 @@ class DUIMMenuMega : DUIMComponent {
               H5A("megamenu", ["nav-link", "dropdown-toggle", "font-weight-bold", "text-uppercase"], 
               ["href":"", "data-toggle":"dropdown", "aria-haspopup":"true", "aria-expanded":"false"], "Mega Menu"),
               H5Div(["dropdown-menu", "border-0", "p-0", "m-0"], ["aria-labelledby":"megammenu"],
-                BS4Container.row(["bg-white", "rounded-0", "m-0", "shadow-sm"],
+                BS5Container.row(["bg-white", "rounded-0", "m-0", "shadow-sm"],
                   H5Div(["col-lg-7", "col-xl-8"],
                     H5Div(["p-4"],
-                      BS4Row(
+                      BS5Row(
                         H5Div(["col-lg-6", "mb-4"]).vFor("group in this.groups", "group.id")(
                           H5H6(["font-weight-bold", "text-uppercase"], "{{group.title}}"),
                           H5Ul(["list-unstyled"])

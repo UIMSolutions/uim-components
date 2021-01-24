@@ -8,7 +8,7 @@ class DUIMInputRange : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4InputRange();
+		_templateObj =  BS5InputRange();
 		return super.toVUEComponent		
 		.name("uim-input-range");
 	}	

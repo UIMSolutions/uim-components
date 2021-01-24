@@ -12,7 +12,7 @@ class DUIMNavbarToggler : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4NavbarToggler("<slot />");
+		_templateObj =  BS5NavbarToggler("<slot />");
 		return super.toVUEComponent		
 		.name("uim-navbar-toggler")
 		;

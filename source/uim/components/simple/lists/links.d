@@ -12,7 +12,7 @@ class DUIMListLinks : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4ListLinks("<slot />");
+		_templateObj =  BS5ListLinks("<slot />");
 		return super.toVUEComponent		
 		.name("uim-list-links")
 		;

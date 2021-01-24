@@ -8,7 +8,7 @@ class DUIMListInline : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4ListInline("<slot />");
+		_templateObj =  BS5ListInline("<slot />");
 		return super.toVUEComponent		
 		.name("uim-list-inline");
 	}

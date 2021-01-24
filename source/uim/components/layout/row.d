@@ -8,7 +8,7 @@ class DUIMRow : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4Row("<slot />");
+		_templateObj =  BS5Row("<slot />");
 		return super.toVUEComponent		
 		.name("uim-row");
 	}

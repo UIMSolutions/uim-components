@@ -9,14 +9,14 @@ class DUIMCalendarWeek : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj = BS4CardColumns(["uim-calendar-week"], 
-			BS4Card(["border"], ["v-for":"weekday, index in this.weekdays"])
+		_templateObj = BS5CardColumns(["uim-calendar-week"], 
+			BS5Card(["border"], ["v-for":"weekday, index in this.weekdays"])
 				.header(H5H2(H5String("{{weekName(start.addDays(index))}}"), H5Small(["ml-1"], "{{dayString(start.addDays(index))}}")))
-				(BS4ListLinks(["list-group-flush"]).link([":href":"this.rootPath+'/event/'+event.id", "v-for":"event in eventsOfWeek(start.addDays(index))", ":key":"event.id"], 
+				(BS5ListLinks(["list-group-flush"]).link([":href":"this.rootPath+'/event/'+event.id", "v-for":"event in eventsOfWeek(start.addDays(index))", ":key":"event.id"], 
 					H5Span(["ml-1"], "{{event.title}}")
 					)
 				)
-				.footer(BS4ButtonGroup(["btn-group-sm", "w-100"], BS4ButtonLink([":href":"'/events'"], `<i class="fas fa-plus-circle"></i> Neuer Eintrag`))
+				.footer(BS5ButtonGroup(["btn-group-sm", "w-100"], BS5ButtonLink([":href":"'/events'"], `<i class="fas fa-plus-circle"></i> Neuer Eintrag`))
 					)
 		);
 		return super.toVUEComponent		

@@ -13,7 +13,7 @@ class DUIMContainer : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4Container("<slot />");
+		_templateObj =  BS5Container("<slot />");
 		return super.toVUEComponent		
 		.name("uim-container");
 	}

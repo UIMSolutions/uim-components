@@ -8,7 +8,7 @@ class DUIMInputColor : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4InputColor();
+		_templateObj =  BS5InputColor();
 		return super.toVUEComponent		
 		.name("uim-input-color")
 		;

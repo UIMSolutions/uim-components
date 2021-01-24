@@ -8,7 +8,7 @@ class DUIMInputSubmit : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4InputButton();
+		_templateObj =  BS5InputButton();
 		return super.toVUEComponent		
 		.name("uim-input-button");
 	}

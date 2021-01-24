@@ -45,7 +45,7 @@ class DUIMFormGroup : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4FormGroup("<slot />");
+		_templateObj =  BS5FormGroup("<slot />");
 		return super.toVUEComponent		
 		.name("uim-form-group")
 		;

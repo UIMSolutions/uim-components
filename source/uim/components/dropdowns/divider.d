@@ -8,7 +8,7 @@ class DUIMDropdownDivider : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4DropdownDivider("<slot />");
+		_templateObj =  BS5DropdownDivider("<slot />");
 		return super.toVUEComponent		
 		.name("uim-dropdown-divider")
 		;

@@ -19,7 +19,7 @@ class DUIMButtonObj : DUIMComponent {
 	mixin(TProperty!("string", "role"));
 	mixin(TProperty!("string", "sizeMode"));
 
-	override string toHTML() {
+/*	override string toHTML() {
 		if (colorMode) {
 			if (outline) _classes ~= "btn-outline-"~colorMode;
 			else _classes ~= "btn-"~colorMode;
@@ -31,7 +31,7 @@ class DUIMButtonObj : DUIMComponent {
 		if (dataToggle) _attributes["data-toggle"]="button"; else _attributes.remove("data-toggle");
 
 		return super.toHTML;
-	}
+	} */ 
 }
 mixin(UIMShort!"ButtonObj");
 

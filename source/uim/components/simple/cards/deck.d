@@ -8,7 +8,7 @@ class DUIMCardDeck : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4CardDeck("<slot />");
+		_templateObj =  BS5CardDeck("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card-deck")
 		;

@@ -12,7 +12,7 @@ class DUIMForm : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4Form("<slot />");
+		_templateObj =  BS5Form("<slot />");
 		return super.toVUEComponent		
 		.name("uim-form")
 		;

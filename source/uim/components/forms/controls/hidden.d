@@ -8,7 +8,7 @@ class DUIMInputHidden : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4InputHidden();
+		_templateObj =  BS5InputHidden();
 		return super.toVUEComponent		
 		.name("uim-input-hidden")
 		;

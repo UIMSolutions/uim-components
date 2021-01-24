@@ -8,7 +8,7 @@ class DUIMInputUrl : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4InputUrl();
+		_templateObj =  BS5InputUrl();
 		return super.toVUEComponent		
 		.name("uim-input-url");
 	}

@@ -11,7 +11,7 @@ class DUIMButtonToolbar : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
-		_templateObj = BS4ButtonToolbar("<slot />");
+		_templateObj = BS5ButtonToolbar("<slot />");
 		return super.toVUEComponent		
 		.name("uim-button-toolbar")
     .computed("classes", `return [""]`);

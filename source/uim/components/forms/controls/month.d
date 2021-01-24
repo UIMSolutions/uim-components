@@ -8,7 +8,7 @@ class DUIMInputMonth : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4InputMonth();
+		_templateObj =  BS5InputMonth();
 		return super.toVUEComponent		
 		.name("uim-input-month")
 		;

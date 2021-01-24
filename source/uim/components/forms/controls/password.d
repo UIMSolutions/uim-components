@@ -8,7 +8,7 @@ class DUIMPassword : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4Password();
+		_templateObj =  BS5Password();
 		return super.toVUEComponent		
 		.name("uim-password")
 		;

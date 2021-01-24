@@ -21,7 +21,7 @@ class DUIMButtonGroup : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
-		_templateObj =  BS4ButtonGroup("<slot />");
+		_templateObj =  BS5ButtonGroup("<slot />");
 		return super.toVUEComponent
 		.name("uim-button-group")
     .props("orientation", `{ type: String,default:"horizontal", validator: value => ["horizontal", "vertical"].indexOf(value) >= 0}`)

@@ -8,7 +8,7 @@ class DUIMInputWeek : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4InputWeek();
+		_templateObj =  BS5InputWeek();
 		return super.toVUEComponent		
 		.name("uim-input-week");
 	}	

@@ -17,7 +17,7 @@ class DUIMProgressBar : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4ProgressBar("<slot />");
+		_templateObj =  BS5ProgressBar("<slot />");
 		return super.toVUEComponent		
 		.name("uim-progress-bar")
 		;

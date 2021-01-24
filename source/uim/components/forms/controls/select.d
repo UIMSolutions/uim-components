@@ -17,7 +17,7 @@ class DUIMInputSelect : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj = BS4InputSelect("<slot />");
+		_templateObj = BS5InputSelect("<slot />");
 		return super.toVUEComponent		
 		.name("uim-input-select");
 	}

@@ -8,7 +8,7 @@ class DUIMCardText : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj = BS4CardText("<slot />");
+		_templateObj = BS5CardText("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card-text");
 	}

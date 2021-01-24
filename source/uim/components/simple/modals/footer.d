@@ -8,7 +8,7 @@ class DUIMModalFooter : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4ModalFooter("<slot />");
+		_templateObj =  BS5ModalFooter("<slot />");
 		return super.toVUEComponent		
 		.name("uim-modal-footer")
 		;

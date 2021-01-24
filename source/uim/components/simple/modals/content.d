@@ -12,7 +12,7 @@ class DUIMModalContent : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4ModalContent("<slot />");
+		_templateObj =  BS5ModalContent("<slot />");
 		return super.toVUEComponent		
 		.name("uim-modal-content")
 		;

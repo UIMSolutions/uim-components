@@ -11,7 +11,7 @@ class DUIMNavItem : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4NavItem("<slot />");
+		_templateObj =  BS5NavItem("<slot />");
 		return super.toVUEComponent		
 		.name("uim-nav-item")
 		;

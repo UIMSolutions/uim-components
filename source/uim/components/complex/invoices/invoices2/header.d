@@ -8,7 +8,7 @@ class DUIMInvoiceHeader : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj = BS4TableHeader(["uim-invoice-header"]).row(H5Slot);
+		_templateObj = BS5TableHeader(["uim-invoice-header"]).row(H5Slot);
 		return super.toVUEComponent		
 		.name("uim-invoice-header");
 	}

@@ -8,7 +8,7 @@ class DUIMInvoiceBody : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj = BS4TableBody(["uim-invoice-body"], "<slot />");
+		_templateObj = BS5TableBody(["uim-invoice-body"], "<slot />");
 		return super.toVUEComponent		
 		.name("uim-invoice-body");
 	}

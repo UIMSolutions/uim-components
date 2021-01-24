@@ -8,7 +8,7 @@ class DUIMCalendarEvent : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj = BS4ListItem(["uim-calendar-event"], 
+		_templateObj = BS5ListItem(["uim-calendar-event"], 
                     H5Div(["d-flex", "w-100", "justify-content-between"], 
                       H5H5(["mb-1"], "{{event.title}}"),
                       H5Small("{{event.date}}")

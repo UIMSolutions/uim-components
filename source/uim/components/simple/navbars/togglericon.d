@@ -7,7 +7,7 @@ class DUIMNavbarTogglericon : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4NavbarTogglerIcon("<slot />");
+		_templateObj =  BS5NavbarTogglerIcon("<slot />");
 		return super.toVUEComponent		
 		.name("uim-navbar-togglericon")
 		;

@@ -23,7 +23,7 @@ class DUIMNavbar : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4Navbar("<slot />");
+		_templateObj =  BS5Navbar("<slot />");
 		return super.toVUEComponent		
 		.name("uim-navbar")
 		;

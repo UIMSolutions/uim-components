@@ -13,7 +13,7 @@ class DUIMBadge : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4Badge("<slot />");
+		_templateObj =  BS5Badge("<slot />");
 		return super.toVUEComponent
 		.name("uim-badge")
 		.props("color", `{ type: String,default:"none", validator: value => ["none","primary", "secondary", "success", "danger", "warning", "info", "light", "dark"].indexOf(value) >= 0}`)

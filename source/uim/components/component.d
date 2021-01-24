@@ -31,7 +31,7 @@ class DUIMComponent : DH5Obj {
 	}
 
 	/// Root obj for template
-	DH5Obj _templateObj = H5Div(H5Slot);
+	DH5Obj _templateObj = H5Div(new DH5Slot);
 	O templateObj(this O)(DH5Obj anObj) { _templateObj = anObj; return cast(O)this; } 
 
 	auto toWeb() {
@@ -51,7 +51,7 @@ class DUIMComponent : DH5Obj {
 
 		if (_templateObj) {
 			_templateObj.attributes([":class":"this.classes", ":style":"this.styles"]);
-			_vueComponent.template_(_templateObj.toHTML);
+			// _vueComponent.template_(_templateObj.toHTML);
 		}
 		return _vueComponent;
 	}

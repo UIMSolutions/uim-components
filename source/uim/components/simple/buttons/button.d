@@ -7,7 +7,7 @@ class DUIMButton :DUIMComponent {
 
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
-		_templateObj =  BS4Button([":class":"this.classes", ":style":"this.styles", "@click":"click", ":aria-pressed":"this.active"], "<slot />");
+		_templateObj =  BS5Button([":class":"this.classes", ":style":"this.styles", "@click":"click", ":aria-pressed":"this.active"], "<slot />");
 		return super.toVUEComponent
 		.name("uim-button")
     .props("block", `{type:Boolean,default:false}`)

@@ -8,7 +8,7 @@ class DUIMInvoiceItems : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj = BS4Table(["uim-invoice-items"],
+		_templateObj = BS5Table(["uim-invoice-items"],
 			UIMInvoiceItem(["v-for":"item in this.items", ":key":"item.id", ":item":"item"]) 
 		);
 		return super.toVUEComponent		

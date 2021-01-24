@@ -19,7 +19,7 @@ class DUIMAlert : DUIMComponent {
 
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
-		_templateObj =  BS4Alert("<slot />");
+		_templateObj =  BS5Alert("<slot />");
 		return super.toVUEComponent
 		.name("uim-alert")
 		.props("color", "String", "'primary'")

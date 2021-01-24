@@ -10,7 +10,7 @@ class DUIMModalBody : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4ModalBody("<slot />");
+		_templateObj =  BS5ModalBody("<slot />");
 		return super.toVUEComponent		
 		.name("uim-modal-body")
 		;

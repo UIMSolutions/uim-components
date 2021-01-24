@@ -8,7 +8,7 @@ class DUIMCardColumns : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4CardColumns("<slot />");
+		_templateObj =  BS5CardColumns("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card-columns");
 	}

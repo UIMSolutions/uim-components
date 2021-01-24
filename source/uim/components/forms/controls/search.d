@@ -8,7 +8,7 @@ class DUIMInputSearch : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4InputSearch();
+		_templateObj =  BS5InputSearch();
 		return super.toVUEComponent		
 		.name("uim-input-search");
 	}

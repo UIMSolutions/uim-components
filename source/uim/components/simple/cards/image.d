@@ -8,7 +8,7 @@ class DUIMCardImage : DUIMComponent { // default top
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
-		_templateObj =  BS4CardImage("<slot />");
+		_templateObj =  BS5CardImage("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card-image")
     .props("position", `{type:String,default:"top",validator:value => ["top","bottom"].indexOf(value) >= 0}`)

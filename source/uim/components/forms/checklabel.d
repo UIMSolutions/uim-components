@@ -8,7 +8,7 @@ class DUIMFormCheckLabel : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4FormCheckLabel("<slot />");
+		_templateObj =  BS5FormCheckLabel("<slot />");
 		return super.toVUEComponent		
 		.name("uim-form-CheckLabel")
 		;

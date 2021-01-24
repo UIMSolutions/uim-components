@@ -8,7 +8,7 @@ class DUIMInputEmail : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4InputEmail();
+		_templateObj =  BS5InputEmail();
 		return super.toVUEComponent		
 		.name("uim-input-email")
 		;

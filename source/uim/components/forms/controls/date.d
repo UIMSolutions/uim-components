@@ -8,7 +8,7 @@ class DUIMInputDate : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4InputDate();
+		_templateObj =  BS5InputDate();
 		return super.toVUEComponent		
 		.name("uim-input-date")
 		;

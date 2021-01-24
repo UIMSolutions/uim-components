@@ -15,7 +15,7 @@ class DUIMPageItem : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4PageItem("<slot />");
+		_templateObj =  BS5PageItem("<slot />");
 		return super.toVUEComponent		
 		.name("uim-page-item")
 		;

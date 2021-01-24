@@ -18,7 +18,7 @@ class DUIMTabPane : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj = BS4TabPane("<slot />");
+		_templateObj = BS5TabPane("<slot />");
 		return super.toVUEComponent		
 		.name("uim-tab-pane");
 	}

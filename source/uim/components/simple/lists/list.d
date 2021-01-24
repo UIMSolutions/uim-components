@@ -11,7 +11,7 @@ class DUIMList : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4List("<slot />");
+		_templateObj =  BS5List("<slot />");
 		return super.toVUEComponent		
 		.name("uim-list")
 		;

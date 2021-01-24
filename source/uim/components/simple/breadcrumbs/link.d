@@ -18,7 +18,7 @@ class DUIMBreadcrumbLink : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
-		_templateObj =  BS4BreadcrumbLink([":class":"this.classes", ":style": "this.styles", ":href":"this.href"], "<slot />");
+		_templateObj =  BS5BreadcrumbLink([":class":"this.classes", ":style": "this.styles", ":href":"this.href"], "<slot />");
 		return super.toVUEComponent		
 		.name("uim-breadcrumb-link")
     	.props("href", `{ type: String,default:'#'}`);

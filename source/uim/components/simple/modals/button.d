@@ -15,7 +15,7 @@ class DUIMModalButton : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4ModalButton("<slot />");
+		_templateObj =  BS5ModalButton("<slot />");
 		return super.toVUEComponent		
 		.name("uim-modal-button")
 		;

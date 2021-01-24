@@ -8,7 +8,7 @@ class DUIMInputTel : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4InputTel();
+		_templateObj =  BS5InputTel();
 		return super.toVUEComponent		
 		.name("uim-input-tel");
 	}	

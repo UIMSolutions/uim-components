@@ -23,7 +23,7 @@ class DUIMInputTextarea : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4InputTextarea("<slot />");
+		_templateObj =  BS5InputTextarea("<slot />");
 		return super.toVUEComponent		
 		.name("uim-input-textarea");
 	}

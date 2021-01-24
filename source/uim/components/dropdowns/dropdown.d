@@ -11,7 +11,7 @@ class DUIMDropdown : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4Dropdown(_id, _classes, _attributes, "<slot />");
+		_templateObj =  BS5Dropdown(_id, _classes, _attributes, "<slot />");
 		return super.toVUEComponent		
 		.name("uim-dropdown")
 		;

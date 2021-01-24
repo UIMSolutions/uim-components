@@ -8,7 +8,7 @@ class DUIMCardBlock : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
-		_templateObj =  BS4CardBlock("<slot />");
+		_templateObj =  BS5CardBlock("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card-block");
 	}

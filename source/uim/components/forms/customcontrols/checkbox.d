@@ -8,7 +8,7 @@ class DUIMCustomCheckbox : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4CustomCheckbox();
+		_templateObj =  BS5CustomCheckbox();
 		return super.toVUEComponent		
 		.name("uim-custom-checkbox")
 		;

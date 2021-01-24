@@ -8,7 +8,7 @@ class DUIMCheckbox : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4Checkbox();
+		_templateObj =  BS5Checkbox();
 		return super.toVUEComponent		
 		.name("uim-checkbox")
 		;

@@ -27,7 +27,7 @@ class DUIMModalDialog : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4ModalDialog("<slot />");
+		_templateObj =  BS5ModalDialog("<slot />");
 		return super.toVUEComponent		
 		.name("uim-modal-dialog")
 		;

@@ -8,7 +8,7 @@ class DUIMDropdownLink : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4DropdownLink("<slot />");
+		_templateObj =  BS5DropdownLink("<slot />");
 		return super.toVUEComponent		
 		.name("uim-dropdown-link")
 		;

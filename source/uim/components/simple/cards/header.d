@@ -8,7 +8,7 @@ class DUIMCardHeader : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj = BS4CardHeader("<slot />");
+		_templateObj = BS5CardHeader("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card-header");
 	}

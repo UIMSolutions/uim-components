@@ -8,7 +8,7 @@ class DUIMInputText : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4InputText();
+		_templateObj =  BS5InputText();
 		return super.toVUEComponent		
 		.name("uim-input-text");
 	}

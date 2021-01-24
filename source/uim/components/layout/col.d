@@ -8,7 +8,7 @@ class DUIMCol : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4Col("<slot />");
+		_templateObj =  BS5Col("<slot />");
 		return super.toVUEComponent		
 		.name("uim-col");
 	}
@@ -16,5 +16,6 @@ class DUIMCol : DUIMComponent {
 mixin(UIMShort!"Col");
 
 unittest {
+	assert(UIMCol == `<uim-col></uim-col>`);
 	assert(Assert(UIMCol, `<uim-col></uim-col>`));
 }

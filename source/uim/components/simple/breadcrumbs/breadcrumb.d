@@ -12,7 +12,7 @@ class DUIMBreadcrumb : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4Breadcrumb("<slot />");
+		_templateObj =  BS5Breadcrumb("<slot />");
 		return super.toVUEComponent		
 		.name("uim-breadcrumb")
 		;

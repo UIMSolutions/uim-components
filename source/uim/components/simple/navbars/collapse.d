@@ -8,7 +8,7 @@ class DUIMNavbarCollapse : DUIMComponent {
 		override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4NavbarCollapse("<slot />");
+		_templateObj =  BS5NavbarCollapse("<slot />");
 		return super.toVUEComponent		
 		.name("uim-navbar-collapse")
 		;

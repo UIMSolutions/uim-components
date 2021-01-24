@@ -8,7 +8,7 @@ class DUIMCardBody : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4CardBody("<slot />");
+		_templateObj =  BS5CardBody("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card-body")
 		;

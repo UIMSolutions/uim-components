@@ -8,7 +8,7 @@ class DUIMInputImage : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4InputImage();
+		_templateObj =  BS5InputImage();
 		return super.toVUEComponent		
 		.name("uim-input-image")
 		;

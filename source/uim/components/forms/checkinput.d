@@ -8,7 +8,7 @@ class DUIMFormCheckInput : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4FormCheckInput();
+		_templateObj =  BS5FormCheckInput();
 		return super.toVUEComponent		
 		.name("uim-form-checkInput")
 		;

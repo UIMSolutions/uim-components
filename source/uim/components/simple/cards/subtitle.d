@@ -8,7 +8,7 @@ class DUIMCardSubtitle : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4CardSubtitle("<slot />");
+		_templateObj =  BS5CardSubtitle("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card-subtitle");
 	}

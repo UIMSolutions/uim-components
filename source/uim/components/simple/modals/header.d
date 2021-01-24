@@ -11,7 +11,7 @@ class DUIMModalHeader : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4ModalHeader("<slot />");
+		_templateObj =  BS5ModalHeader("<slot />");
 		return super.toVUEComponent		
 		.name("uim-modal-header")
 		;

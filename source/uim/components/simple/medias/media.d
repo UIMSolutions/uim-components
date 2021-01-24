@@ -8,7 +8,7 @@ class DUIMMedia : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4Media("<slot />");
+		_templateObj =  BS5Media("<slot />");
 		return super.toVUEComponent		
 		.name("uim-media")
 		;

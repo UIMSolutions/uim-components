@@ -3,12 +3,12 @@
 import uim.components;
 
 class DUIMDropdownButton : DUIMComponent {
-	mixin(H5This!("uim-dropdown-item"));
+	mixin(H5This!("uim-dropdown-button"));
 
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj = BS4DropdownButton([":class":"this.classes"], "<slot />");		
+		_templateObj = BS5DropdownButton([":class":"this.classes"], "<slot />");		
 		return super.toVUEComponent		
 			.name("uim-dropdown-button")
 			.props("active", `{type:Boolean,default:false}`)
@@ -18,12 +18,13 @@ class DUIMDropdownButton : DUIMComponent {
 				"active ? 'active':''",
 				"disabled ? 'disabled':''",
 				"color !== 'None'? 'btn-'+this.color:''",
-			].toJS~`;`)
-			;
+			].toJS~`;`);
 	}
 }
 mixin(UIMShort!"DropdownButton");
 
 unittest {
-	assert(Assert(UIMDropdownButton, `<uim-dropdown-item></uim-dropdown-item>`));
+	assert(Assert(UIMDropdownButton, `<uim-dropdown-button></uim-dropdown-button>`));
+	auto f = File("./public/js/"~"UIMDropdownButton".toLower~".js", "w"); // open for writing
+  f.write(UIMDropdownButton.toVUEComponent.toString);
 }

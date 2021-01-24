@@ -8,7 +8,7 @@ class DUIMFormText : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4FormText();
+		_templateObj =  BS5FormText();
 		return super.toVUEComponent		
 		.name("uim-form-text")
 		;

@@ -8,7 +8,7 @@ class DUIMCardDeckwrapper : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj = BS4CardDeckwrapper("<slot />");
+		_templateObj = BS5CardDeckwrapper("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card-deckwrapper");
 	}

@@ -7,7 +7,7 @@ class DUIMAlertLink : DUIMComponent {
 	
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
-		_templateObj =  BS4AlertLink([":class":"this.classes", ":style": "this.styles", ":href":"this.href"], "<slot />");
+		_templateObj =  BS5AlertLink([":class":"this.classes", ":style": "this.styles", ":href":"this.href"], "<slot />");
 		return super.toVUEComponent
     .name("uim-alert-link")
     .props("href", `{ type: String,default:'#'}`);

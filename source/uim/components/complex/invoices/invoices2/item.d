@@ -8,7 +8,7 @@ class DUIMInvoiceItem : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj = BS4TableRow(["uim-invoice-item"])
+		_templateObj = BS5TableRow(["uim-invoice-item"])
 			.cell("{{item.id}}")
 			.cell("{{item.group}}")
 			.cell("{{item.title}}")

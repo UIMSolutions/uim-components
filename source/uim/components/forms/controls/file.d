@@ -8,7 +8,7 @@ class DUIMInputFile : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4InputFile();
+		_templateObj =  BS5InputFile();
 		return super.toVUEComponent		
 		.name("uim-input-file")
 		;

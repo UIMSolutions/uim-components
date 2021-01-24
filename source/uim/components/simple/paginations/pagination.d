@@ -14,7 +14,7 @@ class DUIMPagination : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4Pagination("<slot />");
+		_templateObj =  BS5Pagination("<slot />");
 		return super.toVUEComponent		
 		.name("uim-pagination")
 		;

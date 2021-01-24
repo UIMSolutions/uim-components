@@ -29,7 +29,7 @@ class DUIMCard : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
-		_templateObj =  BS4Card("<slot />");
+		_templateObj =  BS5Card("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card");
 	}

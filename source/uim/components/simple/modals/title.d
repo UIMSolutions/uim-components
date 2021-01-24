@@ -8,7 +8,7 @@ class DUIMModalTitle : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4ModalTitle("<slot />");
+		_templateObj =  BS5ModalTitle("<slot />");
 		return super.toVUEComponent		
 		.name("uim-modal-title")
 		;

@@ -8,7 +8,7 @@ class DUIMCardFooter : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj = BS4CardFooter("<slot />");
+		_templateObj = BS5CardFooter("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card-footer");
 	}

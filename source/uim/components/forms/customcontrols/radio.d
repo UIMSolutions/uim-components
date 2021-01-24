@@ -8,7 +8,7 @@ class DUIMCustomRadio : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4CustomRadio();
+		_templateObj =  BS5CustomRadio();
 		return super.toVUEComponent		
 		.name("uim-custom-radio")
 		;

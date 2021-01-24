@@ -12,7 +12,7 @@ class DUIMTabContent : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4TabContent("<slot />");
+		_templateObj =  BS5TabContent("<slot />");
 		return super.toVUEComponent		
 		.name("uim-tab-content");
 	}
