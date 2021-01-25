@@ -3,7 +3,7 @@
 import uim.components;
 
 class DUIMCardDeckwrapper : DUIMComponent {
-	mixin(H5This!("uim-card-deck-wrapper"));
+	mixin(H5This!("uim-card-deckwrapper"));
 
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
@@ -16,7 +16,7 @@ class DUIMCardDeckwrapper : DUIMComponent {
 mixin(UIMShort!"CardDeckwrapper");
 
 unittest {
-	assert(Assert(UIMCardDeckwrapper, `<uim-card-deck-wrapper></uim-card-deckwrapper>`));
+	assert(Assert(UIMCardDeckwrapper, `<uim-card-deckwrapper></uim-card-deckwrapper>`));
 
 	auto f = File("./public/js/uim/components/basic/cards/deckwrapper.js", "w"); 
   f.write(UIMCardDeckwrapper.toVUEComponent.toString);

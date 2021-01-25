@@ -18,4 +18,7 @@ mixin(UIMShort!"TableCell");
 
 unittest {
 	assert(Assert(UIMTableCell, `<uim-table-cell></uim-table-cell>`));
+
+	auto f = File("./public/js/uim/components/basic/tables/cell.js", "w"); 
+  f.write(UIMTableCell.toVUEComponent.toString);
 }

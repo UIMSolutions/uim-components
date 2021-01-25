@@ -18,12 +18,12 @@ class DUIMCalendarEvent : DUIMComponent {
                   );
 		return super.toVUEComponent		
 		.name("uim-calendar-event")
-		.props("event", `{type:Object, default:null}`);
+		.props("event", `type:Object, default:null`);
 	}
 }
 mixin(UIMShort!"CalendarEvent");
 unittest {
 	assert(Assert(UIMCalendarEvent, `<uim-calendar-event></uim-calendar-event>`));
-	auto f = File("./public/js/uim/components/"~"CalendarEvent".toLower~".js", "w"); // open for writing
+	auto f = File("./public/js/uim/components/complex/"~"CalendarEvent".toLower~".js", "w"); // open for writing
   f.write(UIMCalendarEvent.toVUEComponent.toString);
 }

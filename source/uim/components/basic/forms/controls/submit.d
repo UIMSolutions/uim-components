@@ -17,4 +17,7 @@ mixin(UIMShort!("InputSubmit"));
 
 unittest {
 	assert(Assert(UIMInputSubmit, "<uim-input-submit></uim-input-submit>"));	
+
+	auto f = File("./public/js/uim/components/basic/forms/controls/submit.js", "w");
+  f.write(UIMInputSubmit.toVUEComponent.toString);
 }

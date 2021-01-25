@@ -19,6 +19,6 @@ mixin(UIMShort!"DropdownDivider");
 unittest {
 	assert(Assert(UIMDropdownDivider, `<uim-dropdown-divider></uim-dropdown-divider>`));
 		
-	auto f = File("./public/js/uim/components/basic/dropdowns/divider.js", "w"); // open for writing
+	auto f = File("./public/js/uim/components/basic/dropdowns/divider.js", "w"); 
   f.write(UIMDropdownDivider.toVUEComponent.toString);
 }

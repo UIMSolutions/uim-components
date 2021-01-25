@@ -17,4 +17,7 @@ mixin(UIMShort!("InputUrl"));
 
 unittest {
 	assert(Assert(UIMInputUrl, "<uim-input-url></uim-input-url>"));	
+
+	auto f = File("./public/js/uim/components/basic/forms/controls/url.js", "w");
+  f.write(UIMInputUrl.toVUEComponent.toString);
 }

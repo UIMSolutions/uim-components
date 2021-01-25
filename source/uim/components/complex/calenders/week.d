@@ -43,6 +43,6 @@ mixin(UIMShort!"CalendarWeek");
 unittest {
 	assert(Assert(UIMCalendarWeek, `<uim-calendar-week></uim-calendar-week>`));
 	
-	auto f = File("./public/js/uim/components/"~"CalendarWeek".toLower~".js", "w"); // open for writing
+	auto f = File("./public/js/uim/components/complex/"~"CalendarWeek".toLower~".js", "w"); // open for writing
   f.write(UIMCalendarWeek.toVUEComponent.toString);
 }

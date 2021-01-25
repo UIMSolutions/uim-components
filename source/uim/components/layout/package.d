@@ -1,8 +1,8 @@
-module uim.components.basic.layout;
+module uim.components.layout;
 
-public import uim.components.basic.layout.container;
-public import uim.components.basic.layout.col;
-public import uim.components.basic.layout.row;
+public import uim.components.layout.container;
+public import uim.components.layout.col;
+public import uim.components.layout.row;
 
 string layoutRegistration() {
   return 

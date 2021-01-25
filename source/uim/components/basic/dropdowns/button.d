@@ -26,6 +26,6 @@ mixin(UIMShort!"DropdownButton");
 unittest {
 	assert(Assert(UIMDropdownButton, `<uim-dropdown-button></uim-dropdown-button>`));
 
-	auto f = File("./public/js/uim/components/basic/dropdowns/button.js", "w"); // open for writing
+	auto f = File("./public/js/uim/components/basic/dropdowns/button.js", "w"); 
   f.write(UIMDropdownButton.toVUEComponent.toString);
 }

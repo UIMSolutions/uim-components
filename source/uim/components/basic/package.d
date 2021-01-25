@@ -8,7 +8,6 @@ public import uim.components.basic.cards;
 public import uim.components.basic.dropdowns;
 public import uim.components.basic.forms;
 public import uim.components.basic.jumbotrons;
-public import uim.components.basic.layout;
 public import uim.components.basic.lists;
 public import uim.components.basic.medias;
 public import uim.components.basic.modals;

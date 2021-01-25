@@ -49,4 +49,7 @@ mixin(UIMShort!"TabList");
 
 unittest {
 	assert(Assert(UIMTabList, `<uim-tab-list></uim-tab-list>`));
+
+	auto f = File("./public/js/uim/components/basic/tabs/list.js", "w"); 
+  f.write(UIMTabList.toVUEComponent.toString);
 }

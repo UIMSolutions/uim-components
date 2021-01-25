@@ -17,4 +17,7 @@ mixin(UIMShort!("InputTel"));
 
 unittest {
 	assert(Assert(UIMInputTel, "<uim-input-tel></uim-input-tel>"));	
+
+	auto f = File("./public/js/uim/components/basic/forms/controls/tel.js", "w");
+  f.write(UIMInputTel.toVUEComponent.toString);
 }

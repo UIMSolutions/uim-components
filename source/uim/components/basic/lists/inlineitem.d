@@ -22,6 +22,6 @@ mixin(UIMShort!"ListInlineItem");
 unittest {
 	assert(Assert(UIMListInlineItem, `<uim-list-inlineitem></uim-list-inlineitem>`));
 
-	auto f = File("./public/js/uim/components/basic/lists/inlineitem.js", "w"); // open for writing
+	auto f = File("./public/js/uim/components/basic/lists/inlineitem.js", "w"); 
   f.write(UIMListInlineItem.toVUEComponent.toString);
 }

@@ -18,4 +18,7 @@ mixin(UIMShort!"TableFooter");
 
 unittest {
 	assert(Assert(UIMTableFooter, `<uim-table-footer></uim-table-footer>`));
+
+	auto f = File("./public/js/uim/components/basic/tables/footer.js", "w"); 
+  f.write(UIMTableFooter.toVUEComponent.toString);
 }

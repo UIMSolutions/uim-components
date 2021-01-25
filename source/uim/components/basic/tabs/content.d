@@ -21,4 +21,7 @@ mixin(UIMShort!"TabContent");
 
 unittest {
 	assert(Assert(UIMTabContent, `<uim-tab-content></uim-tab-content>`));
+
+	auto f = File("./public/js/uim/components/basic/tabs/content.js", "w"); 
+  f.write(UIMTabContent.toVUEComponent.toString);
 }

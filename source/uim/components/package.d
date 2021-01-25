@@ -16,6 +16,7 @@ public import uim.components.demos;
 public import uim.components.snippets;
 public import uim.components.complex;
 public import uim.components.basic;
+public import uim.components.layout;
 
 public import uim.components.mixins;
 public import uim.components.component;
@@ -236,9 +237,35 @@ void 	uimComponentClasses(HTTPServerRequest req, HTTPServerResponse res) {
 
 unittest {
   auto f = File("./public/js/uimcomponents.js", "w"); // open for writing
+  f.write(UIMBadge.toVUEComponent.toString);
   f.write(UIMBlog.toVUEComponent.toString);
+  f.write(UIMBreadcrumb.toVUEComponent.toString);
+  f.write(UIMButton.toVUEComponent.toString);
+  f.write(UIMButtonGroup.toVUEComponent.toString);
+  f.write(UIMButtonToolbar.toVUEComponent.toString);
   f.write(UIMCalendar.toVUEComponent.toString);
   f.write(UIMCalendarDay.toVUEComponent.toString);
   f.write(UIMCalendarEvent.toVUEComponent.toString);
   f.write(UIMCalendarEvents.toVUEComponent.toString);
+  f.write(UIMCard.toVUEComponent.toString);
+  f.write(UIMCardBlock.toVUEComponent.toString);
+  f.write(UIMCardBody.toVUEComponent.toString);
+  f.write(UIMCardColumns.toVUEComponent.toString);
+  f.write(UIMCardDeck.toVUEComponent.toString);
+  f.write(UIMCardDeckwrapper.toVUEComponent.toString);
+  f.write(UIMCardFooter.toVUEComponent.toString);
+  f.write(UIMCardHeader.toVUEComponent.toString);
+  f.write(UIMCardImage.toVUEComponent.toString);
+  f.write(UIMCardLink.toVUEComponent.toString);
+  f.write(UIMCardSubtitle.toVUEComponent.toString);
+  f.write(UIMCardText.toVUEComponent.toString);
+  f.write(UIMCardTitle.toVUEComponent.toString);
+  f.write(UIMDropdownButton.toVUEComponent.toString);
+  f.write(UIMDropdownDivider.toVUEComponent.toString);
+  f.write(UIMDropdown.toVUEComponent.toString);
+  f.write(UIMDropdownHeader.toVUEComponent.toString);
+  f.write(UIMDropdownLink.toVUEComponent.toString);
+  f.write(UIMDropdownMenu.toVUEComponent.toString);
+  f.write(UIMDropdownTogglelink.toVUEComponent.toString);
+  f.write(UIMInputButton.toVUEComponent.toString);
 }

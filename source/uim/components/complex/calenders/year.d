@@ -17,6 +17,6 @@ mixin(UIMShort!"CalendarYear");
 unittest {
 	assert(Assert(UIMCalendarYear, `<uim-calendar-year></uim-calendar-year>`));
 		
-	auto f = File("./public/js/uim/components/"~"CalendarYear".toLower~".js", "w"); // open for writing
+	auto f = File("./public/js/uim/components/complex/"~"CalendarYear".toLower~".js", "w"); // open for writing
   f.write(UIMCalendarYear.toVUEComponent.toString);
 }

@@ -51,7 +51,7 @@ class DUIMComponent : DH5Obj {
 
 		if (_templateObj) {
 			_templateObj.attributes([":class":"this.classes", ":style":"this.styles"]);
-			// _vueComponent.template_(_templateObj.toHTML);
+			_vueComponent.template_(_templateObj.toString);
 		}
 		return _vueComponent;
 	}

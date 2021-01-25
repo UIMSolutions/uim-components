@@ -23,4 +23,7 @@ mixin(UIMShort!"TableBody");
 
 unittest {
 	assert(Assert(UIMTableBody, `<uim-table-body></uim-table-body>`));
+
+	auto f = File("./public/js/uim/components/basic/tables/body.js", "w"); 
+  f.write(UIMTableBody.toVUEComponent.toString);
 }

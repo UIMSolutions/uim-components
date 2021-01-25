@@ -17,4 +17,7 @@ mixin(UIMShort!("InputWeek"));
 
 unittest {
 	assert(Assert(UIMInputWeek, "<uim-input-week></uim-input-week>"));	
+
+	auto f = File("./public/js/uim/components/basic/forms/controls/week.js", "w");
+  f.write(UIMInputWeek.toVUEComponent.toString);
 }

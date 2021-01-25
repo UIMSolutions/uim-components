@@ -1,4 +1,4 @@
-﻿module uim.components.basic.layout.container;
+﻿module uim.components.layout.container;
 
 import uim.components;
 

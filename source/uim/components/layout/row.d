@@ -1,4 +1,4 @@
-﻿module uim.components.basic.layout.row;
+﻿module uim.components.layout.row;
 
 import uim.components;
 

@@ -26,4 +26,7 @@ mixin(UIMShort!("InputSelect"));
 
 unittest {
 	assert(Assert(UIMInputSelect, "<uim-input-select></uim-input-select>"));	
+
+	auto f = File("./public/js/uim/components/basic/forms/controls/select.js", "w");
+  f.write(UIMInputSelect.toVUEComponent.toString);
 }

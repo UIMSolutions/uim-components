@@ -32,4 +32,7 @@ mixin(UIMShort!("InputTextarea"));
 
 unittest {
 	assert(Assert(UIMInputTextarea, "<uim-input-textarea></uim-input-textarea>"));	
+
+	auto f = File("./public/js/uim/components/basic/forms/controls/textarea.js", "w");
+  f.write(UIMInputTextarea.toVUEComponent.toString);
 }
