@@ -17,4 +17,7 @@ class DUIMChatContacts : DUIMComponent {
 mixin(UIMShort!"ChatContacts");
 unittest {
 	assert(Assert(UIMChatContacts, `<uim-chat-contacts></uim-chat-contacts>`));
+			
+	auto f = File("./public/js/uim/components/chats/"~"Contacts".toLower~".js", "w"); // open for writing
+  f.write(UIMChatContacts.toVUEComponent.toString);
 }

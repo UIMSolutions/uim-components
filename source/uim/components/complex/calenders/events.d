@@ -16,4 +16,7 @@ class DUIMCalendarEvents : DUIMComponent {
 mixin(UIMShort!"CalendarEvents");
 unittest {
 	assert(Assert(UIMCalendarEvents, `<uim-calendar-events></uim-calendar-events>`));
+
+	auto f = File("./public/js/uim/components/"~"CalendarEvents".toLower~".js", "w"); // open for writing
+  f.write(UIMCalendarEvents.toVUEComponent.toString);
 }

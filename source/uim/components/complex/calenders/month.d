@@ -16,4 +16,7 @@ class DUIMCalendarMonth : DUIMComponent {
 mixin(UIMShort!"CalendarMonth");
 unittest {
 	assert(Assert(UIMCalendarMonth, `<uim-calendar-month></uim-calendar-month>`));
+
+	auto f = File("./public/js/uim/components/"~"CalendarMonth".toLower~".js", "w"); // open for writing
+  f.write(UIMCalendarMonth.toVUEComponent.toString);
 }
