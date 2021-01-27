@@ -19,6 +19,6 @@ mixin(UIMShort!"FormCheckLabel");
 unittest {
 	assert(Assert(UIMFormCheckLabel, `<uim-form-check-label></uim-form-check-label>`));
 
-	auto f = File("./public/js/uim/components/basic/forms/checkinput.js", "w");
-  f.write(UIMFormCheckInput.toVUEComponent.toString);
+	auto f = File("./public/js/uim/components/basic/forms/label.js", "w");
+  f.write(UIMFormCheckLabel.toVUEComponent.toString);
 }

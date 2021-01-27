@@ -42,4 +42,7 @@ class DUIMTimelineItem : DUIMComponent {
 mixin(UIMShort!"TimelineItem");
 unittest {
 	assert(Assert(UIMTimelineItem, `<uim-timeline-item></uim-timeline-item>`));
+    
+    auto f = File("./public/js/uim/components/complex/timelines/item.js", "w"); 
+    f.write(UIMTimelineItem.toVUEComponent.toString);
 }

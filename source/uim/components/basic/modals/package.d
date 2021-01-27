@@ -7,6 +7,7 @@ public import uim.components.basic.modals.dialog;
 public import uim.components.basic.modals.footer;
 public import uim.components.basic.modals.header;
 public import uim.components.basic.modals.modal;
+public import uim.components.basic.modals.title;
 
 string modalsRegistration() {
   return 

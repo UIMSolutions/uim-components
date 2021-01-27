@@ -16,6 +16,7 @@ class DUIMBlog : DUIMComponent {
 mixin(UIMShort!"Blog");
 unittest {
 	assert(Assert(UIMBlog, `<uim-blog></uim-blog>`));
-	auto f = File("./public/js/uim/components/complex/"~"Blog".toLower~".js", "w"); // open for writing
+
+	auto f = File("./public/js/uim/components/complex/"~"Blog".toLower~".js", "w"); 
   f.write(UIMBlog.toVUEComponent.toString);
 }

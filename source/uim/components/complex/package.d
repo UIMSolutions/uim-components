@@ -3,6 +3,7 @@ module uim.components.complex;
 public import uim.components.complex.blogs;
 public import uim.components.complex.calendars;
 public import uim.components.complex.chats;
+public import uim.components.complex.chatboxes;
 public import uim.components.complex.invoices;
 public import uim.components.complex.mailboxes;
 public import uim.components.complex.menues;

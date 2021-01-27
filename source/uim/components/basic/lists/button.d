@@ -13,7 +13,7 @@ class DUIMListButton : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4ListGroupButton("<slot />");
+		_templateObj =  BS4ListButton("<slot />");
 		return super.toVUEComponent		
 		.name("uim-list-button")
 		.props("active", `{type:Boolean,default:false}`)

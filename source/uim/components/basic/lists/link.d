@@ -14,7 +14,7 @@ class DUIMListLink : DUIMComponent {
 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
-		_templateObj =  BS4ListGroupLink("<slot />");
+		_templateObj =  BS4ListLink("<slot />");
 		return super.toVUEComponent		
 		.name("uim-list-link")
 		;

@@ -1,4 +1,4 @@
-module uim.components.complex.chatbox.chatbox;
+module uim.components.complex.chatboxes.chatbox;
 
 import uim.components;
 
@@ -17,6 +17,6 @@ mixin(UIMShort!"Chatbox");
 unittest {
 	assert(Assert(UIMChatbox, `<uim-chatbox></uim-chatbox>`));
 			
-	auto f = File("./public/js/uim/components/complex/"~"Chatbox".toLower~".js", "w"); // open for writing
+	auto f = File("./public/js/uim/components/complex/"~"Chatbox".toLower~".js", "w"); 
   f.write(UIMChatbox.toVUEComponent.toString);
 }

@@ -18,6 +18,6 @@ mixin(UIMShort!"ChatUsers");
 unittest {
 	assert(Assert(UIMChatUsers, `<uim-chat-users></uim-chat-users>`));
 
-	auto f = File("./public/js/uim/components/complex/chats/"~"Users".toLower~".js", "w"); // open for writing
+	auto f = File("./public/js/uim/components/complex/chats/"~"Users".toLower~".js", "w"); 
   f.write(UIMChatUsers.toVUEComponent.toString);
 }

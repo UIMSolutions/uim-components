@@ -1,7 +1,11 @@
-module uim.components.complex.chatbox;
+module uim.components.complex.chatboxes;
+
+import uim.components;
+
+public import uim.components.complex.chatboxes.chatbox;
+public import uim.components.complex.chatboxes.inbox;
 
 /*
-
 
 .container{max-width:1170px; margin:auto;}
 img{ max-width:100%;}

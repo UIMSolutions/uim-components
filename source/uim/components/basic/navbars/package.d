@@ -6,6 +6,7 @@ public import uim.components.basic.navbars.toggler;
 public import uim.components.basic.navbars.togglericon;
 public import uim.components.basic.navbars.collapse;
 public import uim.components.basic.navbars.nav;
+public import uim.components.basic.navbars.text;
 
 string navbarsRegistration() {
   return 
