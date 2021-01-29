@@ -10,7 +10,7 @@ static this() {
 			.created(DateTime(2020, 12, 20, 10, 10, 0))
 			.changed(timeLastModified(__FILE_FULL_PATH__))
 			.parameters([
-					"pageTitle": "Buttons - Bootstrap 5 Demo",
+					"pageTitle": "Buttons - uim-components Demo",
           ]);
 		} 
 			
@@ -151,6 +151,8 @@ auto pluginExample = demoUIMExample("plugin", "Button Plugin",
     H5A(["btn", "btn-primary", "active"], ["href":"#", "role":"button", "data-bs-toggle":"button", "aria-pressed":"true"], "Active"),
     H5A(["btn", "btn-primary", "disabled"], ["href":"#", "role":"button", "data-bs-toggle":"button"], "Disabled")`, ``);
 
+    this.parameters["libraries"] = "const demoApp = {};Vue.createApp(demoApp).mount('#demo');";
+
       return 
 H5Main(
   H5Div(["container-fluid", "mt-3", "bg-light"],
@@ -161,6 +163,7 @@ H5Main(
     H5Div(["col-12", "col-lg-8"], 
       H5H2(["display-4"], "Buttons"),
       H5Hr,
+      H5Div("demo"),
 
       defaultExample, 
       linksExample, 

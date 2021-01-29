@@ -10,9 +10,9 @@ class DUIMButtonLink : DUIMComponent {
 		_templateObj =  BS5ButtonLink([":class":"this.classes", ":style": "this.styles", ":href":"this.href"], "<slot />");
 		return super.toVUEComponent
     .name("uim-button-link")
-    .props("block", `{type:Boolean,default:false}`)
+    .props("block", `type:Boolean,default:false`)
     .props("color", `{ type: String,default:"none", validator: value => ["none","primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "link"].indexOf(value) >= 0}`)
-    .props("disabled", `{type:Boolean,default:false}`)
+    .props("disabled", `type:Boolean,default:false`)
     .props("href", `{ type: String,default:"#"}`)
     .props("outline", `{ type: String,default:"none", validator: value => ["none", "primary", "secondary", "success", "danger", "warning", "info", "light", "dark"].indexOf(value) >= 0}`)
     .props("size", `{ type: String,default:"normal", validator: value => ["normal", "lg", "sm"].indexOf(value) >= 0}`)

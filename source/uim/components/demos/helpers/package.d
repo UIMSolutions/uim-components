@@ -10,7 +10,7 @@ static this() {
 			.created(DateTime(2020, 12, 20, 10, 10, 0))
 			.changed(timeLastModified(__FILE_FULL_PATH__))
 			.parameters([
-					"pageTitle": "Helpers - Bootstrap 5 Demo",
+					"pageTitle": "Helpers - uim-components Demo",
           ]);
 		} 
 			
@@ -22,8 +22,8 @@ static this() {
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">UI Manufaktur</a></li>
         <li class="breadcrumb-item"><a href="/demos">Demos</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-bootstrap">uim-bootstrap</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-bootstrap/5/">Bootstrap 5</a></li>
+        <li class="breadcrumb-item"><a href="/demos/uim-components">uim-components</a></li>
+        <li class="breadcrumb-item"><a href="/demos/uim-components/">Bootstrap 5</a></li>
         <li class="breadcrumb-item active" aria-current="page">Helpers</li>
       </ol>
     </nav>
@@ -33,31 +33,31 @@ static this() {
       <div class="col-12 col-lg-2">
       </div>
       <div class="col-12 col-lg-8">
-        <h2 class="component display-4">Bootstrap 5 Demo</h2>
+        <h2 class="component display-4">uim-components Demo</h2>
         <hr>
 
         <div class="mb-5">
           <h3 class="text-muted">Themenbereiche</h3>
           <ul class="list-group">
-            <li class="list-group-item"><a href="/demos/uim-bootstrap/5/components">Components</a></li>
-            <li class="list-group-item"><a href="/demos/uim-bootstrap/5/contents">Contents</a></li>
-            <li class="list-group-item"><a href="/demos/uim-bootstrap/5/forms">Forms</a></li>
-            <li class="list-group-item"><a href="/demos/uim-bootstrap/5/helpers">Helpers</a></li>
-            <li class="list-group-item"><a href="/demos/uim-bootstrap/5/layouts">Layouts</a></li>
-            <li class="list-group-item"><a href="/demos/uim-bootstrap/5/utilities">Utilities</a></li>
+            <li class="list-group-item"><a href="/demos/uim-components/components">Components</a></li>
+            <li class="list-group-item"><a href="/demos/uim-components/contents">Contents</a></li>
+            <li class="list-group-item"><a href="/demos/uim-components/forms">Forms</a></li>
+            <li class="list-group-item"><a href="/demos/uim-components/helpers">Helpers</a></li>
+            <li class="list-group-item"><a href="/demos/uim-components/layouts">Layouts</a></li>
+            <li class="list-group-item"><a href="/demos/uim-components/utilities">Utilities</a></li>
           </ul>
         </div>
 
         <div class="mb-5">
           <h3 class="text-muted">Forms</h3>
           <ul class="list-group">
-            <li class="list-group-item"><a href="/demos/uim-bootstrap/5/helpers/clearfix">Clearfix</a></li>
-            <li class="list-group-item"><a href="/demos/uim-bootstrap/5/helpers/coloredlinks">Colored Links</a></li>
-            <li class="list-group-item"><a href="/demos/uim-bootstrap/5/helpers/positionhelpers">Position Helpers</a></li>
-            <li class="list-group-item"><a href="/demos/uim-bootstrap/5/helpers/ratio">Ratio</a></li>
-            <li class="list-group-item"><a href="/demos/uim-bootstrap/5/helpers/stretchedlink">Stretched Link</a></li>
-            <li class="list-group-item"><a href="/demos/uim-bootstrap/5/helpers/texttruncation">Text Truncation</a></li>
-            <li class="list-group-item"><a href="/demos/uim-bootstrap/5/helpers/visuallyhidden">Visually Hidden</a></li>
+            <li class="list-group-item"><a href="/demos/uim-components/helpers/clearfix">Clearfix</a></li>
+            <li class="list-group-item"><a href="/demos/uim-components/helpers/coloredlinks">Colored Links</a></li>
+            <li class="list-group-item"><a href="/demos/uim-components/helpers/positionhelpers">Position Helpers</a></li>
+            <li class="list-group-item"><a href="/demos/uim-components/helpers/ratio">Ratio</a></li>
+            <li class="list-group-item"><a href="/demos/uim-components/helpers/stretchedlink">Stretched Link</a></li>
+            <li class="list-group-item"><a href="/demos/uim-components/helpers/texttruncation">Text Truncation</a></li>
+            <li class="list-group-item"><a href="/demos/uim-components/helpers/visuallyhidden">Visually Hidden</a></li>
           </ul>
         </div>
       </div>

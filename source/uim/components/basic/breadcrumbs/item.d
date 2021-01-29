@@ -14,8 +14,8 @@ class DUIMBreadcrumbItem : DUIMComponent {
 		_templateObj =  BS5BreadcrumbItem("<slot />");
 		return super.toVUEComponent		
 		.name("uim-breadcrumb-item")
-		.props("active", `{type:Boolean,default:false}`)
-		.props("disabled", `{type:Boolean,default:false}`)
+		.props("active", `type:Boolean,default:false`)
+		.props("disabled", `type:Boolean,default:false`)
     .computed("classes", `return [
       this.active ? 'active' : '',
       this.disabled ? 'disabled' : ''

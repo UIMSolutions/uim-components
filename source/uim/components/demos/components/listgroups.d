@@ -10,7 +10,7 @@ static this() {
 			.created(DateTime(2020, 12, 20, 10, 10, 0))
 			.changed(timeLastModified(__FILE_FULL_PATH__))
 			.parameters([
-					"pageTitle": "List Groups - Bootstrap 5 Demo",
+					"pageTitle": "List Groups - uim-components Demo",
           ]);
 		} 
 			

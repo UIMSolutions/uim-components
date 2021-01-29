@@ -237,7 +237,7 @@ void 	uimComponentClasses(HTTPServerRequest req, HTTPServerResponse res) {
 }
 
 unittest {
-  auto f = File("./public/js/uimcomponents.js", "w"); 
+  auto f = File("./public/js/all.js", "w"); 
   f.write(UIMBadge.toVUEComponent.toString);
   f.write(UIMBreadcrumb.toVUEComponent.toString);
   f.write(UIMButton.toVUEComponent.toString);

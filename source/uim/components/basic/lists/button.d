@@ -16,8 +16,8 @@ class DUIMListButton : DUIMComponent {
 		_templateObj =  BS4ListButton("<slot />");
 		return super.toVUEComponent		
 		.name("uim-list-button")
-		.props("active", `{type:Boolean,default:false}`)
-		.props("disabled", `{type:Boolean,default:false}`)
+		.props("active", `type:Boolean,default:false`)
+		.props("disabled", `type:Boolean,default:false`)
 		.props("color", `{type:String,default:'None'}`)
 		.computed("classes", `return`~[
 			"active ? 'active':''",

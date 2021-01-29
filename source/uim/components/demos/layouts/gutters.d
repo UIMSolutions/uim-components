@@ -10,7 +10,7 @@ static this() {
 			.created(DateTime(2020, 12, 20, 10, 10, 0))
 			.changed(timeLastModified(__FILE_FULL_PATH__))
 			.parameters([
-					"pageTitle": "Gutters - Bootstrap 5 Demo",
+					"pageTitle": "Gutters - uim-components Demo",
           ]);
 		} 
 			
@@ -18,7 +18,7 @@ override string content() {
       return 
 H5Main(
   H5Div(["container-fluid", "mt-3", "bg-light"],
-    bs5Breadcrumbs(["/", "/demos", "/demos/uim-bootstrap", "/demos/uim-bootstrap/5", "/demos/uim-bootstrap/5/contents"], 
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-bootstrap", "/demos/uim-components", "/demos/uim-components/contents"], 
     ["UI Manufaktur", "Demos", "uim-components", "Contents"], "Gutters")),
 
   BS5Container(["mt-3"]).row(

@@ -38,11 +38,11 @@ class DUIMTabList : DUIMComponent {
 		_templateObj = BS5NavItem("<slot />");
 		return super.toVUEComponent			
 		.name("uim-tab-list")
-		.props("fill", `{type:Boolean,default:false}`)
-		.props("justified", `{type:Boolean,default:false}`)
-		.props("pills", `{type:Boolean,default:false}`)
-		.props("tabs", `{type:Boolean,default:false}`)
-		.props("vertical", `{type:Boolean,default:false}`);
+		.props("fill", `type:Boolean,default:false`)
+		.props("justified", `type:Boolean,default:false`)
+		.props("pills", `type:Boolean,default:false`)
+		.props("tabs", `type:Boolean,default:false`)
+		.props("vertical", `type:Boolean,default:false`);
 	}
 }
 mixin(UIMShort!"TabList");

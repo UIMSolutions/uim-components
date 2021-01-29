@@ -10,7 +10,7 @@ static this() {
 			.created(DateTime(2020, 12, 20, 10, 10, 0))
 			.changed(timeLastModified(__FILE_FULL_PATH__))
 			.parameters([
-					"pageTitle": "Text Truncation - Bootstrap 5 Demo",
+					"pageTitle": "Text Truncation - uim-components Demo",
           ]);
 		} 
 			
@@ -22,9 +22,9 @@ static this() {
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">UI Manufaktur</a></li>
         <li class="breadcrumb-item"><a href="/demos">Demos</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-bootstrap">uim-bootstrap</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-bootstrap/5">Bootstrap 5</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-bootstrap/5/helpers">Helpers</a></li>
+        <li class="breadcrumb-item"><a href="/demos/uim-components">uim-components</a></li>
+        <li class="breadcrumb-item"><a href="/demos/uim-components">Bootstrap 5</a></li>
+        <li class="breadcrumb-item"><a href="/demos/uim-components/helpers">Helpers</a></li>
         <li class="breadcrumb-item active" aria-current="page">Text Truncation</li>
       </ol>
     </nav>

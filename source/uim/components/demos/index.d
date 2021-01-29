@@ -31,7 +31,7 @@ static this() {
       <div class="col-12 col-lg-2">
       </div>
       <div class="col-12 col-lg-8">
-        <h2 class="component display-4">Bootstrap 5 Demo</h2>
+        <h2 class="component display-4">uim-components Demo</h2>
         <hr>
 
         <div class="mb-5">

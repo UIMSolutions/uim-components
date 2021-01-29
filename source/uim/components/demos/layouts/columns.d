@@ -10,7 +10,7 @@ static this() {
 			.created(DateTime(2020, 12, 20, 10, 10, 0))
 			.changed(timeLastModified(__FILE_FULL_PATH__))
 			.parameters([
-					"pageTitle": "Columns - Bootstrap 5 Demo",
+					"pageTitle": "Columns - uim-components Demo",
           ]);
 		} 
 			
@@ -18,7 +18,7 @@ static this() {
       return 
 H5Main(
   H5Div(["container-fluid", "mt-3", "bg-light"],
-    bs5Breadcrumbs(["/", "/demos", "/demos/uim-bootstrap", "/demos/uim-bootstrap/5", "/demos/uim-bootstrap/5/contents"], 
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-bootstrap", "/demos/uim-components", "/demos/uim-components/contents"], 
     ["UI Manufaktur", "Demos", "uim-components", "Contents"], "Columns")),
 
   BS5Container(["mt-3"]).row(
