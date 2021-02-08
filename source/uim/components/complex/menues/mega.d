@@ -41,7 +41,7 @@ class DUIMMenuMega : DUIMComponent {
             );
 		return super.toVUEComponent		
 		.name("uim-menu-mega")
-		.props("groups", `{type:Object, default() { return {}}}`);
+		.props("groups", `type:Object,default(){return{}}`);
 	}
 }
 mixin(UIMShort!"MenuMega");

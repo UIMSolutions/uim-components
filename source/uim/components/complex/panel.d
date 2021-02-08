@@ -24,9 +24,9 @@ class DUIMPanel : DUIMComponent {
       );
 		return super.toVUEComponent		
 		.name("uim-panel")
-		.props("isOpen", `{type:Boolean, default: false}`)
-		.props("id", `{type:String, default: ''}`)
-		.props("title", `{type:String, default: ''}`)
+		.props("isOpen", `type:Boolean,default:false`)
+		.props("id", `type:String, default:''`)
+		.props("title", `type:String, default:''`)
 		.methods("toogle()", "this.isOpen = !this.isOpen");
 	}
 }

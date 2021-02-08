@@ -20,7 +20,7 @@ class DUIMButton :DUIMComponent {
     .methods("click(event)", `if (this.state === "disabled"){event.stopImmediatePropagation();return;}this.$emit("click", event);`)
     .computed("classes", `return [
     this.block ? 'btn-block':'',
-    (this.color !== "none")&&(this.outline === "none")?'btn-'+this.color:'',
+    (this.color !== "none")&&(this.outline === "none") ? 'btn-'+this.color:'',
     (this.active)&&(!this.disabled) ? 'active':'',
     this.disabled ? 'disabled':'',
     this.outline !== "none"?'btn-outline-'+this.outline:'',

@@ -11,12 +11,12 @@ class DUIMButtonLink : DUIMComponent {
 		return super.toVUEComponent
     .name("uim-button-link")
     .props("block", `type:Boolean,default:false`)
-    .props("color", `{ type: String,default:"none", validator: value => ["none","primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "link"].indexOf(value) >= 0}`)
+    .props("color", `type:String,default:"none", validator: value => ["none","primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "link"].indexOf(value) >= 0`)
     .props("disabled", `type:Boolean,default:false`)
-    .props("href", `{ type: String,default:"#"}`)
-    .props("outline", `{ type: String,default:"none", validator: value => ["none", "primary", "secondary", "success", "danger", "warning", "info", "light", "dark"].indexOf(value) >= 0}`)
-    .props("size", `{ type: String,default:"normal", validator: value => ["normal", "lg", "sm"].indexOf(value) >= 0}`)
-    .props("type", `{ type: String,default:"button", validator: value => ["button", "submit", "reset", "menu"].indexOf(value) >= 0}`)
+    .props("href", `type:String,default:"#"`)
+    .props("outline", `type:String,default:"none", validator: value => ["none", "primary", "secondary", "success", "danger", "warning", "info", "light", "dark"].indexOf(value) >= 0`)
+    .props("size", `type:String,default:"normal", validator: value => ["normal", "lg", "sm"].indexOf(value) >= 0`)
+    .props("type", `type:String,default:"button", validator: value => ["button", "submit", "reset", "menu"].indexOf(value) >= 0`)
     .methods("click(event)", `if (this.state === "disabled") { event.stopImmediatePropagation(); return; } this.$emit("click", event);`)
     .computed("classes", `return [
     this.block ? 'btn-block' : '',

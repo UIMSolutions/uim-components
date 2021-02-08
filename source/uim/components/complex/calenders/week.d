@@ -21,13 +21,13 @@ class DUIMCalendarWeek : DUIMComponent {
 		);
 		return super.toVUEComponent		
 		.name("uim-calendar-week")
-		.props("rootPath", `{type:String, default: '/'}`)
-		.props("start", `{type:Date, default(){ return new Date();}}`)
-		.props("weekdays", `{type:Array, default(){ return ['mo', 'di', 'mi', 'do', 'fr', 'sa', 'so']}}`)
-		.props("events", `{type:Object, default(){ return {} }}`)
+		.props("rootPath", `type:String, default: '/'`)
+		.props("start", `type:Date, default(){return new Date();}`)
+		.props("weekdays", `type:Array, default(){return ['mo', 'di', 'mi', 'do', 'fr', 'sa', 'so']}`)
+		.props("events", `type:Object, default(){return {}}`)
 		.methods("eventsOfWeek(day)", "if (this.dayString(day) in this.events) return this.events[this.dayString(day)]; return [];")
 		.methods("dayString(day)", "return ''+day.getDate()+'. '+day.getMonth()+'.'+' '+day.getFullYear();")
-		.methods("weekName(day)", "switch(day.getDay()) {
+		.methods("weekName(day)", "switch(day.getDay()){
 case 0: return 'So';
 case 1: return 'Mo';
 case 2: return 'Di';

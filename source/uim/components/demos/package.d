@@ -21,7 +21,7 @@ static this() {
     };
 }
 
-auto demoUIMExample(string id, string title, DH5Obj tabResult, string tabUim, string tabHTML) {
+auto demoUIMExample(string id, string title, DH5Obj tabResult, string tabUim, string tabVue, string tabHTML) {
   return 
   H5Div(["mt-4 mb-4"],
     H5H3(["text-muted"], title),
@@ -31,15 +31,19 @@ auto demoUIMExample(string id, string title, DH5Obj tabResult, string tabUim, st
           BS5NavItem(["role":"presentation"], 
             BS5NavLink("tab"~id~"-1", ["active"], ["href":"#tab"~id~"-pane-1", "data-bs-toggle":"tab", "role":"tab", "aria-controls":"tab"~id~"-pane-1", "aria-selected":"true"], "Result")),
           BS5NavItem(["role":"presentation"], 
-            BS5NavLink("tab"~id~"-2", ["href":"#tab"~id~"-pane-2", "data-bs-toggle":"tab", "role":"tab", "aria-controls":"tab"~id~"-pane-2", "aria-selected":"true"], "Code")),
+            BS5NavLink("tab"~id~"-2", ["active"], ["href":"#tab"~id~"-pane-2", "data-bs-toggle":"tab", "role":"tab", "aria-controls":"tab"~id~"-pane-2", "aria-selected":"true"], "UIM")),
           BS5NavItem(["role":"presentation"], 
-            BS5NavLink("tab"~id~"-3", ["href":"#tab"~id~"-pane-3", "data-bs-toggle":"tab", "role":"tab", "aria-controls":"tab"~id~"-pane-3", "aria-selected":"true"], "JavaScript")))),
+            BS5NavLink("tab"~id~"-3", ["href":"#tab"~id~"-pane-3", "data-bs-toggle":"tab", "role":"tab", "aria-controls":"tab"~id~"-pane-3", "aria-selected":"true"], "Vue")),
+          BS5NavItem(["role":"presentation"], 
+            BS5NavLink("tab"~id~"-4", ["href":"#tab"~id~"-pane-4", "data-bs-toggle":"tab", "role":"tab", "aria-controls":"tab"~id~"-pane-4", "aria-selected":"true"], "HTML")))),
       BS5CardBody(
         H5Div(["tab-content"], 
           H5Div("tab"~id~"-pane-1", ["tab-pane", "active"], ["role":"tabpanel", "aria-labelledby":"tab"~id~"-1"], tabResult),
           H5Div("tab"~id~"-pane-2", ["tab-pane"], ["role":"tabpanel", "aria-labelledby":"tab"~id~"-2"], 
             `<pre><code>`~tabUim.replace(`&`, "&amp;").replace(`"`, "&quot;").replace("<", "&lt;").replace(">", "&gt;")~`</code></pre>`),
           H5Div("tab"~id~"-pane-3", ["tab-pane"], ["role":"tabpanel", "aria-labelledby":"tab"~id~"-3"], 
+            `<pre><code>`~tabVue.replace(`&`, "&amp;").replace(`"`, "&quot;").replace("<", "&lt;").replace(">", "&gt;")~`</code></pre>`),
+          H5Div("tab"~id~"-pane-4", ["tab-pane"], ["role":"tabpanel", "aria-labelledby":"tab"~id~"-4"], 
             `<pre><code>`~tabHTML.replace(`&`, "&amp;").replace(`"`, "&quot;").replace("<", "&lt;").replace(">", "&gt;")~`</code></pre>`)
   ))));
 }

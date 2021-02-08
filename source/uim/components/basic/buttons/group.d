@@ -24,8 +24,8 @@ class DUIMButtonGroup : DUIMComponent {
 		_templateObj =  BS5ButtonGroup("<slot />");
 		return super.toVUEComponent
 		.name("uim-button-group")
-    .props("orientation", `{ type: String,default:"horizontal", validator: value => ["horizontal", "vertical"].indexOf(value) >= 0}`)
-    .props("size", `{ type: String,default:"normal", validator: value => ["normal", "lg", "sm"].indexOf(value) >= 0}`)
+    .props("orientation", `type:String,default:"horizontal", validator: value => ["horizontal", "vertical"].indexOf(value) >= 0`)
+    .props("size", `type:String,default:"normal", validator: value => ["normal", "lg", "sm"].indexOf(value) >= 0`)
     .computed("classes", `return [
     this.orientation === "horizontal" ? "btn-group" : "btn-group-vertical",
     this.size !== "normal" ? 'btn-group-'+this.size : ""];`)

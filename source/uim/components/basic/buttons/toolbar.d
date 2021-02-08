@@ -14,7 +14,7 @@ class DUIMButtonToolbar : DUIMComponent {
 		_templateObj = BS5ButtonToolbar("<slot />");
 		return super.toVUEComponent		
 		.name("uim-button-toolbar")
-    .computed("classes", `return [""]`);
+    .computed("classes", `return [""];`);
 	}
 }
 mixin(UIMShort!"ButtonToolbar");

@@ -11,8 +11,8 @@ class DUIMCardImage : DUIMComponent { // default top
 		_templateObj =  BS5CardImage("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card-image")
-    .props("position", `{type:String,default:"top",validator:value => ["top","bottom"].indexOf(value) >= 0}`)
-    .computed("classes", `return [this.position==="top"?'card-img-top':'card-img-bottom']`);
+    .props("position", `type:String,default:"top",validator:value => ["top","bottom"].indexOf(value) >= 0`)
+    .computed("classes", `return [this.position==="top"?'card-img-top':'card-img-bottom'];`);
 	}
 }
 mixin(UIMShort!"CardImage");

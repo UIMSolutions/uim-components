@@ -36,7 +36,7 @@ class DUIMTimelineItem : DUIMComponent {
                     );
 		return super.toVUEComponent		
 		.name("uim-timeline-item")
-        .props("item", "{type:Object,return{}}");
+        .props("item", "type:Object,return{}");
 	}
 }
 mixin(UIMShort!"TimelineItem");

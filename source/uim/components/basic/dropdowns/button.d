@@ -13,11 +13,11 @@ class DUIMDropdownButton : DUIMComponent {
 			.name("uim-dropdown-button")
 			.props("active", `type:Boolean,default:false`)
 			.props("disabled", `type:Boolean,default:false`)
-			.props("color", `{type:String,default:'None'}`)
+			.props("color", `type:String,default:'None'`)
 			.computed("classes", `return`~[
-				"active ? 'active':''",
-				"disabled ? 'disabled':''",
-				"color !== 'None'? 'btn-'+this.color:''",
+				"active?'active':''",
+				"disabled?'disabled':''",
+				"color !== 'None'?'btn-'+this.color:''",
 			].toJS~`;`);
 	}
 }

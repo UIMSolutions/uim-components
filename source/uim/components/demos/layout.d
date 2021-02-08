@@ -22,8 +22,8 @@ static this() {
       )
     .libraries(
       ["src":"/lib/bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"], 
-      ["src":"/lib/vue/last/vue.min.js"], 
-      ["src":"/lib/uim-components/all.js"], 
+      ["src":"https://unpkg.com/vue@next"], 
+     /*  ["src":"/lib/uim-components/all.js"],   */
       )
     .title("Demo - uim-components");
   }
@@ -93,7 +93,8 @@ static this() {
 		.body_(_bodyClasses)
 		.body_(_bodyAttributes)
 		.body_(this.layout ? this.layout.toString(content, this.parameters) : content)
-		.body_(this.libraries.asString~parameters.get("libraries", ""));
+		.body_(this.libraries.asString~parameters.get("libraries", ""))
+		.body_("script" in parameters ? H5Script(parameters["script"]).toString : "");
 
 		return _html.toString;
   }        

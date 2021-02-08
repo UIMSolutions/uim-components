@@ -11,7 +11,11 @@ static this() {
 			.changed(timeLastModified(__FILE_FULL_PATH__))
 			.parameters([
 					"pageTitle": "UIM Components Demo",
-          ]);
+          "script":
+          `const vue = Vue.createApp({});`~
+          UIMButton.toVue3("vue")~";"~
+          /* UIMButtonLink.toVue3("vue")~";"~ */
+          `vue.mount('#app');`]);
 		} 
 			
     override string content() { 
