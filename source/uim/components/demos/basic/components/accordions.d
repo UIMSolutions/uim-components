@@ -3,7 +3,7 @@ module uim.components.demos.components.accordions;
 import uim.components;
 
 static this() {
-	demoUIMComps.pages("components/accordions", new class DH5AppPage {
+	demoUIMComps.pages("basic/components/accordions", new class DH5AppPage {
 		this() { 
 			super(); 
 			this
@@ -18,7 +18,7 @@ static this() {
           `vue.mount('#app');`]);
 		} 
 			
-    override string content() { 
+    override string content() {
 /* 
 auto defaultExample = demoUIMExample("default", "Default",
   H5Div(
@@ -187,14 +187,16 @@ auto flushExample = demoUIMExample("flush", "Flush",
   </div>
 </div>`);
  */
+
       return 
-H5Main("app", [""],
+H5Main("app", ["style":"margin-top:70px;"],
   H5Div(["container-fluid", "mt-3", "bg-light"],
-    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/components", "/demos/uim-components/components/basic"], 
-    ["UI Manufaktur", "Demos", "uim-components", "Components", "Basic"], "Accordions")),
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/basic", "/demos/uim-components/basic/components"], 
+    ["UI Manufaktur", "Demos", "uim-components" , "Basic", "Components"], "Accordions")),
   BS5Container(["mt-3"]).row(
     H5Div(["col-12", "col-lg-2"]),
-    H5Div(["col-12", "col-lg-8"], 
+      H5Div(["col-12", "col-lg-8"], 
+            dateInfo(created, changed),
       H5H2(["display-4"], "Accordions"),
       H5Hr,
 
@@ -202,7 +204,7 @@ H5Main("app", [""],
   /*     defaultExample,
       flushExample */
 
-     ),
+    ),
     H5Div(["col-12", "col-lg-2"]))).toString;
     }
   });

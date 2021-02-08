@@ -3,7 +3,7 @@ module uim.components.demos.demos.helpers.ratio;
 import uim.components;
 
 static this() {
-	demoUIMComps.pages("helpers/ratio", new class DH5AppPage {
+	demoUIMComps.pages("basic/helpers/ratio", new class DH5AppPage {
 		this() { 
 			super(); 
 			this
@@ -20,10 +20,10 @@ static this() {
 			
     override string content() { 
       return 
-H5Main("app", [""],
+H5Main("app", ["style":"margin-top:70px;"],
   H5Div(["container-fluid", "mt-3", "bg-light"],
-    bs5Breadcrumbs(["/", "/demos", "/demos/uim-bootstrap", "/demos/uim-components", "/demos/uim-components/helpers"], 
-    ["UI Manufaktur", "Demos", "uim-components", "Helpers"], "Ratio")),
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-bootstrap", "/uim-components/demos", "/demos/uim-components/helpers"], 
+    ["UI Manufaktur", "Demos", "uim-components" , "Helpers"], "Ratio")),
 
   BS5Container(["mt-3"]).row(
     H5Div(["col-12", "col-lg-2"]),

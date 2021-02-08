@@ -3,7 +3,7 @@ module uim.components.demos.demos.utilities.flex;
 import uim.components;
 
 static this() {
-	demoUIMComps.pages("utilities/flex", new class DH5AppPage {
+	demoUIMComps.pages("basic/utilities/flex", new class DH5AppPage {
 		this() { 
 			super(); 
 			this
@@ -19,28 +19,20 @@ static this() {
 		} 
 			
     override string content() { 
-      return `
-<main>
-  <div class="container-fluid mt-3 bg-light m-1">
-    <nav aria-label="Breadcrumb" >
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">UI Manufaktur</a></li>
-        <li class="breadcrumb-item"><a href="/demos">Demos</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-components">uim-components</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-components">Bootstrap 5</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-components/utilities">Utilities</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Flex</li>
-      </ol>
-    </nav>
-  </div>
-  <div class="container mt-3">
-    <div class="row">
-      <div class="col-12 col-lg-2">
-      </div>
-      <div class="col-12 col-lg-8">
-        <h2 class="component display-4">Flex</h2>
-        <hr>
+return 
+H5Main("app", ["style":"margin-top:70px;"],
+  H5Div(["container-fluid", "mt-3", "bg-light"],
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/basic", "/demos/uim-components/components/utilities"], 
+    ["UI Manufaktur", "Demos", "uim-components" , "Components", "Utilities"], "Flex")),
 
+  BS5Container(["mt-3"]).row(
+    H5Div(["col-12", "col-lg-2"]),
+    H5Div(["col-12", "col-lg-8"], 
+      dateInfo(created, changed),
+      H5H2(["display-4"], "Flex"),
+      H5Hr,
+
+/* /*
   <div class="mb-5" data-css='.d-flex,&#10;.d-inline-flex {&#10;&#9;background-color: #f8f9fa;&#10;}&#10;.d-flex div {&#10;&#9;border: 1px solid white;&#10;&#9;background-color: #6c757d;&#10;&#9;color: white;&#10;&#9;padding: 0.5rem;&#10;}&#10;[class*=align-items-],&#10;[data-example="alignSelf"],&#10;[class*=align-content-] {&#10;&#9;height: 200px;&#10;}&#10;.responsive-examples {&#10;&#9;display: none;&#10;}'>
               <h3 class="text-muted">Container</h3>
               <div>
@@ -452,14 +444,10 @@ static this() {
                   <div class="d-flex align-content-xxl-stretch">Display flex for all devices and align content to stretch for extra extra large devices and up</div>
                 </div>
               </div>
-            </div>
+            </div> */
 
-          </div>
-        </div>
-      </div>
-    </main>
-
-      `;
+       ),
+    H5Div(["col-12", "col-lg-2"]))).toString;
     }
   });
 }

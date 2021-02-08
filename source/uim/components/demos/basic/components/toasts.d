@@ -3,7 +3,7 @@ module uim.components.demos.components.toasts;
 import uim.components;
 
 static this() {
-	demoUIMComps.pages("components/toasts", new class DH5AppPage {
+	demoUIMComps.pages("basic/components/toasts", new class DH5AppPage {
 		this() { 
 			super(); 
 			this
@@ -118,10 +118,10 @@ auto multipleExample = demoUIMExample("multiple", "Multiple",
   ), ``, ``); */
 
       return 
-H5Main("app", [""],
+H5Main("app", ["style":"margin-top:70px;"],
   H5Div(["container-fluid", "mt-3", "bg-light"],
-    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/components", "/demos/uim-components/components/basic"], 
-    ["UI Manufaktur", "Demos", "uim-components", "Components", "Basic"], "Toasts")),
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/basic", "/demos/uim-components/basic/components"], 
+    ["UI Manufaktur", "Demos", "uim-components" , "Basic", "Components"], "Toasts")),
 
   BS5Container(["mt-3"]).row(
     H5Div(["col-12", "col-lg-2"]),
@@ -136,7 +136,7 @@ H5Main("app", [""],
       translucentExample,
       multipleExample
 
-     ),
+    ),
     H5Div(["col-12", "col-lg-2"]))).toString;
     }
   });

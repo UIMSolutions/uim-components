@@ -3,7 +3,7 @@ module uim.components.demos.demos.layouts.grid;
 import uim.components;
 
 static this() {
-	demoUIMComps.pages("layouts/grid", new class DH5AppPage {
+	demoUIMComps.pages("basic/layouts/grid", new class DH5AppPage {
 		this() { 
 			super(); 
 			this
@@ -20,10 +20,10 @@ static this() {
 			
 override string content() { 
   return 
-H5Main("app", [""],
+H5Main("app", ["style":"margin-top:70px;"],
   H5Div(["container-fluid", "mt-3", "bg-light"],
-    bs5Breadcrumbs(["/", "/demos", "/demos/uim-bootstrap", "/demos/uim-components", "/demos/uim-components/layout"], 
-    ["UI Manufaktur", "Demos", "uim-components", "Layout"], "Grid")),
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-bootstrap", "/uim-components/demos", "/demos/uim-components/layout"], 
+    ["UI Manufaktur", "Demos", "uim-components" , "Layout"], "Grid")),
 
   BS5Container(["mt-3"]).row(
     H5Div(["col-12", "col-lg-2"]),

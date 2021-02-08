@@ -60,6 +60,9 @@ class DUIMComponent : DH5Obj {
 	override string toString() {
 		return super.toString;
 	} 
+	string toVue3(string target) {
+		return toVUEComponent.toVue3(target);
+	} 
 }
 mixin(UIMShort!"Component");
 

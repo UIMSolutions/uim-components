@@ -3,7 +3,7 @@ module uim.components.demos.components.badges;
 import uim.components;
 
 static this() {
-	demoUIMComps.pages("components/badges", new class DH5AppPage {
+	demoUIMComps.pages("basic/components/badges", new class DH5AppPage {
 		this() { 
 			super(); 
 			this
@@ -19,14 +19,16 @@ static this() {
 		} 
 			
     override string content() { 
-      return 
-H5Main("app", [""],
+return 
+H5Main("app", ["style":"margin-top:70px;"],
   H5Div(["container-fluid", "mt-3", "bg-light"],
-    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/components", "/demos/uim-components/components/basic"], 
-    ["UI Manufaktur", "Demos", "uim-components", "Components", "Basic"], "Badges")),
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/basic", "/demos/uim-components/basic/components"], 
+    ["UI Manufaktur", "Demos", "uim-components" , "Basic", "Components"], "Badges")),
+
   BS5Container(["mt-3"]).row(
     H5Div(["col-12", "col-lg-2"]),
     H5Div(["col-12", "col-lg-8"], 
+      dateInfo(created, changed),
       H5H2(["display-4"], "Badges"),
       H5Hr,
 
@@ -49,13 +51,13 @@ H5H2(H5String("H2 mit "), UIMBadge(["bg-secondary"], "Badge"))
 H5H3(H5String("H3 mit "), UIMBadge(["bg-secondary"], "Badge"))
 H5H4(H5String("H4 mit "), UIMBadge(["bg-secondary"], "Badge"))
 H5H5(H5String("H5 mit "), UIMBadge(["bg-secondary"], "Badge"))
-H5H6(H5String("H6 mit "), UIMBadge(["bg-secondary"], "Badge"))`),
+H5H6(H5String("H6 mit "), UIMBadge(["bg-secondary"], "Badge"))`, ``),
 
 demoUIMExample("buttons", "Buttons mit Badges", 
   H5Div(
     UIMButton(["btn-secondary"], H5String("Notifications "), UIMBadge(["bg-light", "text-dark"], "10"))), 
 `<button class="btn btn-secondary">Notifications <span class="badge bg-light text-dark">10</span>")`, 
-`UIMButton(["btn-secondary"], H5String("Notifications "), UIMBadge(["bg-light", "text-dark"], "10"))`
+`UIMButton(["btn-secondary"], H5String("Notifications "), UIMBadge(["bg-light", "text-dark"], "10"))`, ``
 ),
 
 demoUIMExample("accessible", "Buttons mit accessible Badges", 
@@ -63,7 +65,7 @@ demoUIMExample("accessible", "Buttons mit accessible Badges",
     UIMButton(["btn-secondary"], 
       H5String("Profile"),
       UIMBadge(["bg-light", "text-dark"], "3"),
-      H5Span(["visually-hidden"], "unread messages"))), ``, ``),
+      H5Span(["visually-hidden"], "unread messages"))), ``, ``, ``),
 
 demoUIMExample("bgcolors", "Hintergrundfarben", 
   H5Div(
@@ -83,7 +85,7 @@ demoUIMExample("bgcolors", "Hintergrundfarben",
     UIMBadge(["bg-warning text-dark"], "Warning"), 
     UIMBadge(["bg-info"], "Info"), 
     UIMBadge(["bg-light", "text-dark"], "Light"), 
-    UIMBadge(["bg-dark"], "Dark")`, ``), 
+    UIMBadge(["bg-dark"], "Dark")`, ``, ``), 
 
 demoUIMExample("pills", "Pill badges", 
   H5Div(
@@ -103,7 +105,7 @@ demoUIMExample("pills", "Pill badges",
     UIMBadge(["rounded-pill", "bg-warning", "text-dark"], "Warning"),
     UIMBadge(["rounded-pill", "bg-info"], "Info"),
     UIMBadge(["rounded-pill", "bg-light", "text-dark"], "Light"),
-    UIMBadge(["rounded-pill", "bg-dark"], "Dark")`, ``)
+    UIMBadge(["rounded-pill", "bg-dark"], "Dark")`, ``, ``)
     
     ),
     H5Div(["col-12", "col-lg-2"]))).toString;

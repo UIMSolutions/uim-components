@@ -3,7 +3,7 @@ module uim.components.demos.demos.contents;
 import uim.components;
 
 static this() {
-	demoUIMComps.pages("contents", new class DH5AppPage {
+	demoUIMComps.pages("basic/contents", new class DH5AppPage {
 		this() { 
 			super(); 
 			this
@@ -26,7 +26,7 @@ static this() {
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">UI Manufaktur</a></li>
         <li class="breadcrumb-item"><a href="/demos">Demos</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-components">uim-components</a></li>
+        <li class="breadcrumb-item"><a href="/uim-components/demos">uim-components</a></li>
         <li class="breadcrumb-item"><a href="/demos/uim-components/">Bootstrap 5</a></li>
         <li class="breadcrumb-item active" aria-current="page">Contents</li>
       </ol>
@@ -43,7 +43,7 @@ static this() {
         <div class="mb-5">
           <h3 class="text-muted">Themenbereiche</h3>
           <ul class="list-group">
-            <li class="list-group-item"><a href="/demos/uim-components/components">Components</a></li>
+            <li class="list-group-item"><a href="/demos/uim-components/basic">Components</a></li>
             <li class="list-group-item"><a href="/demos/uim-components/contents">Contents</a></li>
             <li class="list-group-item"><a href="/demos/uim-components/forms">Forms</a></li>
             <li class="list-group-item"><a href="/demos/uim-components/helpers">Helpers</a></li>

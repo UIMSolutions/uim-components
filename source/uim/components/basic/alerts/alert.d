@@ -29,7 +29,10 @@ class DUIMAlert : DUIMComponent {
 mixin(UIMShort!("Alert"));
 ///
 unittest {
-	
+	assert(Assert(UIMAlert, "<uim-alert></uim-alert>"));
+
+	auto f = File("./public/js/uim/components/basic/alerts/alert.js", "w"); 
+  f.write(UIMAlert.toVUEComponent.toString);
 }
 
 

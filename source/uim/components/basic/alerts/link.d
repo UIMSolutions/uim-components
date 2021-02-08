@@ -10,11 +10,14 @@ class DUIMAlertLink : DUIMComponent {
 		_templateObj =  BS5AlertLink([":class":"this.classes", ":style": "this.styles", ":href":"this.href"], "<slot />");
 		return super.toVUEComponent
     .name("uim-alert-link")
-    .props("href", `{ type: String,default:'#'}`);
+    .props("href", `type:String,default:'#'`);
 	}
 }
 mixin(UIMShort!("AlertLink"));
 
 unittest {
 	assert(Assert(UIMAlertLink, "<uim-alert-link></uim-alert-link>"));
+
+	auto f = File("./public/js/uim/components/basic/alerts/link.js", "w"); 
+  f.write(UIMAlertLink.toVUEComponent.toString);
 }

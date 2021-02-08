@@ -3,7 +3,7 @@ module uim.components.demos.components.scrollspies;
 import uim.components;
 
 static this() {
-	demoUIMComps.pages("components/scrollspies", new class DH5AppPage {
+	demoUIMComps.pages("basic/components/scrollspies", new class DH5AppPage {
 		this() { 
 			super(); 
 			this
@@ -58,10 +58,10 @@ auto exampleExample = demoUIMExample("example", "Example",
             ), ``, ``);
 
       return 
-H5Main("app", [""],
+H5Main("app", ["style":"margin-top:70px;"],
   H5Div(["container-fluid", "mt-3", "bg-light"],
-    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/components", "/demos/uim-components/components/basic"], 
-    ["UI Manufaktur", "Demos", "uim-components", "Components", "Basic"], "Scrollspies")),
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/basic", "/demos/uim-components/basic/components"], 
+    ["UI Manufaktur", "Demos", "uim-components" , "Basic", "Components"], "Scrollspies")),
 
   BS5Container(["mt-3"]).row(
     H5Div(["col-12", "col-lg-2"]),
@@ -71,7 +71,7 @@ H5Main("app", [""],
       
       exampleExample
 
-     ),
+    ),
     H5Div(["col-12", "col-lg-2"]))).toString;
     }
   });

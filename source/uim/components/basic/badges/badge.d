@@ -16,7 +16,7 @@ class DUIMBadge : DUIMComponent {
 		_templateObj =  BS5Badge("<slot />");
 		return super.toVUEComponent
 		.name("uim-badge")
-		.props("color", `type: String,default:"none",`~
+		.props("color", `type:String,default:"none",`~
 			`validator: value => ["none","primary","secondary", "success", "danger", "warning", "info", "light", "dark"].indexOf(value) >= 0`)
 		.props("pill", `type:Boolean,default:false`)
 		.computed("classes", `return [

@@ -3,7 +3,7 @@ module uim.components.demos.components.buttons;
 import uim.components;
 
 static this() {
-	demoUIMComps.pages("components/buttons", new class DH5AppPage {
+	demoUIMComps.pages("basic/components/buttons", new class DH5AppPage {
 		this() { 
 			super(); 
 			this
@@ -137,10 +137,10 @@ auto pluginExample = demoUIMExample("plugin", "Button Plugin",
     H5A(["btn", "btn-primary", "disabled"], ["href":"#", "role":"button", "data-bs-toggle":"button"], "Disabled")`, ``);
 
       return 
-H5Main("app", [""],
+H5Main("app", ["style":"margin-top:70px;"],
   H5Div(["container-fluid", "mt-3", "bg-light"],
-    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/components", "/demos/uim-components/components/basic"], 
-    ["UI Manufaktur", "Demos", "uim-components", "Components", "Basic"], "Buttons")),
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/basic", "/demos/uim-components/basic/components"], 
+    ["UI Manufaktur", "Demos", "uim-components" , "Basic", "Components"], "Buttons")),
   BS5Container(["mt-3"]).row(
     H5Div(["col-12", "col-lg-2"]),
     H5Div(["col-12", "col-lg-8"], 
@@ -157,8 +157,8 @@ H5Main("app", [""],
       blockExample2,
       pluginExample
 
-    ))).toString;
-
+    ),
+    H5Div(["col-12", "col-lg-2"]))).toString;
     }
   });
 }

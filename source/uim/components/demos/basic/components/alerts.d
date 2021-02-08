@@ -3,7 +3,7 @@ module uim.components.demos.components.alerts;
 import uim.components;
 
 static this() {
-	demoUIMComps.pages("components/alerts", new class DH5AppPage {
+	demoUIMComps.pages("basic/components/alerts", new class DH5AppPage {
 		this() { 
 			super(); 
 			this
@@ -19,14 +19,16 @@ static this() {
 		} 
 			
     override string content() { 
-      return 
-H5Main("app", [""],
+return 
+H5Main("app", ["style":"margin-top:70px;"],
   H5Div(["container-fluid", "mt-3", "bg-light"],
-    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/components", "/demos/uim-components/components/basic"], 
-    ["UI Manufaktur", "Demos", "uim-components", "Components", "Basic"], "Alerts")),
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/basic", "/demos/uim-components/basic/components"], 
+    ["UI Manufaktur", "Demos", "uim-components" , "Basic", "Components"], "Alerts")),
+
   BS5Container(["mt-3"]).row(
     H5Div(["col-12", "col-lg-2"]),
     H5Div(["col-12", "col-lg-8"], 
+      dateInfo(created, changed),
       H5H2(["display-4"], "Alerts"),
       H5Hr,
 
@@ -54,6 +56,7 @@ UIMAlert("Danger").color("danger")
 UIMAlert("Warning").color("warning")
 UIMAlert("Info").color("info")
 UIMAlert("Dark").color("dark")`,
+``,
 `<div class="alert alert-primary" role="alert">Primary</div>
 <div class="alert alert-secondary" role="alert">Secondary</div>
 <div class="alert alert-success" role="alert">Success</div>
@@ -88,6 +91,7 @@ UIMAlert("Danger mit H5A(["href":"#",  class="alert-link">Beispiellink</a>.").co
 UIMAlert("Warning mit H5A(["href":"#",  class="alert-link">Beispiellink</a>.").color("warning")
 UIMAlert("Info mit H5A(["href":"#",  class="alert-link">Beispiellink</a>.").color("info")
 UIMAlert("Dark mit H5A(["href":"#",  class="alert-link">Beispiellink</a>.").color("dark")`,
+``,
 `<div class="alert alert-primary" role="alert">Primary mit H5A(["href":"#",  class="alert-link">Beispiellink</a>.</div>
 <div class="alert alert-secondary" role="alert">Secondary mit H5A(["href":"#",  class="alert-link">Beispiellink</a>.</div>
 <div class="alert alert-success" role="alert">Success mit H5A(["href":"#",  class="alert-link">Beispiellink</a>.</div>
@@ -152,7 +156,8 @@ demoUIMExample("addition", "Zusätzliche Inhalte",
     H5H4(["alert-heading"], "Info!"),
     H5P("Please read the provided <a href=\"#\" class=\"alert-link\">information.</a>"),
     H5P("The information will help you get a better understanding of the topic.")
-)`),
+)`,
+``),
 
 demoUIMExample("dismissing", "Entfernbar", 
   H5Div(
@@ -166,7 +171,8 @@ demoUIMExample("dismissing", "Entfernbar",
 `UIMAlert(["alert-success", "alert-dismissible", "fade", "show"], 
   UIMButton(["btn-close"], ["data-bs-dismiss":"alert", "aria-label":"Close"]),
   H5Strong("Achtung!"), H5String(" Dieser Alert verschwindet, wenn der &times; Button getätigt wird.")
-)`)
+)`,
+``)
 
      ),
     H5Div(["col-12", "col-lg-2"]))).toString;

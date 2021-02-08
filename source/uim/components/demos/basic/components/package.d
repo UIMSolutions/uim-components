@@ -3,7 +3,7 @@ module uim.components.demos.components;
 import uim.components;
 
 static this() {
-	demoUIMComps.pages("components", new class DH5AppPage {
+	demoUIMComps.pages("basic/components", new class DH5AppPage {
 		this() { 
 			super(); 
 			this
@@ -19,18 +19,19 @@ static this() {
 		} 
 			
     override string content() { 
-      return `
-<main>
-  <div class="container-fluid mt-3 bg-light m-1">
-    <nav aria-label="Breadcrumb" >
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">UI Manufaktur</a></li>
-        <li class="breadcrumb-item"><a href="/demos">Demos</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-components">uim-components</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Components</li>
-      </ol>
-    </nav>
-  </div>
+     return 
+H5Main("app", ["style":"margin-top:70px;"],
+  H5Div(["container-fluid", "mt-3", "bg-light"],
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/basic"], 
+    ["UI Manufaktur", "Demos", "uim-components" , "Components"], "Basic")),
+
+  BS5Container(["mt-3"]).row(
+    H5Div(["col-12", "col-lg-2"]),
+    H5Div(["col-12", "col-lg-8"], 
+      H5H2(["display-4"], "Toasts"),
+      H5Hr,
+
+/* 
   <div class="container mt-3">
     <div class="row">
       <div class="col-12 col-lg-2">
@@ -42,7 +43,7 @@ static this() {
         <div class="mb-5">
           H5H3(["text-muted"], "Themenbereiche")
           <ul class="list-group">
-            <li class="list-group-item"><a href="/demos/uim-components/components">Components</a></li>
+            <li class="list-group-item"><a href="/demos/uim-components/basic">Components</a></li>
             <li class="list-group-item"><a href="/demos/uim-components/contents">Contents</a></li>
             <li class="list-group-item"><a href="/demos/uim-components/forms">Forms</a></li>
             <li class="list-group-item"><a href="/demos/uim-components/helpers">Helpers</a></li>
@@ -83,7 +84,9 @@ static this() {
   </div>
 </main>
 
-      `;
+      `; */
+       ),
+    H5Div(["col-12", "col-lg-2"]))).toString;
     }
   });
 }

@@ -3,7 +3,7 @@ module uim.components.demos.components.cards;
 import uim.components;
 
 static this() {
-	demoUIMComps.pages("components/cards", new class DH5AppPage {
+	demoUIMComps.pages("basic/components/cards", new class DH5AppPage {
 		this() { 
 			super(); 
 			this
@@ -46,7 +46,7 @@ auto titleExample = demoUIMExample("title", "Title",
   `UIMCard(["w-50"], 
   UIMCardBody(
     UIMCardTitle("Card title")))
-`, ``);
+`, ``, ``);
 
 auto subtitleExample = demoUIMExample("subtitle", "Subtitle",
   H5Div(
@@ -67,7 +67,7 @@ auto buttonExample = demoUIMExample("button", "Button",
   ), 
   `UIMCard(["w-50"], 
   UIMCardBody(
-    UIMButtonLink(["btn-primary"], "Button")))`, ``);
+    UIMButtonLink(["btn-primary"], "Button")))`, ``, ``);
 
 auto linksExample = demoUIMExample("links", "Links",
   H5Div(
@@ -79,7 +79,7 @@ auto linksExample = demoUIMExample("links", "Links",
   `UIMCardBody(
   UIMCardLink(["href":"#"], "Card link"),
   UIMCardLink(["href":"#"], "Card link"),
-  UIMCardLink(["href":"#"], "Card link"))`, ``);
+  UIMCardLink(["href":"#"], "Card link"))`, ``, ``);
 
 auto lgExample = demoUIMExample("listgroup", "List Group",
   H5Div(
@@ -436,15 +436,16 @@ demoUIMExample("footer", "Mit Footer",
           ),
           H5Div(["col-12", "col-lg-2"]) */
       return 
-demoBs5Page(
-    H5H2(["display-4"], "Cards"),
-    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/components", "/demos/uim-components/components/basic"], 
-    ["UI Manufaktur", "Demos", "uim-components", "Components", "Basic"], "Cards"),
+H5Main("app", ["style":"margin-top:70px;"],
+  H5Div(["container-fluid", "mt-3", "bg-light"],
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/basic", "/demos/uim-components/basic/components"], 
+    ["UI Manufaktur", "Demos", "uim-components" , "Basic", "Components"], "Toasts")),
+
   BS5Container(["mt-3"]).row(
     H5Div(["col-12", "col-lg-2"]),
     H5Div(["col-12", "col-lg-8"], 
       dateInfo(created, changed),
-      H5H2(["display-4"], "Cards"),
+      H5H2(["display-4"], "Toasts"),
       H5Hr,
       
       textExample, 
@@ -457,16 +458,9 @@ demoBs5Page(
       footerExample,
       textExample,
       titleExample
-    ),
-    H5Div(["col-12", "col-lg-2"])
-    );
-
+      
+        ),
+    H5Div(["col-12", "col-lg-2"]))).toString;
     }
   });
 }
-
-/*
-Cards, ein Element für viele Anlässe
-Wenn Sie in diesem Bereich bestimmte Zeilen im Transkript auswählen, wird die zugehörige Zeitmarke im Video angesteuert.
-Cards sind ein Element innerhalb von Bootstrap, um genau zu sein eine Komponente, die in sich jetzt eine größere Anzahl an ehemaligen Komponenten vereint und dementsprechend umfangreich ist das Thema Card in Wirklichkeit. Ich habe jetzt hier in einer älteren Version einen Bereich auf meiner Seite, wo einfach drei Absätze jetzt im Moment noch untereinander liegen, die ich in Cards umbaue, beziehungsweise die ich schon in Cards umgebaut habe, um Ihnen die Funktionsweise von Cards in Aktion zu zeigen. Wenn sie selbst sich über Cards schlau machen wollen, dann finden sie unter den Komponenten, „Components“ den Eintrag „Card“ und dadurch, dass die Cards sich eben eine größere Anzahl anderer Elemente ersetzt haben, finden Sie auf der rechten Seite diese Menge an Möglichkeiten, die sie mit Cards ausführen können. Sie können in Ruhe sich es durchschauen und durchscrollen. Meine momentane Lösung sieht auf jeden Fall so aus. Das heißt, aus diesen drei Absätzen sind jetzt drei nebeneinanderliegende Karten geworden. Und das einzige was ich jetzt noch bei allen drei Karten hinzufügen möchte ist ein Bild im Kopfbereich, das über die gesamte Länge geht. Aber zuerst sehen wir uns mal an, was überhaupt da ist und abgesehen jetzt von dem umfassenden Container, der das Row-Element in sich beherbergt und den einzelnen Spalten-Einträgen haben wir jetzt eben einen zusätzlichen Behälter der die Klasse „card“ trägt und der für diesen Rahmen und diesen abgerundeten Rand zuständig ist und dann haben wir einen „card-body“, der seinerseits jetzt für ein gewisses Padding gegenüber dem übergeordneten Element zuständig ist und dann haben wir noch einen eigenen kleinen Absatz der „card-title“ heißt, ich habe hier jetzt eben keine Überschriftsebene mehr, sondern ich verwende nur den „card-title“, der nichts anderes tut als etwas Abstand zwischen dem Titel und dem normalen Fließtext zu schaffen und im Fließtext könnte ich jetzt noch die Klasse „card-text“ mitgeben, was ich jetzt aber nicht mache, weil es für meinen Bedarf hier nicht notwendig ist. Und das habe ich bei allen drei Absätzen gemacht, womit ich jetzt eben zum gerade gezeigten Ergebnis gekommen bin. Wenn ich jetzt noch ein Bild einfügen möchte, so hier auf dieser Ebene, so ist das einzige was ich beim Einfügen des Bilds beachten muss, die Art wo ich es einfüge. Und zwar das Bild, ich hole mir das jetzt als Vorlage mit „Strg+C“ in meine Zwischenablage, muss aber oberhalb vom „card-body“ zu liegen kommen, damit es nicht ebenfalls mit diesem Padding versehen wird, das eben die Aufgabe des „card-body“ ist. Okay, ich habe das schon in der Zwischenablage, das heißt ich wechsle jetzt zurück zu meiner höchst eigenen Karte und werde genau hier jetzt dieses Image einfügen. Das Image hat eine eigene Klasse „card-img-top“, das dafür sorgt, dass das Bild sich dann auch passend verhält und ich muss jetzt eigentlich nur noch in mein Bildverzeichnis gehen und ein passendes Bild aussuchen. Und vielleicht hier auch noch den Alternativtext ändern. Okay, und dasselbe mache ich jetzt noch mal hier mit der zweiten Karte, indem ich wieder ein Bild einfüge und dieses Mal verzichte ich jetzt auf den Alternativtext. Wir wissen, dass er wichtig ist und ein drittes Mal auch noch hier. Mit meinem Treppenbild, das Feld C. So, und einfach nur durch dieses Verwenden der Klasse „card-img-top“ und mit der Positionierung oberhalb vom „card-body“, wenn ich das Ganze speichere und mir jetzt meine Karten wieder ausgeben lasse, sorgt dafür, dass die Bilder sich perfekt eingliedern in diese Karte und die Karte so gesehen auch ziemlich gut aufpeppen. Und so können Sie mit etwas mehr Markup aber trotzdem recht wenig Aufwand mit Hilfe von Cards, in sich abgeschlossene Informationseinheiten erzeugen.
-*/

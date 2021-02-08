@@ -3,7 +3,7 @@ module uim.components.demos.demos.helpers.texttruncation;
 import uim.components;
 
 static this() {
-	demoUIMComps.pages("helpers/texttruncation", new class DH5AppPage {
+	demoUIMComps.pages("basic/helpers/texttruncation", new class DH5AppPage {
 		this() { 
 			super(); 
 			this
@@ -26,8 +26,8 @@ static this() {
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">UI Manufaktur</a></li>
         <li class="breadcrumb-item"><a href="/demos">Demos</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-components">uim-components</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-components">Bootstrap 5</a></li>
+        <li class="breadcrumb-item"><a href="/uim-components/demos">uim-components</a></li>
+        <li class="breadcrumb-item"><a href="/uim-components/demos">Bootstrap 5</a></li>
         <li class="breadcrumb-item"><a href="/demos/uim-components/helpers">Helpers</a></li>
         <li class="breadcrumb-item active" aria-current="page">Text Truncation</li>
       </ol>

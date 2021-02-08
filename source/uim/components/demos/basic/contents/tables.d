@@ -3,7 +3,7 @@ module uim.components.demos.demos.contents.tables;
 import uim.components;
 
 static this() {
-	demoUIMComps.pages("contents/tables", new class DH5AppPage {
+	demoUIMComps.pages("basic/contents/tables", new class DH5AppPage {
 		this() { 
 			super(); 
 			this
@@ -26,8 +26,8 @@ static this() {
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">UI Manufaktur</a></li>
         <li class="breadcrumb-item"><a href="/demos">Demos</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-components">uim-components</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-components">Bootstrap 5</a></li>
+        <li class="breadcrumb-item"><a href="/uim-components/demos">uim-components</a></li>
+        <li class="breadcrumb-item"><a href="/uim-components/demos">Bootstrap 5</a></li>
         <li class="breadcrumb-item"><a href="/demos/uim-components/contents">Contents</a></li>
         <li class="breadcrumb-item active" aria-current="page">Tables</li>
       </ol>

@@ -3,7 +3,7 @@ module uim.components.demos.demos.utilities.interactions;
 import uim.components;
 
 static this() {
-	demoUIMComps.pages("utilities/interactions", new class DH5AppPage {
+	demoUIMComps.pages("basic/utilities/interactions", new class DH5AppPage {
 		this() { 
 			super(); 
 			this
@@ -19,27 +19,19 @@ static this() {
 		} 
 			
     override string content() { 
-      return `
-<main>
-  <div class="container-fluid mt-3 bg-light m-1">
-    <nav aria-label="Breadcrumb" >
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">UI Manufaktur</a></li>
-        <li class="breadcrumb-item"><a href="/demos">Demos</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-components">uim-components</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-components">Bootstrap 5</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-components/utilities">Utilities</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Interactions</li>
-      </ol>
-    </nav>
-  </div>
-  <div class="container mt-3">
-    <div class="row">
-      <div class="col-12 col-lg-2">
-      </div>
-      <div class="col-12 col-lg-8">
-        <h2 class="component display-4">Interactions</h2>
-        <hr>
+     return 
+H5Main("app", ["style":"margin-top:70px;"],
+  H5Div(["container-fluid", "mt-3", "bg-light"],
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/basic", "/demos/uim-components/components/utilities"], 
+    ["UI Manufaktur", "Demos", "uim-components" , "Components", "Utilities"], "Interactions")),
+
+  BS5Container(["mt-3"]).row(
+    H5Div(["col-12", "col-lg-2"]),
+    H5Div(["col-12", "col-lg-8"], 
+      dateInfo(created, changed),
+      H5H2(["display-4"], "Interactions"),
+      H5Hr,
+/*
 
         <div class="mb-5">
               <h3 class="text-muted">Text selection</h3>
@@ -69,7 +61,9 @@ static this() {
         </div>
       </div>
     </main>
-      `;
+      `;*/
+       ),
+    H5Div(["col-12", "col-lg-2"]))).toString;
     }
   });
 }
