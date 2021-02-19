@@ -18,29 +18,30 @@ static this() {
           `vue.mount('#app');`]);
 		} 
 			
-    override string content() { 
-      return `
-<main>
-  <div class="container-fluid mt-3 bg-light m-1">
-    <nav aria-label="Breadcrumb" >
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">UI Manufaktur</a></li>
-        <li class="breadcrumb-item"><a href="/demos">Demos</a></li>
-        <li class="breadcrumb-item"><a href="/uim-components/demos">uim-components</a></li>
-        <li class="breadcrumb-item"><a href="/uim-components/demos">Bootstrap 5</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-components/helpers">Helpers</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Text Truncation</li>
-      </ol>
-    </nav>
-  </div>
-  <div class="container mt-3">
-    <div class="row">
-      <div class="col-12 col-lg-2">
-      </div>
-      <div class="col-12 col-lg-8">
-        <h2 class="component display-4">Text Truncation</h2>
-        <hr>
+       override string content() { 
+      return 
+H5Main("app", ["style":"margin-top:70px;"],
+  H5Div(["container-fluid", "mt-3", "bg-light"],
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/basic", "/demos/uim-components/basic/helpers"], 
+    ["UI Manufaktur", "Demos", "uim-components" , "Helpers", "Forms"], "Text Truncation")),
 
+  BS5Container(["mt-3"]).row(
+    H5Div(["col-12", "col-lg-2"], 
+      listCompLevels("basic"),    
+      listCompAreas("basic", "helpers"),    
+      listCompSections("basic", "helpers", "texttruncation"),    
+    ),
+    H5Div(["col-12", "col-lg-8"], 
+      dateInfo(created, changed),
+      H5H2(["display-4"], "Text Truncation"),
+      H5Hr
+
+    ),
+    H5Div(["col-12", "col-lg-2"]))).toString;
+    }
+  });
+}
+/*
         <div class="mb-5">
           <div>
             <h4 class="h5 text-muted mt-3">Block</h4>
@@ -50,11 +51,4 @@ static this() {
           </div>
         </div>
 
-      </div>
-    </div>
-  </div>
-</main>
-      `;
-    }
-  });
-}
+*/

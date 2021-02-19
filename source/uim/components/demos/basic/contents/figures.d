@@ -19,27 +19,31 @@ static this() {
 		} 
 			
     override string content() { 
-      return `
-<main>
-  <div class="container-fluid mt-3 bg-light m-1">
-    <nav aria-label="Breadcrumb" >
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">UI Manufaktur</a></li>
-        <li class="breadcrumb-item"><a href="/demos">Demos</a></li>
-        <li class="breadcrumb-item"><a href="/uim-components/demos">uim-components</a></li>
-        <li class="breadcrumb-item"><a href="/uim-components/demos">Bootstrap 5</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-components/contents">Contents</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Figures</li>
-      </ol>
-    </nav>
-  </div>
-  <div class="container mt-3">
-    <div class="row">
-      <div class="col-12 col-lg-2">
-      </div>
-      <div class="col-12 col-lg-8">
-        <h2 class="component display-4">Figures</h2>
-        <hr>
+return 
+H5Main("app", ["style":"margin-top:70px;"],
+  H5Div(["container-fluid", "mt-3", "bg-light"],
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/basic", "/demos/uim-components/basic/contents"], 
+    ["UI Manufaktur", "Demos", "uim-components" , "Basic", "Contents"], "Figures")),
+
+  BS5Container(["mt-3"]).row(
+    H5Div(["col-12", "col-lg-2"], 
+      listCompLevels("basic"),    
+      listCompAreas("basic", "contents"),    
+      listCompSections("basic", "contents", "figures"),    
+    ),
+    H5Div(["col-12", "col-lg-8"], 
+      dateInfo(created, changed),
+      H5H2(["display-4"], "Figures"),
+      H5Hr
+
+    ),
+    H5Div(["col-12", "col-lg-2"]))).toString;
+    }
+  });
+}
+
+     /*  return `
+
 
         <div class="mb-5">
           <h3 class="text-muted">Default</h3>
@@ -74,4 +78,4 @@ static this() {
       `;
     }
   });
-}
+} */

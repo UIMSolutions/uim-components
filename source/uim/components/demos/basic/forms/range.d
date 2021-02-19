@@ -19,29 +19,28 @@ static this() {
 		} 
 			
     override string content() { 
-      return `
-<main>
-  <div class="container-fluid mt-3 bg-light m-1">
-    <nav aria-label="Breadcrumb" >
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">UI Manufaktur</a></li>
-        <li class="breadcrumb-item"><a href="/demos">Demos</a></li>
-        <li class="breadcrumb-item"><a href="/uim-components/demos">uim-components</a></li>
-        <li class="breadcrumb-item"><a href="/uim-components/demos">Bootstrap 5</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-components/contents">Contents</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Range</li>
-      </ol>
-    </nav>
-  </div>
-  <div class="container mt-3">
-    <div class="row">
-      <div class="col-12 col-lg-2">
-      </div>
-      <div class="col-12 col-lg-8">
-        <h2 class="component display-4">Range</h2>
-        <hr>
+      return 
+H5Main("app", ["style":"margin-top:70px;"],
+  H5Div(["container-fluid", "mt-3", "bg-light"],
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/basic", "/demos/uim-components/basic/forms"], 
+    ["UI Manufaktur", "Demos", "uim-components" , "Basic", "Forms"], "Range")),
+  BS5Container(["mt-3"]).row(
+    H5Div(["col-12", "col-lg-2"], 
+      listCompLevels("basic"),    
+      listCompAreas("basic", "forms"),    
+      listCompSections("basic", "forms", "range"),    
+    ),
+    H5Div(["col-12", "col-lg-8"], 
+      dateInfo(created, changed),
+      H5H2(["display-4"], "Range"),
+      H5Hr,
 
-          <div class="mb-5">
+      ),
+    H5Div(["col-12", "col-lg-2"]))).toString;
+    }
+  });
+}
+        /*   <div class="mb-5">
               <h3 class="text-muted">Default</h3>
               <div>
                 <label for="inputRange" class="form-label">Range input label</label>
@@ -64,12 +63,5 @@ static this() {
                 <input type="range" class="form-range" id="inputRangeSteps" min="0" max="10" step="0.5">
               </div>
             </div>
-
-          </div>
-        </div>
-      </div>
-    </main>
-      `;
-    }
-  });
-}
+ */
+ 

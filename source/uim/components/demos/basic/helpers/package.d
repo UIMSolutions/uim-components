@@ -19,57 +19,24 @@ static this() {
 		} 
 			
     override string content() { 
-      return `
-<main>
-  <div class="container-fluid mt-3 bg-light m-1">
-    <nav aria-label="Breadcrumb" >
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">UI Manufaktur</a></li>
-        <li class="breadcrumb-item"><a href="/demos">Demos</a></li>
-        <li class="breadcrumb-item"><a href="/uim-components/demos">uim-components</a></li>
-        <li class="breadcrumb-item"><a href="/demos/uim-components/">Bootstrap 5</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Helpers</li>
-      </ol>
-    </nav>
-  </div>
-  <div class="container mt-3">
-    <div class="row">
-      <div class="col-12 col-lg-2">
-      </div>
-      <div class="col-12 col-lg-8">
-        <h2 class="component display-4">uim-components Demo</h2>
-        <hr>
+      return 
+H5Main("app", ["style":"margin-top:70px;"],
+  H5Div(["container-fluid", "mt-3", "bg-light"],
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/basic"], 
+    ["UI Manufaktur", "Demos", "uim-components" , "Basic"], "Helpers")),
+  BS5Container(["mt-3"]).row(
+    H5Div(["col-12", "col-lg-2"], 
+      listCompLevels("basic"),    
+      listCompAreas("basic", "helpers")       
+    ),
+    H5Div(["col-12", "col-lg-8"], 
+      dateInfo(created, changed),
+      H5H2(["display-4"], "Helpers"),
+      H5Hr,
 
-        <div class="mb-5">
-          <h3 class="text-muted">Themenbereiche</h3>
-          <ul class="list-group">
-            <li class="list-group-item"><a href="/demos/uim-components/basic">Components</a></li>
-            <li class="list-group-item"><a href="/demos/uim-components/contents">Contents</a></li>
-            <li class="list-group-item"><a href="/demos/uim-components/forms">Forms</a></li>
-            <li class="list-group-item"><a href="/demos/uim-components/helpers">Helpers</a></li>
-            <li class="list-group-item"><a href="/demos/uim-components/layouts">Layouts</a></li>
-            <li class="list-group-item"><a href="/demos/uim-components/utilities">Utilities</a></li>
-          </ul>
-        </div>
-
-        <div class="mb-5">
-          <h3 class="text-muted">Forms</h3>
-          <ul class="list-group">
-            <li class="list-group-item"><a href="/demos/uim-components/helpers/clearfix">Clearfix</a></li>
-            <li class="list-group-item"><a href="/demos/uim-components/helpers/coloredlinks">Colored Links</a></li>
-            <li class="list-group-item"><a href="/demos/uim-components/helpers/positionhelpers">Position Helpers</a></li>
-            <li class="list-group-item"><a href="/demos/uim-components/helpers/ratio">Ratio</a></li>
-            <li class="list-group-item"><a href="/demos/uim-components/helpers/stretchedlink">Stretched Link</a></li>
-            <li class="list-group-item"><a href="/demos/uim-components/helpers/texttruncation">Text Truncation</a></li>
-            <li class="list-group-item"><a href="/demos/uim-components/helpers/visuallyhidden">Visually Hidden</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
-
-      `;
+      listCompSections("basic", "helpers")
+    ),
+    H5Div(["col-12", "col-lg-2"]))).toString;
     }
   });
 }

@@ -1,5 +1,6 @@
 module uim.components.basic;
 
+public import uim.components.basic.accordions;
 public import uim.components.basic.alerts;
 public import uim.components.basic.badges;
 public import uim.components.basic.breadcrumbs;

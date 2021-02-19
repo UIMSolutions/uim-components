@@ -13,8 +13,13 @@ static this() {
 					"pageTitle": "Accordions - uim-components Demo",
           "script":
           `const vue = Vue.createApp({});`~
-          UIMButton.toVue3("vue")~";"~
-          /* UIMButtonLink.toVue3("vue")~";"~ */
+          UIMAccordion.toVue3("vue")~";"~
+          UIMAccordionItem.toVue3("vue")~";"~
+          UIMAccordionHeader.toVue3("vue")~";"~
+          UIMAccordionButton.toVue3("vue")~";"~
+          UIMAccordionCollapse.toVue3("vue")~";"~
+          UIMAccordionButton.toVue3("vue")~";"~
+          UIMAccordionButton.toVue3("vue")~";"~
           `vue.mount('#app');`]);
 		} 
 			
@@ -194,11 +199,15 @@ H5Main("app", ["style":"margin-top:70px;"],
     bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/basic", "/demos/uim-components/basic/components"], 
     ["UI Manufaktur", "Demos", "uim-components" , "Basic", "Components"], "Accordions")),
   BS5Container(["mt-3"]).row(
-    H5Div(["col-12", "col-lg-2"]),
-      H5Div(["col-12", "col-lg-8"], 
-            dateInfo(created, changed),
-      H5H2(["display-4"], "Accordions"),
-      H5Hr,
+    H5Div(["col-12", "col-lg-2"], 
+      listCompLevels("basic"),    
+      listCompAreas("basic", "components"),    
+      listCompSections("basic", "components", "accordions"),    
+    ),
+    H5Div(["col-12", "col-lg-8"], 
+    dateInfo(created, changed),
+    H5H2(["display-4"], "Accordions"),
+    H5Hr,
 
 
   /*     defaultExample,

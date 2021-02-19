@@ -26,7 +26,11 @@ H5Main("app", ["style":"margin-top:70px;"],
     ["UI Manufaktur", "Demos", "uim-components" , "Helpers"], "Stretched Link")),
 
   BS5Container(["mt-3"]).row(
-    H5Div(["col-12", "col-lg-2"]),
+    H5Div(["col-12", "col-lg-2"], 
+      listCompLevels("basic"),    
+      listCompAreas("basic", "helpers"),    
+      listCompSections("basic", "helpers", "stretchedlink"),    
+    ),
     H5Div(["col-12", "col-lg-8"], 
       H5H2(["display-4"], "Stretched Link"),
       H5Hr,

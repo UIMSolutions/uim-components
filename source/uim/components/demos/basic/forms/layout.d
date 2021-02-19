@@ -19,9 +19,30 @@ static this() {
 		} 
 			
     override string content() { 
-      return `
-<main>
-  <div class="container-fluid mt-3 bg-light m-1">
+      return 
+H5Main("app", ["style":"margin-top:70px;"],
+  H5Div(["container-fluid", "mt-3", "bg-light"],
+    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/basic", "/demos/uim-components/basic/forms"], 
+    ["UI Manufaktur", "Demos", "uim-components" , "Basic", "Forms"], "Layout")),
+
+  BS5Container(["mt-3"]).row(
+    H5Div(["col-12", "col-lg-2"], 
+      listCompLevels("basic"),    
+      listCompAreas("basic", "forms"),    
+      listCompSections("basic", "forms", "layout"),    
+    ),
+    H5Div(["col-12", "col-lg-8"], 
+      dateInfo(created, changed),
+      H5H2(["display-4"], "Layout"),
+      H5Hr
+
+    ),
+    H5Div(["col-12", "col-lg-2"]))).toString;
+    }
+  });
+}
+
+/*   <div class="container-fluid mt-3 bg-light m-1">
     <nav aria-label="Breadcrumb" >
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">UI Manufaktur</a></li>
@@ -67,11 +88,4 @@ static this() {
           </div>
         </div>
 
-      </div>
-    </div>
-  </div>
-</main>
-      `;
-    }
-  });
-}
+*/

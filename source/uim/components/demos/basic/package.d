@@ -1,16 +1,16 @@
-module uim.components.demos.demos.contents;
+module uim.components.demos.basic;
 
 import uim.components;
 
 static this() {
-	demoUIMComps.pages("basic/contents", new class DH5AppPage {
+	demoUIMComps.pages("basic", new class DH5AppPage {
 		this() { 
 			super(); 
 			this
 			.created(DateTime(2020, 12, 20, 10, 10, 0))
 			.changed(timeLastModified(__FILE_FULL_PATH__))
 			.parameters([
-					"pageTitle": "Contents - uim-components Demo",
+					"pageTitle": "UIM Components Demo",
           "script":
           `const vue = Vue.createApp({});`~
           UIMButton.toVue3("vue")~";"~
@@ -19,26 +19,24 @@ static this() {
 		} 
 			
     override string content() { 
-      return 
+return 
 H5Main("app", ["style":"margin-top:70px;"],
   H5Div(["container-fluid", "mt-3", "bg-light"],
-    bs5Breadcrumbs(["/", "/demos", "/demos/uim-components", "/demos/uim-components/basic"], 
-    ["UI Manufaktur", "Demos", "uim-components" , "Basic"], "Contents")),
+    bs5Breadcrumbs(["/", "/demos/", "/demos/uim-components"], 
+    ["UI Manufaktur", "Demos", "uim-components"], "Basic")),
 
   BS5Container(["mt-3"]).row(
     H5Div(["col-12", "col-lg-2"], 
-      listCompLevels("basic"),    
-      listCompAreas("basic", "contents")    
-    ),
+      listCompLevels("basic")),
     H5Div(["col-12", "col-lg-8"], 
       dateInfo(created, changed),
-      H5H2(["display-4"], "Contents"),
+      H5H2(["display-4"], "UIM Components Demos"),
       H5Hr,
+      
+      listCompAreas("basic")
 
-      listCompSections("basic", "contents") 
     ),
     H5Div(["col-12", "col-lg-2"]))).toString;
     }
   });
 }
-      

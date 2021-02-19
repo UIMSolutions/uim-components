@@ -9,7 +9,6 @@ class DUIMButtonObj : DUIMComponent {
 	}
 
 	mixin(MyAttribute!("buttonType", "type"));
-	mixin(MyAttribute!("buttonType", "type"));
 	mixin(TProperty!("string", "colorMode"));
 	mixin(TProperty!("bool", "outline"));
 	mixin(TProperty!("bool", "block"));

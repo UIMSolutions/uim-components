@@ -124,8 +124,13 @@ H5Main("app", ["style":"margin-top:70px;"],
     ["UI Manufaktur", "Demos", "uim-components" , "Basic", "Components"], "Toasts")),
 
   BS5Container(["mt-3"]).row(
-    H5Div(["col-12", "col-lg-2"]),
+     H5Div(["col-12", "col-lg-2"], 
+      listCompLevels("basic"),    
+      listCompAreas("basic", "components"),    
+      listCompSections("basic", "components", "toasts"),    
+    ),
     H5Div(["col-12", "col-lg-8"], 
+      dateInfo(created, changed),
       H5H2(["display-4"], "Toasts"),
       H5Hr,
 

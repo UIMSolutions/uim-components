@@ -346,3 +346,25 @@ unittest {
   f.write(UIMChatUser.toVUEComponent.toString);
   f.write(UIMChatUsers.toVUEComponent.toString);
 }
+
+string toVue3() {
+  string result;
+
+  // Accordions
+  result ~= UIMAccordion.toVue3("vue")~";";
+  result ~= UIMAccordionItem.toVue3("vue")~";";
+  result ~= UIMAccordionHeader.toVue3("vue")~";";
+  result ~= UIMAccordionButton.toVue3("vue")~";";
+  result ~= UIMAccordionCollapse.toVue3("vue")~";";
+  result ~= UIMAccordionButton.toVue3("vue")~";";
+  result ~= UIMAccordionButton.toVue3("vue")~";";
+
+  // Alerts
+  result ~= UIMAlert.toVue3("vue")~";";
+  result ~= UIMAlertHeading.toVue3("vue")~";";
+  result ~= UIMAlertLink.toVue3("vue")~";";
+
+  return result;
+}
+
+string vue3components;

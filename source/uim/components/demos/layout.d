@@ -28,75 +28,64 @@ static this() {
     .title("Demo - uim-components");
   }
 
-  override string toString(DH5AppPage page, string[string] parameters = null) {
-		if ("title" !in parameters) {
-			parameters["title"] =  this.title;
-		}
+  override string toString(string content, string[string] parameters = null) {
+		return super.toString(
+        ("navigation" in parameters ? parameters["navigation"] : navigation(parameters))~ 
+        (this.layout ?  this.layout.toString(content, this.parameters) : content)~
+        ("footer" in parameters ? parameters["footer"] : footer(parameters)) 
+      );
+	  }
 
-		if ("lang" !in parameters) {
-			parameters["lang"] =  this.lang;
-		}
+  string navigation(string[string] parameters) {
+    string result;
 
-		if (page) {			
-			debug writeln("Reading header settings from page");
-			if (page.title) parameters["title"] =  this.title;
-			if (page.lang) parameters["lang"] = this.lang;
+    result = 
+`<nav class="navbar navbar-expand-lg bg-info fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">`~H5Img(["height":"40", "src":"/img/logo.png", "alt":"UI Manufaktur"]).toString~`</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">
+            UI Manufaktur
+          </a>
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-link" href="/demos/uim-components">uim-components</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>`;
 
-			if (page.metas) {
-				if ("metas" in parameters) parameters["metas"] = page.metas.asString~parameters["metas"];
-				else parameters["metas"] = page.metas.asString;
-			}
-			if (page.links) {
-				parameters["links"] = "links" in parameters ? page.styles.asString~parameters["styles"] : page.styles.asString;
-			}
-			if (page.styles) {
-				if ("styles" in parameters) parameters["styles"] = page.styles.asString~parameters["styles"];
-				else parameters["styles"] = page.styles.asString;
-			}
-			if (page.libraries) {
-				if ("libraries" in parameters) parameters["libraries"] = page.libraries.asString~parameters["libraries"];
-				else parameters["libraries"] = page.libraries.asString;
-			}
-			debug writeln(parameters);
-		}
-		return toString(page.content, parameters);
-	}
+    return result;    
+  }
 
-	override string toString(string content, string[string] parameters = null) {
-		if (this.app) {			
-			if (this.app.metas) {
-				if ("metas" in parameters) parameters["metas"] = this.app.metas.asString~parameters["metas"];
-				else parameters["metas"] = this.app.metas.asString;
-			}
-			if (this.app.styles) {
-				if ("styles" in parameters) parameters["styles"] = this.app.styles.asString~parameters["styles"];
-				else parameters["styles"] = this.app.styles.asString;
-			}
-			if (this.app.libraries) {
-				if ("libraries" in parameters) parameters["libraries"] = this.app.libraries.asString~parameters["libraries"];
-				else parameters["libraries"] = this.app.libraries.asString;
-			}
-		}
-    auto finalLang = parameters.get("lang", this.lang); // if lang !in parameters use this.lang
-		auto finalTitle = parameters.get("title", this.title);  // if title !in parameters use this.title
+  string footer(string[string] parameters) {
+    string result;
 
-		// creating HTML page
-		_html = H5Html
-		.attributes("lang", finalLang).attributes("dir", parameters.get("dir", "ltr"))
-		// Head part of HTML
-		.head(_headClasses)
-		.head(_headAttributes)
-		.head(this.metas.asString~parameters.get("metas", ""))
-		.head(finalTitle.length > 0 ? "<title>" ~ finalTitle ~ "</title>":"")
-		.head(this.styles.asString~parameters.get("styles", ""))
-		// Body part of HTML
-		.body_(_bodyClasses)
-		.body_(_bodyAttributes)
-		.body_(this.layout ? this.layout.toString(content, this.parameters) : content)
-		.body_(this.libraries.asString~parameters.get("libraries", ""))
-		.body_("script" in parameters ? H5Script(parameters["script"]).toString : "");
+    result = H5Footer(["py-5 bg-dark"], ["style":"background-color:#14a1b7"], 
+    BS4Container.fluid()(
+      H5P(["m-0 text-center text-white"], `Verantwortlich für den Inhalt gemäß § 6 MDStV`), 
+      H5P(["m-0 text-center text-white"], `ui-manufaktur.com ist ein Einzelunternehmen:<br>
+            UI Manufaktur UG (haftungsbeschränkt).<br>
+            Inhaberin: Brigitte Straßer<br>
+            Dreimühlenstraße 30<br>
+            80469 München<br>
+            Tel.: 0159 0508 4318<br>
+            Email: contact@ui-manufaktur.com<br>	 	
+            Amtsgericht	München<br>	
+            HRB: 233911<br>
+            USt-IdNr.: DE313841646`),
+      H5P(["m-0 text-center text-white"], "Copyright &copy; 2017 - 2021 UI Manufaktur UG"))).toString;
 
-		return _html.toString;
-  }        
+    return result;    
+  }
 });
 }

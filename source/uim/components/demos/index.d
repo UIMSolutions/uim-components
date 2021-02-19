@@ -32,7 +32,7 @@ H5Main("app", ["style":"margin-top:70px;"],
       H5H2(["display-4"], "UIM Components Demos"),
       H5Hr,
       
-      listLevels
+      listCompLevels()
 
     ),
     H5Div(["col-12", "col-lg-2"]))).toString;
