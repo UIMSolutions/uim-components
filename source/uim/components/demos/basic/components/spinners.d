@@ -13,8 +13,7 @@ static this() {
 					"pageTitle": "Spinners - uim-components Demo",
           "script":
           `const vue = Vue.createApp({});`~
-          UIMButton.toVue3("vue")~";"~
-          /* UIMButtonLink.toVue3("vue")~";"~ */
+          //spinnersVue3("vue")~
           `vue.mount('#app');`]);
 		} 
 			

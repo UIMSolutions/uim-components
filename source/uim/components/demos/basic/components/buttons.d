@@ -10,12 +10,11 @@ static this() {
 			.created(DateTime(2020, 12, 20, 10, 10, 0))
 			.changed(timeLastModified(__FILE_FULL_PATH__))
 			.parameters([
-					"pageTitle": "Buttons - uim-components Demo",
-          "script":
-          `const vue = Vue.createApp({});`~
-          UIMButton.toVue3("vue")~";"~
-          /* UIMButtonLink.toVue3("vue")~";"~ */
-          `vue.mount('#app');`]);
+					"pageTitle": "Buttons - uim-components Demo"])
+      .scripts(
+        `const vue = Vue.createApp({});`~
+        buttonsVue3("vue")~
+        `vue.mount('#app');`);
 		} 
 			
     override string content() { 
@@ -57,10 +56,10 @@ auto linksExample = demoUIMExample("links", "Links",
     
 auto classesExample = demoUIMExample("classes", `Button class<p>Default button styles applied to <code>&lt;a&gt;</code> and <code>&lt;input&gt;</code> elements")`, 
   H5Div(
-    UIMButtonLink(["btn-primary"], ["href":"#", "role":"button"], "Link"), 
-    H5Input(["btn", "btn-success"], ["type":"button", "value":"Input"]),
-    H5Input(["btn", "btn-danger"], ["type":"submit", "value":"Submit"]),
-    H5Input(["btn", "btn-warning"], ["type":"reset", "value":"Reset"])
+    UIMButtonLink(["btn-primary"], ["href":"#"], "Link"), 
+    UIMInputButton(["btn", "btn-success"], ["type":"button", "value":"Input"]),
+    UIMInputSubmit(["btn", "btn-danger"], ["type":"submit", "value":"Submit"]),
+    UIMInputReset(["btn", "btn-warning"], ["type":"reset", "value":"Reset"])
     ), ``, ``);
 
 auto outlinesExample = demoUIMExample("outlines", "Outline styles", 

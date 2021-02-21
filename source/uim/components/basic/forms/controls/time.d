@@ -18,6 +18,6 @@ mixin(UIMShort!("InputTime"));
 unittest {
 	assert(Assert(UIMInputTime, "<uim-input-time></uim-input-time>"));	
 
-	auto f = File("./public/js/uim/components/basic/forms/controls/time.js", "w");
-  f.write(UIMInputTime.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/forms/controls/time.js", "w");
+  // f.write(UIMInputTime.toVUEComponent.toString);
 }

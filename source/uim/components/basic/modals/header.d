@@ -22,6 +22,6 @@ mixin(UIMShort!"ModalHeader");
 unittest {	
 	assert(Assert(UIMModalHeader, `<div class="modal-header"></div>`));
 
-	auto f = File("./public/js/uim/components/basic/modals/header.js", "w"); 
-  f.write(UIMModalHeader.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/modals/header.js", "w"); 
+  // f.write(UIMModalHeader.toVUEComponent.toString);
 }

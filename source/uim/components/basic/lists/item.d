@@ -20,6 +20,6 @@ mixin(UIMShort!"ListItem");
 unittest {
 	assert(Assert(UIMListItem, `<uim-list-item></uim-list-item>`));
 
-	auto f = File("./public/js/uim/components/basic/lists/item.js", "w"); 
-  f.write(UIMListItem.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/lists/item.js", "w"); 
+  // f.write(UIMListItem.toVUEComponent.toString);
 }

@@ -38,6 +38,6 @@ mixin(UIMShort!"ModalDialog");
 unittest {
 	assert(Assert(UIMModalDialog, "<uim-modal-dialog></uim-modal-dialog>"));
 
-	auto f = File("./public/js/uim/components/basic/modals/dialog.js", "w"); 
-  f.write(UIMModalDialog.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/modals/dialog.js", "w"); 
+  // f.write(UIMModalDialog.toVUEComponent.toString);
 }

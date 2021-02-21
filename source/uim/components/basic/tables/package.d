@@ -1,5 +1,7 @@
 module uim.components.basic.tables;
 
+public import uim.components;
+
 public import uim.components.basic.tables.table;
 public import uim.components.basic.tables.body_;
 public import uim.components.basic.tables.header;
@@ -16,3 +18,14 @@ string tablesRegistration() {
     UIMTableFooter.toVUEComponent.globalRegistration~
     UIMTableHeader.toVUEComponent.globalRegistration;
 }
+
+string tablesVue3(string target) {
+  return [
+    UIMTable, 
+    UIMTableBody, 
+    UIMTableCell, 
+    UIMTableRow, 
+    UIMTableFooter,
+    UIMTableHeader
+  ].map!(a => a.toVue3(target)~";").join("");
+} 

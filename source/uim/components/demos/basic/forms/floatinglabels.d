@@ -13,8 +13,7 @@ static this() {
 					"pageTitle": "Floating Labels - uim-components Demo",
           "script":
           `const vue = Vue.createApp({});`~
-          UIMButton.toVue3("vue")~";"~
-          /* UIMButtonLink.toVue3("vue")~";"~ */
+          formsVue3("vue")~
           `vue.mount('#app');`]);
 		} 
 			

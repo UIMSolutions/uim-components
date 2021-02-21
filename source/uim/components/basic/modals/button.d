@@ -24,6 +24,6 @@ class DUIMModalButton : DUIMComponent {
 mixin(UIMShort!"ModalButton");
 
 unittest {
-	auto f = File("./public/js/uim/components/basic/modals/button.js", "w"); 
-  f.write(UIMModalButton.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/modals/button.js", "w"); 
+  // f.write(UIMModalButton.toVUEComponent.toString);
 }

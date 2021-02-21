@@ -19,6 +19,6 @@ mixin(UIMShort!"ModalTitle");
 unittest {
 	assert(Assert(UIMModalTitle, `<uim-modal-title></uim-modal-title>`));
 
-	auto f = File("./public/js/uim/components/basic/modals/title.js", "w"); 
-  f.write(UIMModalTitle.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/modals/title.js", "w"); 
+  // f.write(UIMModalTitle.toVUEComponent.toString);
 }

@@ -15,6 +15,6 @@ mixin(UIMShort!"NavLink");
 unittest {
 	assert(Assert(UIMNavLink, `<uim-nav-link></uim-nav-link>`));
 
-	auto f = File("./public/js/uim/components/basic/navs/link.js", "w"); 
-  f.write(UIMNavLink.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/navs/link.js", "w"); 
+  // f.write(UIMNavLink.toVUEComponent.toString);
 }

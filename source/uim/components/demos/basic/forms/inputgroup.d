@@ -13,8 +13,7 @@ static this() {
 					"pageTitle": "Input Group - uim-components Demo",
           "script":
           `const vue = Vue.createApp({});`~
-          // UIMFigure.toVue3("vue")~";"~
-          /* UIMButtonLink.toVue3("vue")~";"~ */
+          formsVue3("vue")~
           `vue.mount('#app');`]);
 		} 
 			

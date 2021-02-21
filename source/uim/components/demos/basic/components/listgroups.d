@@ -13,9 +13,7 @@ static this() {
 					"pageTitle": "List Groups - uim-components Demo",
           "script":
           `const vue = Vue.createApp({});`~
-          UIMList.toVue3("vue")~";"~
-          UIMListItem.toVue3("vue")~";"~
-          /* UIMButtonLink.toVue3("vue")~";"~ */
+          listsVue3("vue")~
           `vue.mount('#app');`]);
 		} 
 			

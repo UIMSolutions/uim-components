@@ -13,8 +13,7 @@ static this() {
 					"pageTitle": "Alerts - uim-components Demo",
           "script":
           `const vue = Vue.createApp({});`~
-          UIMAlert.toVue3("vue")~";"~
-          /* UIMButtonLink.toVue3("vue")~";"~ */
+          alertsVue3("vue")~
           `vue.mount('#app');`]);
 		} 
 			

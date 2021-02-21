@@ -19,6 +19,6 @@ mixin(UIMShort!"TableRow");
 unittest {
 	assert(Assert(UIMTableRow, `<uim-table-row></uim-table-row>`));
 
-	auto f = File("./public/js/uim/components/basic/tables/row.js", "w"); 
-  f.write(UIMTableRow.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/tables/row.js", "w"); 
+  // f.write(UIMTableRow.toVUEComponent.toString);
 }

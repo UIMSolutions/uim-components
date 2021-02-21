@@ -20,7 +20,7 @@ static this() {
       ["href":"/lib/bootstrap/5.0.0-beta1/css/bootstrap.min.css", "rel":"stylesheet"], 
       ["href":"/lib/font-awesome/last/css/all.css", "rel":"stylesheet"],
       )
-    .libraries(
+    .scripts(
       ["src":"/lib/bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"], 
       ["src":"https://unpkg.com/vue@next"], 
      /*  ["src":"/lib/uim-components/all.js"],   */
@@ -28,14 +28,19 @@ static this() {
     .title("Demo - uim-components");
   }
 
-  override string toString(string content, string[string] parameters = null) {
-		return super.toString(
-        ("navigation" in parameters ? parameters["navigation"] : navigation(parameters))~ 
-        (this.layout ?  this.layout.toString(content, this.parameters) : content)~
-        ("footer" in parameters ? parameters["footer"] : footer(parameters)) 
-      );
-	  }
-
+  override string toString(DH5AppPage page, string[string] parameters = null) {
+    return super.toString(page,
+      ("navigation" in parameters ? parameters["navigation"] : navigation(parameters))~ 
+      H5Div(["style": "margin-top=100px;"], this.layout ?  this.layout.toString(page.content, parameters) : page.content).toString
+      ~footer(parameters), parameters);
+  }
+/*   override string toString(string content, string[string] parameters = null) {
+    return super.toString(
+      ("navigation" in parameters ? parameters["navigation"] : navigation(parameters))~ 
+      H5Div(["style": "margin-top=100px;"], this.layout ?  this.layout.toString(content, parameters) : content).toString
+      ~footer(parameters), parameters);
+  }
+ */
   string navigation(string[string] parameters) {
     string result;
 

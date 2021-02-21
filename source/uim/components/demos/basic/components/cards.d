@@ -13,12 +13,7 @@ static this() {
 					"pageTitle": "Cards - uim-components Demo",
           "script":
           `const vue = Vue.createApp({});`~
-          UIMCard.toVue3("vue")~";"~
-          UIMCardBody.toVue3("vue")~";"~
-          UIMCardText.toVue3("vue")~";"~
-          UIMCardTitle.toVue3("vue")~";"~
-          UIMCardSubtitle.toVue3("vue")~";"~
-          /* UIMButtonLink.toVue3("vue")~";"~ */
+          cardsVue3("vue")~
           `vue.mount('#app');`]);
 		} 
 			

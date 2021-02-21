@@ -19,6 +19,6 @@ mixin(UIMShort!"NavbarText");
 unittest {
 	assert(Assert(UIMNavbarText, `<uim-navbar-text></uim-navbar-text>`));
 
-	auto f = File("./public/js/uim/components/basic/navbars/text.js", "w"); 
-  f.write(UIMNavbarText.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/navbars/text.js", "w"); 
+  // f.write(UIMNavbarText.toVUEComponent.toString);
 }

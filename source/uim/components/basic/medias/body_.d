@@ -19,6 +19,6 @@ mixin(UIMShort!"MediaBody");
 unittest {
 	assert(Assert(UIMMediaBody, `<uim-media-body></uim-media-body>`));
 
-	auto f = File("./public/js/uim/components/basic/medias/body.js", "w"); 
-  f.write(UIMMediaBody.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/medias/body.js", "w"); 
+  // f.write(UIMMediaBody.toVUEComponent.toString);
 }

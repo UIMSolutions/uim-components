@@ -13,10 +13,7 @@ static this() {
 					"pageTitle": "Paginations - uim-components Demo",
           "script":
           `const vue = Vue.createApp({});`~
-          UIMPagination.toVue3("vue")~";"~
-          UIMPageItem.toVue3("vue")~";"~
-          UIMPageLink.toVue3("vue")~";"~
-          /* UIMButtonLink.toVue3("vue")~";"~ */
+          paginationsVue3("vue")~
           `vue.mount('#app');`]);
 		} 
 			

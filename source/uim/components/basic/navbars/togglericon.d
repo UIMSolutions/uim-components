@@ -18,6 +18,6 @@ mixin(UIMShort!"NavbarTogglericon");
 unittest {
 	assert(Assert(UIMNavbarTogglericon, `<uim-navbar-togglericon></uim-navbar-togglericon>`));
 
-	auto f = File("./public/js/uim/components/basic/navbars/togglericon.js", "w"); 
-  f.write(UIMNavbarTogglericon.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/navbars/togglericon.js", "w"); 
+  // f.write(UIMNavbarTogglericon.toVUEComponent.toString);
 }

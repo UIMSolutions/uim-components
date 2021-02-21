@@ -23,6 +23,6 @@ mixin(UIMShort!"ModalContent");
 unittest {
 	assert(Assert(UIMModalContent, `<uim-modal-content></uim-modal-content>`));
 
-	auto f = File("./public/js/uim/components/basic/modals/content.js", "w"); 
-  f.write(UIMModalContent.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/modals/content.js", "w"); 
+  // f.write(UIMModalContent.toVUEComponent.toString);
 }

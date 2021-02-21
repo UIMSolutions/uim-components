@@ -21,6 +21,6 @@ mixin(UIMShort!"ModalBody");
 unittest {
 	assert(Assert(UIMModalBody, `<uim-modal-body></uim-modal-body>`));
 
-	auto f = File("./public/js/uim/components/basic/modals/body.js", "w"); 
-  f.write(UIMModalBody.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/modals/body.js", "w"); 
+  // f.write(UIMModalBody.toVUEComponent.toString);
 }

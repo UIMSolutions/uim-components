@@ -28,6 +28,6 @@ mixin(UIMShort!"TabPane");
 unittest {
 	assert(Assert(UIMTabPane, `<uim-tab-pane></uim-tab-pane>`));
 
-	auto f = File("./public/js/uim/components/basic/tabs/pane.js", "w"); 
-  f.write(UIMTabPane.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/tabs/pane.js", "w"); 
+  // f.write(UIMTabPane.toVUEComponent.toString);
 }

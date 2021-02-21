@@ -3,12 +3,12 @@
 import uim.components;
 
 class DUIMInputGroupAppend : DUIMComponent {
-	mixin(H5This!("uim-input-group-append"));
+	mixin(H5This!("uim-inputgroup-append"));
 
 	mixin(MyContent!("text", "UIMInputGroupText"));
 }
 mixin(UIMShort!"InputGroupAppend");
 
 unittest {
-	assert(Assert(UIMInputGroupAppend, `<uim-input-group-append></uim-input-group-append>`));
+	assert(Assert(UIMInputGroupAppend, `<uim-inputgroup-append></uim-inputgroup-append>`));
 }

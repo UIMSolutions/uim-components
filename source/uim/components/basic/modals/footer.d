@@ -19,6 +19,6 @@ mixin(UIMShort!"ModalFooter");
 unittest {
 	assert(Assert(UIMModalFooter, `<uim-modal-footer></uim-modal-footer>`));
 
-	auto f = File("./public/js/uim/components/basic/modals/footer.js", "w"); 
-  f.write(UIMModalFooter.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/modals/footer.js", "w"); 
+  // f.write(UIMModalFooter.toVUEComponent.toString);
 }

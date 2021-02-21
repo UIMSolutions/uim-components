@@ -1,5 +1,7 @@
 ﻿module uim.components.basic.navbars;
 
+public import uim.components;
+
 public import uim.components.basic.navbars.brand;
 public import uim.components.basic.navbars.navbar;
 public import uim.components.basic.navbars.toggler;
@@ -17,3 +19,16 @@ string navbarsRegistration() {
     UIMNavbarCollapse.toVUEComponent.globalRegistration~
     UIMNavbarNav.toVUEComponent.globalRegistration;
 }
+
+string navbarsVue3(string target) {
+  string[] results; 
+
+	results ~= UIMNavbar.toVue3(target);
+	results ~= UIMNavbarBrand.toVue3(target);
+	results ~= UIMNavbarToggler.toVue3(target);
+	results ~= UIMNavbarTogglericon.toVue3(target);
+	results ~= UIMNavbarCollapse.toVue3(target);
+	results ~= UIMNavbarNav.toVue3(target);
+
+  return results.join(";")~";";
+} 

@@ -21,6 +21,6 @@ mixin(UIMShort!"Nav");
 unittest {
 	assert(Assert(UIMNav, `<uim-nav></uim-nav>`));
 
-	auto f = File("./public/js/uim/components/basic/navs/nav.js", "w"); 
-  f.write(UIMNav.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/navs/nav.js", "w"); 
+  // f.write(UIMNav.toVUEComponent.toString);
 }

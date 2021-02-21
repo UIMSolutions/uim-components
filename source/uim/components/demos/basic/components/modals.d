@@ -13,13 +13,7 @@ static this() {
 					"pageTitle": "Modals - uim-components Demo",
           "script":
           `const vue = Vue.createApp({});`~
-          UIMModalDialog.toVue3("vue")~";"~
-          UIMModalContent.toVue3("vue")~";"~
-          UIMModalHeader.toVue3("vue")~";"~
-          UIMModalTitle.toVue3("vue")~";"~
-          UIMModalBody.toVue3("vue")~";"~
-          UIMModalFooter.toVue3("vue")~";"~
-          /* UIMButtonLink.toVue3("vue")~";"~ */
+          modalsVue3("vue")~ 
           `vue.mount('#app');`]);
 		} 
 			

@@ -19,6 +19,6 @@ mixin(UIMShort!"NavbarCollapse");
 unittest {
 	assert(Assert(UIMNavbarCollapse, `<uim-navbar-collapse></uim-navbar-collapse>`));
 
-	auto f = File("./public/js/uim/components/basic/navbars/collapse.js", "w"); 
-  f.write(UIMNavbarCollapse.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/navbars/collapse.js", "w"); 
+  // f.write(UIMNavbarCollapse.toVUEComponent.toString);
 }

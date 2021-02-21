@@ -23,6 +23,6 @@ mixin(UIMShort!"ListLinks");
 unittest {
 	assert(Assert(UIMListLinks, `<uim-list-links></uim-list-links>`));
 
-	auto f = File("./public/js/uim/components/basic/lists/links.js", "w"); 
-  f.write(UIMListLinks.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/lists/links.js", "w"); 
+  // f.write(UIMListLinks.toVUEComponent.toString);
 }

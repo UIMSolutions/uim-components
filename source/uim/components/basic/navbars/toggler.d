@@ -23,6 +23,6 @@ mixin(UIMShort!"NavbarToggler");
 unittest {
 	assert(Assert(UIMNavbarToggler, `<uim-navbar-toggler></uim-navbar-toggler>`));
 
-	auto f = File("./public/js/uim/components/basic/navbars/toggler.js", "w"); 
-  f.write(UIMNavbarToggler.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/navbars/toggler.js", "w"); 
+  // f.write(UIMNavbarToggler.toVUEComponent.toString);
 }

@@ -13,13 +13,7 @@ static this() {
 					"pageTitle": "Navbars - uim-components Demo",
           "script":
           `const vue = Vue.createApp({});`~
-          UIMNavbar.toVue3("vue")~";"~
-          UIMNavbarBrand.toVue3("vue")~";"~
-          UIMNavbarCollapse.toVue3("vue")~";"~
-          UIMNavbarNav.toVue3("vue")~";"~
-          UIMNavItem.toVue3("vue")~";"~
-          UIMNavLink.toVue3("vue")~";"~
-          /* UIMButtonLink.toVue3("vue")~";"~ */
+          navbarsVue3("vue")~
           `vue.mount('#app');`]);
 		} 
 			

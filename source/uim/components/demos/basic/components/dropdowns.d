@@ -13,11 +13,7 @@ static this() {
 					"pageTitle": "Dropdowns - uim-components Demo",
           "script":
           `const vue = Vue.createApp({});`~
-          UIMDropdown.toVue3("vue")~";"~
-          // UIMDropdownToggle.toVue3("vue")~";"~
-          UIMDropdownMenu.toVue3("vue")~";"~
-          UIMDropdownLink.toVue3("vue")~";"~
-          /* UIMButtonLink.toVue3("vue")~";"~ */
+          dropdownsVue3("vue")~
           `vue.mount('#app');`]);
 		} 
 			

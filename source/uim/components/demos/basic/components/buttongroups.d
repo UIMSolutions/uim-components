@@ -13,9 +13,7 @@ static this() {
 					"pageTitle": "Buttongroups - uim-components Demo",
           "script":
           `const vue = Vue.createApp({});`~
-          UIMButton.toVue3("vue")~";"~
-          UIMButtonGroup.toVue3("vue")~";"~
-          /* UIMButtonLink.toVue3("vue")~";"~ */
+          buttonsVue3("vue")~
           `vue.mount('#app');`]);
 		} 
 			

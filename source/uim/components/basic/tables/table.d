@@ -44,6 +44,6 @@ mixin(UIMShort!"Table");
 unittest {
 	assert(Assert(UIMTable, `<uim-table></uim-table>`));
 
-	auto f = File("./public/js/uim/components/basic/tables/table.js", "w"); 
-  f.write(UIMTable.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/tables/table.js", "w"); 
+  // f.write(UIMTable.toVUEComponent.toString);
 }

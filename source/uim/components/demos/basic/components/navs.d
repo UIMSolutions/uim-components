@@ -13,8 +13,7 @@ static this() {
 					"pageTitle": "Navs - uim-components Demo",
           "script":
           `const vue = Vue.createApp({});`~
-          UIMButton.toVue3("vue")~";"~
-          /* UIMButtonLink.toVue3("vue")~";"~ */
+          navsVue3("vue")~
           `vue.mount('#app');`]);
 		} 
 			

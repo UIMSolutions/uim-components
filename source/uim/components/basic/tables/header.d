@@ -19,6 +19,6 @@ mixin(UIMShort!"TableHeader");
 unittest {
 	assert(Assert(UIMTableHeader, `<uim-table-header></uim-table-header>`));
 
-	auto f = File("./public/js/uim/components/basic/tables/header.js", "w"); 
-  f.write(UIMTableHeader.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/tables/header.js", "w"); 
+  // f.write(UIMTableHeader.toVUEComponent.toString);
 }

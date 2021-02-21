@@ -1,5 +1,7 @@
 ﻿module uim.components.basic.modals;
 
+public import uim.components;
+
 public import uim.components.basic.modals.body_;
 public import uim.components.basic.modals.button;
 public import uim.components.basic.modals.content;
@@ -19,3 +21,17 @@ string modalsRegistration() {
     UIMModalFooter.toVUEComponent.globalRegistration~
     UIMModalHeader.toVUEComponent.globalRegistration;
 }
+
+string modalsVue3(string target) {
+  string[] results; 
+
+	results ~= UIMModal.toVue3(target);
+	results ~= UIMModalBody.toVue3(target);
+	results ~= UIMModalButton.toVue3(target);
+	results ~= UIMModalContent.toVue3(target);
+	results ~= UIMModalDialog.toVue3(target);
+	results ~= UIMModalFooter.toVue3(target);
+	results ~= UIMModalHeader.toVue3(target);
+
+  return results.join(";")~";";
+} 

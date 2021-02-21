@@ -13,13 +13,7 @@ static this() {
 					"pageTitle": "Accordions - uim-components Demo",
           "script":
           `const vue = Vue.createApp({});`~
-          UIMAccordion.toVue3("vue")~";"~
-          UIMAccordionItem.toVue3("vue")~";"~
-          UIMAccordionHeader.toVue3("vue")~";"~
-          UIMAccordionButton.toVue3("vue")~";"~
-          UIMAccordionCollapse.toVue3("vue")~";"~
-          UIMAccordionButton.toVue3("vue")~";"~
-          UIMAccordionButton.toVue3("vue")~";"~
+          accordionsVue3("vue")~
           `vue.mount('#app');`]);
 		} 
 			

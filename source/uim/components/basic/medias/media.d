@@ -19,6 +19,6 @@ mixin(UIMShort!"Media");
 unittest {
 	assert(Assert(UIMMedia, `<uim-media></uim-media>`));
 
-	auto f = File("./public/js/uim/components/basic/medias/media.js", "w"); 
-  f.write(UIMMedia.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/medias/media.js", "w"); 
+  // f.write(UIMMedia.toVUEComponent.toString);
 }

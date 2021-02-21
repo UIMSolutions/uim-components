@@ -27,6 +27,6 @@ unittest {
 	assert(Assert(UIMListLink.active, `<uim-list-link class="active"></uim-list-link>`));
 	assert(Assert(UIMListLink.disabled, `<uim-list-link class="disabled"></uim-list-link>`));
 
-	auto f = File("./public/js/uim/components/basic/lists/link.js", "w"); 
-  f.write(UIMListLink.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/lists/link.js", "w"); 
+  // f.write(UIMListLink.toVUEComponent.toString);
 }
