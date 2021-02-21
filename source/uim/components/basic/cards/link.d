@@ -18,6 +18,6 @@ mixin(UIMShort!"CardLink");
 unittest {
 	assert(Assert(UIMCardLink, `<uim-card-link></uim-card-link>`));
 
-	auto f = File("./public/js/uim/components/basic/cards/link.js", "w"); 
-  f.write(UIMCardLink.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/cards/link.js", "w"); 
+  // f.write(UIMCardLink.toVUEComponent.toString);
 }

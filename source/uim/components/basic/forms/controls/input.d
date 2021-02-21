@@ -8,6 +8,6 @@ class DUIMInput : DUIMComponent {
 mixin(UIMShort!("Input"));
 
 unittest {
-	auto f = File("./public/js/uim/components/basic/forms/controls/input.js", "w");
-  f.write(UIMInput.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/forms/controls/input.js", "w");
+  // f.write(UIMInput.toVUEComponent.toString);
 }

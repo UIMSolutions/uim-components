@@ -19,6 +19,6 @@ mixin(UIMShort!("InputColor"));
 unittest {
 	assert(Assert(UIMInputColor, "<uim-input-color></uim-input-color>"));
 
-	auto f = File("./public/js/uim/components/basic/forms/controls/color.js", "w");
-  f.write(UIMInputColor.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/forms/controls/color.js", "w");
+  // f.write(UIMInputColor.toVUEComponent.toString);
 }

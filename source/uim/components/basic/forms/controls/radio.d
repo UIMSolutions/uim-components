@@ -19,6 +19,6 @@ mixin(UIMShort!("Radio"));
 unittest {
 	assert(Assert(UIMRadio, "<uim-radio></uim-radio>"));	
 
-	auto f = File("./public/js/uim/components/basic/forms/controls/radio.js", "w");
-  f.write(UIMRadio.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/forms/controls/radio.js", "w");
+  // f.write(UIMRadio.toVUEComponent.toString);
 }

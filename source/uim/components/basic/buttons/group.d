@@ -38,6 +38,6 @@ mixin(UIMShort!"ButtonGroup");
 unittest {
 	assert(Assert(UIMButtonGroup, `<uim-button-group></uim-button-group>`));
 
-	auto f = File("./public/js/uim/components/basic/buttons/group.js", "w"); 
-  f.write(UIMButtonGroup.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/buttons/group.js", "w"); 
+  // f.write(UIMButtonGroup.toVUEComponent.toString);
 }

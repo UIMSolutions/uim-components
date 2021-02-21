@@ -19,8 +19,8 @@ mixin(UIMShort!"AccordionButton");
 unittest {
 	assert(Assert(UIMAccordionButton, `<uim-accordion-button></uim-accordion-button>`));
 
-	auto f = File("./public/js/uim/components/basic/accordions/accordion-button.js", "w"); 
-  f.write(UIMAccordionButton.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/accordions/accordion-button.js", "w"); 
+  // f.write(UIMAccordionButton.toVUEComponent.toString);
 
 	vue3components ~= UIMAccordionButton.toVue3("vue")~";";
 }

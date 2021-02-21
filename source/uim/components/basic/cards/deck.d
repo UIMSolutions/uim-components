@@ -19,6 +19,6 @@ mixin(UIMShort!"CardDeck");
 unittest {
 	assert(Assert(UIMCardDeck, `<uim-card-deck></uim-card-deck>`));
 
-	auto f = File("./public/js/uim/components/basic/cards/deck.js", "w"); 
-  f.write(UIMCardDeck.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/cards/deck.js", "w"); 
+  // f.write(UIMCardDeck.toVUEComponent.toString);
 }

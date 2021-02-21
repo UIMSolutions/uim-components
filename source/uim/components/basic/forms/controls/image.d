@@ -19,6 +19,6 @@ mixin(UIMShort!("InputImage"));
 unittest {
 	assert(Assert(UIMInputImage, "<uim-input-image></uim-input-image>"));	
 
-	auto f = File("./public/js/uim/components/basic/forms/controls/image.js", "w");
-  f.write(UIMInputImage.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/forms/controls/image.js", "w");
+  // f.write(UIMInputImage.toVUEComponent.toString);
 }

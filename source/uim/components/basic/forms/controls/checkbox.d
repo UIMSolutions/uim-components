@@ -19,6 +19,6 @@ mixin(UIMShort!("Checkbox"));
 unittest {
 	assert(Assert(UIMCheckbox, "<uim-checkbox></uim-checkbox>"));	
 
-	auto f = File("./public/js/uim/components/basic/forms/controls/checkbox.js", "w");
-  f.write(UIMCheckbox.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/forms/controls/checkbox.js", "w");
+  // f.write(UIMCheckbox.toVUEComponent.toString);
 }

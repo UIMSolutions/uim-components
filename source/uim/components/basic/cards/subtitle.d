@@ -18,6 +18,6 @@ mixin(UIMShort!"CardSubtitle");
 unittest {
 	assert(Assert(UIMCardSubtitle, `<uim-card-subtitle></uim-card-subtitle>`));
 
-	auto f = File("./public/js/uim/components/basic/cards/subtitle.js", "w"); 
-  f.write(UIMCardSubtitle.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/cards/subtitle.js", "w"); 
+  // f.write(UIMCardSubtitle.toVUEComponent.toString);
 }

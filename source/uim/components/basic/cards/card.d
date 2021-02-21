@@ -41,6 +41,6 @@ unittest {
 	assert(Assert(UIMCard.header.body_.footer, `<uim-card><uim-card-header></uim-card-header><uim-card-body>`~
 	`</uim-card-body><uim-card-footer></uim-card-footer></uim-card>`));
 
-	auto f = File("./public/js/uim/components/basic/cards/card.js", "w"); 
-  f.write(UIMCard.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/cards/card.js", "w"); 
+  // f.write(UIMCard.toVUEComponent.toString);
 }

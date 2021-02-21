@@ -22,6 +22,6 @@ mixin(UIMShort!"DropdownMenu");
 unittest {
 	assert(Assert(UIMDropdownMenu, `<uim-dropdown-menu></uim-dropdown-menu>`));
 
-	auto f = File("./public/js/uim/components/basic/dropdowns/menu.js", "w"); 
-  f.write(UIMDropdownMenu.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/dropdowns/menu.js", "w"); 
+  // f.write(UIMDropdownMenu.toVUEComponent.toString);
 }

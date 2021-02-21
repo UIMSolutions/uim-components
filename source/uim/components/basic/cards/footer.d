@@ -17,8 +17,8 @@ mixin(UIMShort!"CardFooter");
 unittest {
 	assert(Assert(UIMCardFooter, `<uim-card-footer></uim-card-footer>`));
 
-	auto f = File("./public/js/uim/components/basic/cards/footer.js", "w"); 
-  f.write(UIMCardFooter.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/cards/footer.js", "w"); 
+  // f.write(UIMCardFooter.toVUEComponent.toString);
 }
 
 

@@ -18,6 +18,6 @@ mixin(UIMShort!("InputReset"));
 unittest {
 	assert(Assert(UIMInputReset, "<uim-input-reset></uim-input-reset>"));	
 
-	auto f = File("./public/js/uim/components/basic/forms/controls/search.js", "w");
-  f.write(UIMInputSearch.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/forms/controls/reset.js", "w");
+  // f.write(UIMInputReset.toVUEComponent.toString);
 }

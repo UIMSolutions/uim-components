@@ -18,6 +18,6 @@ mixin(UIMShort!"CardHeader");
 unittest {
 	assert(Assert(UIMCardHeader, `<uim-card-header></uim-card-header>`));
 
-	auto f = File("./public/js/uim/components/basic/cards/header.js", "w"); 
-  f.write(UIMCardHeader.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/cards/header.js", "w"); 
+  // f.write(UIMCardHeader.toVUEComponent.toString);
 }

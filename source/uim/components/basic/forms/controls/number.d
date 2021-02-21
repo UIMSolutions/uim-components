@@ -19,6 +19,6 @@ mixin(UIMShort!("InputNumber"));
 unittest {
 	assert(Assert(UIMInputNumber, "<uim-input-number></uim-input-number>"));		
 
-	auto f = File("./public/js/uim/components/basic/forms/controls/number.js", "w");
-  f.write(UIMInputNumber.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/forms/controls/number.js", "w");
+  // f.write(UIMInputNumber.toVUEComponent.toString);
 }

@@ -19,6 +19,6 @@ mixin(UIMShort!("InputEmail"));
 unittest {
 	assert(Assert(UIMInputEmail, "<uim-input-email></uim-input-email>"));	
 
-	auto f = File("./public/js/uim/components/basic/forms/controls/email.js", "w");
-  f.write(UIMInputEmail.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/forms/controls/email.js", "w");
+  // f.write(UIMInputEmail.toVUEComponent.toString);
 }

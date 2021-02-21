@@ -32,6 +32,6 @@ mixin(UIMShort!"Button");
 unittest {
 	assert(Assert(UIMButton, `<uim-button></uim-button>`));
 
-	auto f = File("./public/js/uim/components/basic/buttons/button.js", "w"); 
-  f.write(UIMButton.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/buttons/button.js", "w"); 
+  // f.write(UIMButton.toVUEComponent.toString);
 }

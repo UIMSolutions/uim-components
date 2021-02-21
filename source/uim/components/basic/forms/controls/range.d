@@ -18,6 +18,6 @@ mixin(UIMShort!("InputRange"));
 unittest {
 	assert(Assert(UIMInputRange, "<uim-input-range></uim-input-range>"));	
 			
-	auto f = File("./public/js/uim/components/basic/forms/controls/range.js", "w"); 
-  f.write(UIMInputRange.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/forms/controls/range.js", "w"); 
+  // f.write(UIMInputRange.toVUEComponent.toString);
 }

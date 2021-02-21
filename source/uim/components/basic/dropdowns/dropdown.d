@@ -23,6 +23,6 @@ unittest {
 	assert(Assert(UIMDropdown, `<uim-dropdown></uim-dropdown>`));
 	assert(Assert(UIMDropdown.id("id"), `<uim-dropdown id="id"></uim-dropdown>`));
 
-	auto f = File("./public/js/uim/components/basic/dropdowns/dropdown.js", "w"); 
-  f.write(UIMDropdown.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/dropdowns/dropdown.js", "w"); 
+  // f.write(UIMDropdown.toVUEComponent.toString);
 }

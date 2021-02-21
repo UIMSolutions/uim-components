@@ -22,6 +22,6 @@ mixin(UIMShort!("AlertHeading"));
 unittest {
 	assert(Assert(UIMAlertHeading, "<uim-alert-heading></uim-alert-heading>"));
 
-	auto f = File("./public/js/uim/components/basic/alerts/heading.js", "w"); 
-  f.write(UIMAlertHeading.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/alerts/heading.js", "w"); 
+  // f.write(UIMAlertHeading.toVUEComponent.toString);
 }

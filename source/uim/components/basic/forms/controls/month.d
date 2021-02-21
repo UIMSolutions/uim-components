@@ -19,6 +19,6 @@ mixin(UIMShort!("InputMonth"));
 unittest {
 	assert(Assert(UIMInputMonth, "<uim-input-month></uim-input-month>"));	
 
-	auto f = File("./public/js/uim/components/basic/forms/controls/month.js", "w");
-  f.write(UIMInputMonth.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/forms/controls/month.js", "w");
+  // f.write(UIMInputMonth.toVUEComponent.toString);
 }

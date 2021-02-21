@@ -1,5 +1,7 @@
 ﻿module uim.components.basic.forms.controls;
 
+public import uim.components;
+
 public import uim.components.basic.forms.controls.button;
 public import uim.components.basic.forms.controls.color;
 public import uim.components.basic.forms.controls.checkbox;
@@ -26,3 +28,34 @@ public import uim.components.basic.forms.controls.time;
 public import uim.components.basic.forms.controls.url;
 public import uim.components.basic.forms.controls.week;
 
+string formsControlsVue3(string target) {
+  string[] results; 
+
+	results ~= UIMInputButton.toVue3(target);
+	results ~= UIMCheckbox.toVue3(target);
+	results ~= UIMInputColor.toVue3(target);
+	results ~= UIMInputDate.toVue3(target);
+	results ~= UIMInputDateTime.toVue3(target);
+	results ~= UIMInputEmail.toVue3(target);
+	results ~= UIMInputFile.toVue3(target);
+	results ~= UIMInputHidden.toVue3(target);
+	results ~= UIMInputImage.toVue3(target);
+	results ~= UIMInput.toVue3(target);
+	results ~= UIMInputMonth.toVue3(target);
+	results ~= UIMInputNumber.toVue3(target);
+	results ~= UIMPassword.toVue3(target);
+	results ~= UIMRadio.toVue3(target);
+	results ~= UIMInputRange.toVue3(target);
+	results ~= UIMInputReset.toVue3(target);
+	results ~= UIMInputSearch.toVue3(target);
+	results ~= UIMInputSelect.toVue3(target);
+	results ~= UIMInputSubmit.toVue3(target);
+	results ~= UIMInputTel.toVue3(target);
+	results ~= UIMInputText.toVue3(target);
+	results ~= UIMInputTextarea.toVue3(target);
+	results ~= UIMInputTime.toVue3(target);
+	results ~= UIMInputUrl.toVue3(target);
+	results ~= UIMInputWeek.toVue3(target);
+
+  return results.join(";")~";";
+} 

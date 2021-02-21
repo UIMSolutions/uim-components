@@ -19,6 +19,6 @@ mixin(UIMShort!("InputFile"));
 unittest {
 	assert(Assert(UIMInputFile, "<uim-input-file></uim-input-file>"));	
 	
-	auto f = File("./public/js/uim/components/basic/forms/controls/file.js", "w");
-  f.write(UIMInputFile.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/forms/controls/file.js", "w");
+  // f.write(UIMInputFile.toVUEComponent.toString);
 }

@@ -17,6 +17,6 @@ mixin(UIMShort!"CardBlock");
 unittest {
 	assert(Assert(UIMCardBlock, `<uim-card-block></uim-card-block>`));
 
-	auto f = File("./public/js/uim/components/basic/cards/block.js", "w"); 
-  f.write(UIMCardBlock.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/cards/block.js", "w"); 
+  // f.write(UIMCardBlock.toVUEComponent.toString);
 }

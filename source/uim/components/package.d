@@ -34,7 +34,6 @@ string globalRegistration() {
     cardsRegistration~
     dropdownsRegistration~
     formsRegistration~
-    jumbotronsRegistration~
     listsRegistration~
     layoutRegistration~
     mediasRegistration~

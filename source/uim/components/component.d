@@ -34,9 +34,9 @@ class DUIMComponent : DH5Obj {
 	DH5Obj _templateObj = H5Div(new DH5Slot);
 	O templateObj(this O)(DH5Obj anObj) { _templateObj = anObj; return cast(O)this; } 
 
-/* 	auto toWeb() {
-		return "class %s extends HTMLElement { constructor() { } }";
-	} */
+	/* 	auto toWeb() {
+			return "class %s extends HTMLElement { constructor() { } }";
+		} */
 	/** 
 	* Export component to VueComponent 
 	* _vueComponent - cache for toVUEComponent

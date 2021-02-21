@@ -19,6 +19,6 @@ mixin(UIMShort!("InputDate"));
 unittest {
 	assert(Assert(UIMInputDate, "<uim-input-date></uim-input-date>"));	
 
-	auto f = File("./public/js/uim/components/basic/forms/controls/date.js", "w");
-  f.write(UIMInputDate.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/forms/controls/date.js", "w");
+  // f.write(UIMInputDate.toVUEComponent.toString);
 }

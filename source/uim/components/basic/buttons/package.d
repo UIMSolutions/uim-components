@@ -1,5 +1,6 @@
 ﻿module uim.components.basic.buttons;
 
+public import uim.components;
 public import uim.components.basic.buttons.buttonobj;
 public import uim.components.basic.buttons.button;
 public import uim.components.basic.buttons.link;
@@ -13,3 +14,14 @@ string buttonsRegistration() {
     UIMButtonGroup.toVUEComponent.globalRegistration~
     UIMButtonToolbar.toVUEComponent.globalRegistration;
 }
+
+string buttonsVue3(string target) {
+  string[] results; 
+
+	results ~= UIMButton.toVue3(target);
+	results ~= UIMButtonLink.toVue3(target);
+	results ~= UIMButtonGroup.toVue3(target);
+	results ~= UIMButtonToolbar.toVue3(target);
+
+  return results.join(";")~";";
+} 

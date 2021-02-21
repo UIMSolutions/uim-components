@@ -18,6 +18,6 @@ mixin(UIMShort!("AlertLink"));
 unittest {
 	assert(Assert(UIMAlertLink, "<uim-alert-link></uim-alert-link>"));
 
-	auto f = File("./public/js/uim/components/basic/alerts/link.js", "w"); 
-  f.write(UIMAlertLink.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/alerts/link.js", "w"); 
+  // f.write(UIMAlertLink.toVUEComponent.toString);
 }

@@ -17,6 +17,6 @@ mixin(UIMShort!"CardColumns");
 unittest {
 	assert(Assert(UIMCardColumns, `<uim-card-columns></uim-card-columns>`));
 
-	auto f = File("./public/js/uim/components/basic/cards/columns.js", "w"); 
-  f.write(UIMCardColumns.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/cards/columns.js", "w"); 
+  // f.write(UIMCardColumns.toVUEComponent.toString);
 }

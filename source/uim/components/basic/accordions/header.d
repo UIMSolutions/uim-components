@@ -19,8 +19,8 @@ mixin(UIMShort!"AccordionHeader");
 unittest {
 	assert(Assert(UIMAccordionHeader, `<uim-accordion-header></uim-accordion-header>`));
 
-	auto f = File("./public/js/uim/components/basic/accordions/accordion-header.js", "w"); 
-  f.write(UIMAccordionHeader.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/accordions/accordion-header.js", "w"); 
+  // f.write(UIMAccordionHeader.toVUEComponent.toString);
 
 	vue3components ~= UIMAccordionHeader.toVue3("vue")~";";
 }

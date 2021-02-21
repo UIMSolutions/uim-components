@@ -31,6 +31,6 @@ mixin(UIMShort!("Badge"));
 unittest {
 	assert(Assert(UIMBadge, "<uim-badge></uim-badge>"));
 
-	auto f = File("./public/js/uim/components/basic/badges/badge.js", "w"); 
-  f.write(UIMBadge.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/badges/badge.js", "w"); 
+  // f.write(UIMBadge.toVUEComponent.toString);
 }

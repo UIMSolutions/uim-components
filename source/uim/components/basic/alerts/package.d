@@ -1,5 +1,6 @@
 ﻿module uim.components.basic.alerts;
 
+public import uim.components;
 public import uim.components.basic.alerts.alert;
 public import uim.components.basic.alerts.heading;
 public import uim.components.basic.alerts.link;
@@ -10,3 +11,13 @@ string alertsRegistration() {
     UIMAlertHeading.toVUEComponent.globalRegistration~
     UIMAlertLink.toVUEComponent.globalRegistration;
 }
+
+string alertsVue3(string target) {
+  string[] results; 
+
+	results ~= UIMAlert.toVue3(target);
+	results ~= UIMAlertHeading.toVue3(target);
+	results ~= UIMAlertLink.toVue3(target);
+
+  return results.join(";")~";";
+} 

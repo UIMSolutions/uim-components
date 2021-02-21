@@ -23,6 +23,6 @@ unittest {
 	assert(Assert(UIMButtonToolbar, `<uim-button-toolbar></uim-button-toolbar>`));
 	assert(Assert(UIMButtonToolbar.label("hallo"), `<uim-button-toolbar aria-label="hallo"></uim-button-toolbar>`));
 
-	auto f = File("./public/js/uim/components/basic/buttons/toolbar.js", "w"); 
-  f.write(UIMButtonToolbar.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/buttons/toolbar.js", "w"); 
+  // f.write(UIMButtonToolbar.toVUEComponent.toString);
 }

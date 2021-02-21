@@ -1,5 +1,6 @@
 ﻿module uim.components.basic.cards;
 
+public import uim.components;
 public import uim.components.basic.cards.card;
 public import uim.components.basic.cards.block;
 public import uim.components.basic.cards.body_;
@@ -30,3 +31,23 @@ string cardsRegistration() {
     UIMCardText.toVUEComponent.globalRegistration~
     UIMCardTitle.toVUEComponent.globalRegistration;
 }
+
+string cardsVue3(string target) {
+  string[] results; 
+
+	results ~= UIMCard.toVue3(target);
+	results ~= UIMCardBlock.toVue3(target);
+	results ~= UIMCardBody.toVue3(target);
+	results ~= UIMCardColumns.toVue3(target);
+	results ~= UIMCardDeck.toVue3(target);
+	results ~= UIMCardDeckwrapper.toVue3(target);
+	results ~= UIMCardFooter.toVue3(target);
+	results ~= UIMCardHeader.toVue3(target);
+	results ~= UIMCardImage.toVue3(target);
+	results ~= UIMCardLink.toVue3(target);
+	results ~= UIMCardSubtitle.toVue3(target);
+	results ~= UIMCardText.toVue3(target);
+	results ~= UIMCardTitle.toVue3(target);
+
+  return results.join(";")~";";
+} 

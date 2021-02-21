@@ -19,8 +19,8 @@ mixin(UIMShort!"AccordionBody");
 unittest {
 	assert(Assert(UIMAccordionBody, `<uim-accordion-body></uim-accordion-body>`));
 
-	auto f = File("./public/js/uim/components/basic/accordions/accordion-body.js", "w"); 
-  f.write(UIMAccordionBody.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/accordions/accordion-body.js", "w"); 
+  // f.write(UIMAccordionBody.toVUEComponent.toString);
 
 	vue3components ~= UIMAccordionBody.toVue3("vue")~";";
 }

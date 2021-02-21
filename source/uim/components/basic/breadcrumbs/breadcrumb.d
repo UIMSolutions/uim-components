@@ -23,6 +23,6 @@ mixin(UIMShort!"Breadcrumb");
 unittest {
 	assert(Assert(UIMBreadcrumb, `<uim-breadcrumb></uim-breadcrumb>`));
 
-	auto f = File("./public/js/uim/components/basic/breadcrumbs/breadcrumb.js", "w"); 
-  f.write(UIMBreadcrumb.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/breadcrumbs/breadcrumb.js", "w"); 
+  // f.write(UIMBreadcrumb.toVUEComponent.toString);
 }

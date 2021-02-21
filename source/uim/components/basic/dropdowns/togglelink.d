@@ -21,7 +21,7 @@ class DUIMDropdownTogglelink : DUIMComponent {
 mixin(UIMShort!"DropdownTogglelink");
 
 unittest {
-	auto f = File("./public/js/uim/components/basic/dropdowns/togglelink.js", "w"); 
-  f.write(UIMDropdownTogglelink.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/dropdowns/togglelink.js", "w"); 
+  // f.write(UIMDropdownTogglelink.toVUEComponent.toString);
 }
 

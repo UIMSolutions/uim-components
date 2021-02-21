@@ -1,5 +1,7 @@
 ﻿module uim.components.basic.dropdowns;
 
+public import uim.components;
+
 public import uim.components.basic.dropdowns.dropdown;
 public import uim.components.basic.dropdowns.menu;
 public import uim.components.basic.dropdowns.link;
@@ -18,3 +20,17 @@ string dropdownsRegistration() {
     UIMDropdownHeader.toVUEComponent.globalRegistration~
     UIMDropdownTogglelink.toVUEComponent.globalRegistration;
 }
+
+string dropdownsVue3(string target) {
+  string[] results; 
+
+	results ~= UIMDropdown.toVue3(target);
+	results ~= UIMDropdownMenu.toVue3(target);
+	results ~= UIMDropdownLink.toVue3(target);
+	results ~= UIMDropdownButton.toVue3(target);
+	results ~= UIMDropdownDivider.toVue3(target);
+	results ~= UIMDropdownHeader.toVue3(target);
+	results ~= UIMDropdownTogglelink.toVue3(target);
+
+  return results.join(";")~";";
+} 

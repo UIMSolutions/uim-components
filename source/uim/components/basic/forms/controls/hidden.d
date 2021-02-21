@@ -19,6 +19,6 @@ mixin(UIMShort!("InputHidden"));
 unittest {
 	assert(Assert(UIMInputHidden, "<uim-input-hidden></uim-input-hidden>"));	
 
-	auto f = File("./public/js/uim/components/basic/forms/controls/hidden.js", "w");
-  f.write(UIMInputHidden.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/forms/controls/hidden.js", "w");
+  // f.write(UIMInputHidden.toVUEComponent.toString);
 }

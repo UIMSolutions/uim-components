@@ -19,6 +19,6 @@ mixin(UIMShort!"DropdownHeader");
 unittest {
 	assert(Assert(UIMDropdownHeader, `<uim-dropdown-header></uim-dropdown-header>`));
 
-	auto f = File("./public/js/uim/components/basic/dropdowns/headers.js", "w"); 
-  f.write(UIMDropdownHeader.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/dropdowns/headers.js", "w"); 
+  // f.write(UIMDropdownHeader.toVUEComponent.toString);
 }

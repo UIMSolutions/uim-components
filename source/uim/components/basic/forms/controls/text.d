@@ -18,6 +18,6 @@ mixin(UIMShort!("InputText"));
 unittest {
 	assert(Assert(UIMInputText, "<uim-input-text></uim-input-text>"));	
 
-	auto f = File("./public/js/uim/components/basic/forms/controls/text.js", "w");
-  f.write(UIMInputText.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/forms/controls/text.js", "w");
+  // f.write(UIMInputText.toVUEComponent.toString);
 }

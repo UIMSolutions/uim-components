@@ -19,6 +19,6 @@ mixin(UIMShort!"CardImage");
 unittest {
 	assert(Assert(UIMCardImage, `<uim-card-image></uim-card-image>`));
 
-	auto f = File("./public/js/uim/components/basic/cards/image.js", "w"); 
-  f.write(UIMCardImage.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/cards/image.js", "w"); 
+  // f.write(UIMCardImage.toVUEComponent.toString);
 }

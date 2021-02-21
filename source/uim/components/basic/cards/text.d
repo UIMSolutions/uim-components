@@ -17,6 +17,6 @@ mixin(UIMShort!"CardText");
 unittest {
 	assert(Assert(UIMCardText, `<uim-card-text></uim-card-text>`));
 
-	auto f = File("./public/js/uim/components/basic/cards/text.js", "w"); 
-  f.write(UIMCardText.toVUEComponent.toString);
+	// auto f = File("./public/js/uim/components/basic/cards/text.js", "w"); 
+  // f.write(UIMCardText.toVUEComponent.toString);
 }

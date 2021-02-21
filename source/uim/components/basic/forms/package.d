@@ -1,5 +1,7 @@
 ﻿module uim.components.basic.forms;
 
+public import uim.components;
+
 public import uim.components.basic.forms.controls;
 public import uim.components.basic.forms.customcontrols;
 public import uim.components.basic.forms.inputgroups;
@@ -20,3 +22,19 @@ string formsRegistration() {
     UIMFormGroup.toVUEComponent.globalRegistration~
     UIMFormText.toVUEComponent.globalRegistration;
 }
+
+string formsVue3(string target) {
+  string[] results; 
+
+	results ~= formsControlsVue3(target);
+	results ~= formsCustomVue3(target);
+	results ~= formsInputgroupVue3(target);
+
+	results ~= UIMFormCheckbox.toVue3(target);
+	results ~= UIMFormCheckInput.toVue3(target);
+	results ~= UIMForm.toVue3(target);
+	results ~= UIMFormGroup.toVue3(target);
+	results ~= UIMFormText.toVue3(target);
+
+  return results.join(";")~";";
+} 
