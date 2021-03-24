@@ -1,5 +1,7 @@
 ﻿module uim.components.layout.container;
 
+@safe:
+
 import uim.components;
 
 class DUIMContainer : DUIMComponent {

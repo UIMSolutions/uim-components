@@ -1,5 +1,7 @@
 module uim.components.layout;
 
+@safe:
+
 public import uim.components.layout.container;
 public import uim.components.layout.col;
 public import uim.components.layout.row;

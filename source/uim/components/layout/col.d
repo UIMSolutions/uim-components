@@ -1,5 +1,7 @@
 ﻿module uim.components.layout.col;
 
+@safe:
+
 import uim.components;
 
 class DUIMCol : DUIMComponent {

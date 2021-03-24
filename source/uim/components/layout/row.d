@@ -1,5 +1,7 @@
 ﻿module uim.components.layout.row;
 
+@safe:
+
 import uim.components;
 
 class DUIMRow : DUIMComponent {

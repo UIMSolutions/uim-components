@@ -1,9 +1,10 @@
 module uim.components.demos.layout;
 
+@safe: 
+
 import uim.components;
 
 /// Standard Bootstrap 5 Layout 
-@safe: 
 static this() {
   demoUIMComps.layout(new class DH5AppLayout {
   /// Basic Constructor
@@ -42,7 +43,7 @@ static this() {
       ~footer(parameters), parameters);
   }
  */
-  string navigation(string[string] parameters) {
+  @safe string navigation(string[string] parameters) {
     string result;
 
     result = 
@@ -73,7 +74,7 @@ static this() {
     return result;    
   }
 
-  string footer(string[string] parameters) {
+  @safe string footer(string[string] parameters) {
     string result;
 
     result = H5Footer(["py-5 bg-dark"], ["style":"background-color:#14a1b7"], 
