@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.forms.controls.hidden;
 
-import uim.components; 
+import uim.components;
+
+@safe: 
 
 class DUIMInputHidden : DUIMComponent {
 	mixin(H5This!("uim-input-hidden"));	

@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMButtonToolbar : DUIMComponent {
 	mixin(H5This!("uim-button-toolbar"));
 

@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMInputGroup : DUIMComponent {
 	mixin(H5This!("uim-inputgroup"));
 	

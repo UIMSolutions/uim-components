@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMListItem : DUIMComponent {
 	mixin(H5This!("uim-list-item"));
 	O color(this O)(string aColor) { this.classes("list-item-"~aColor); return cast(O)this; }

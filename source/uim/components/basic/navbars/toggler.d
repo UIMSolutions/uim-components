@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 /* DUIMNavbarToggler - for use with collapse plugin and other navigation toggling behaviors */
 class DUIMNavbarToggler : DUIMComponent {
 	mixin(H5This!("uim-navbar-toggler"));

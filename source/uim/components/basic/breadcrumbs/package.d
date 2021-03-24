@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.breadcrumbs;
 
 public import uim.components;
+
+@safe:
 public import uim.components.basic.breadcrumbs.breadcrumb;
 public import uim.components.basic.breadcrumbs.item;
 public import uim.components.basic.breadcrumbs.link;

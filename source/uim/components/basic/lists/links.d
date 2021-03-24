@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMListLinks : DUIMComponent {
 	mixin(H5This!("uim-list-links"));
 	override public void _init() {

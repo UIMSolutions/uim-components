@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.forms.controls.input;
 
-import uim.components; 
+import uim.components;
+
+@safe: 
 
 class DUIMInput : DUIMComponent {
 	mixin(H5This!("uim-input"));	

@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMTableFooter : DUIMComponent {
 	mixin(H5This!("uim-table-footer"));
 

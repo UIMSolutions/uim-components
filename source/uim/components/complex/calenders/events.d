@@ -2,6 +2,8 @@ module uim.components.complex.calendars.events;
 
 import uim.components;
 
+@safe:
+
 class DUIMCalendarEvents : DUIMComponent {
 	mixin(H5This!("uim-calendar-events"));
 

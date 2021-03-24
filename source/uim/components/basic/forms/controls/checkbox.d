@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.forms.controls.checkbox;
 
-import uim.components; 
+import uim.components;
+
+@safe: 
 
 class DUIMCheckbox : DUIMComponent {
 	mixin(H5This!("uim-checkbox"));

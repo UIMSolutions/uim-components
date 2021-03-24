@@ -2,6 +2,7 @@ module uim.components.demos.components.buttons;
 
 import uim.components;
 
+@safe: 
 static this() {
 	demoUIMComps.pages("basic/components/buttons", new class DH5AppPage {
 		this() { 
@@ -17,7 +18,7 @@ static this() {
         `vue.mount('#app');`);
 		} 
 			
-    override string content() { 
+    override string content(STRINGAA reqParameters = null) { 
 
 auto defaultExample = demoUIMExample("default", "Default", 
   H5Div(
@@ -30,6 +31,14 @@ auto defaultExample = demoUIMExample("default", "Default",
     UIMButton(["color":"light"], "Light"),
     UIMButton(["color":"dark"], "Dark")
   ), 
+`UIMButton(["color":"primary"], "Primary"), 
+UIMButton(["color":"secondary"], "Secondary"),
+UIMButton(["color":"success"], "Success"),
+UIMButton(["color":"danger"], "Danger"),
+UIMButton(["color":"warning"], "Warning"),
+UIMButton(["color":"info"], "Info"),
+UIMButton(["color":"light"], "Light"),
+UIMButton(["color":"dark"], "Dark")`,
 `<uim-button color="primary">Primary</uim-button>
 <uim-button color="secondary">Secondary</uim-button>
 <uim-button color="success">Success</uim-button>

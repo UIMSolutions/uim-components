@@ -2,6 +2,8 @@ module uim.components.basic.badges.badge;
 
 import uim.components;
 
+@safe:
+
 class DUIMBadge : DUIMComponent {
 	mixin(H5This!("uim-badge"));
 

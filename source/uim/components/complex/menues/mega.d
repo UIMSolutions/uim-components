@@ -2,6 +2,8 @@ module uim.components.complex.menues.mega;
 
 import uim.components;
 
+@safe:
+
 /** 
  * Big Dropdown menuitem compoent with many columns and rows
  * 

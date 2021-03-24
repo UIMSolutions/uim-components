@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMCustomControl : DUIMComponent {
 	mixin(H5This!("uim-custom-control"));
 }

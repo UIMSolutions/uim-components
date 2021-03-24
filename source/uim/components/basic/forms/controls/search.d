@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.forms.controls.search;
 
-import uim.components; 
+import uim.components;
+
+@safe: 
 
 class DUIMInputSearch : DUIMComponent {
 	mixin(H5This!("uim-input-search"));	

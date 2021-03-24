@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMBreadcrumbItem : DUIMComponent {
 	mixin(H5This!("uim-breadcrumb-item"));
 

@@ -2,6 +2,8 @@ module uim.components.complex.timelines.item;
 
 import uim.components;
 
+@safe:
+
 /**
  * Timelime item component
  * 

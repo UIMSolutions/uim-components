@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.forms.controls.tel;
 
-import uim.components; 
+import uim.components;
+
+@safe: 
 
 class DUIMInputTel : DUIMComponent {
 	mixin(H5This!("uim-input-tel"));

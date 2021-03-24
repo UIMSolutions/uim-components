@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.forms.controls.reset;
 
-import uim.components; 
+import uim.components;
+
+@safe: 
 
 class DUIMInputReset : DUIMComponent {
 	mixin(H5This!("uim-input-reset"));

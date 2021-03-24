@@ -2,6 +2,8 @@ module uim.components.complex.tables.sortables.header;
 
 import uim.components;
 
+@safe:
+
 class DUIMTableSortableHeader : DUIMComponent {
 	mixin(H5This!("uim-table-sortable-header"));
 

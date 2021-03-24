@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMFormCheckLabel : DUIMComponent {
 	mixin(H5This!("uim-form-check-label"));
 

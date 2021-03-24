@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMModal : DUIMComponent {
 	mixin(H5This!("uim-modal"));
 

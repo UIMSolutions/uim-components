@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.forms.controls.time;
 
-import uim.components; 
+import uim.components;
+
+@safe: 
 
 class DUIMInputTime : DUIMComponent {
 	mixin(H5This!("uim-input-time"));

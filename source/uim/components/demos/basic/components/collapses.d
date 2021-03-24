@@ -2,6 +2,7 @@ module uim.components.demos.components.collapses;
 
 import uim.components;
 
+@safe: 
 static this() {
 	demoUIMComps.pages("basic/components/collapses", new class DH5AppPage {
 		this() { 
@@ -18,7 +19,7 @@ static this() {
           `vue.mount('#app');`]);
 		} 
 			
-    override string content() { 
+    override string content(STRINGAA reqParameters = null) { 
 
 /* uto linkExample = demoUIMExample("link", "Link<p>Show and hide other content with link using the 'href' attribute</p>", 
   H5Div(

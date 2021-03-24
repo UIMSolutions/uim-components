@@ -2,12 +2,15 @@
 
 public import uim.components;
 
+@safe:
+
 public import uim.components.basic.dropdowns.dropdown;
 public import uim.components.basic.dropdowns.menu;
 public import uim.components.basic.dropdowns.link;
 public import uim.components.basic.dropdowns.button;
 public import uim.components.basic.dropdowns.divider;
 public import uim.components.basic.dropdowns.header;
+public import uim.components.basic.dropdowns.toggle;
 public import uim.components.basic.dropdowns.togglelink;
 
 string dropdownsRegistration() {
@@ -18,7 +21,7 @@ string dropdownsRegistration() {
     UIMDropdownButton.toVUEComponent.globalRegistration~
     UIMDropdownDivider.toVUEComponent.globalRegistration~
     UIMDropdownHeader.toVUEComponent.globalRegistration~
-    UIMDropdownTogglelink.toVUEComponent.globalRegistration;
+    UIMDropdownToggleLink.toVUEComponent.globalRegistration;
 }
 
 string dropdownsVue3(string target) {
@@ -30,7 +33,8 @@ string dropdownsVue3(string target) {
 	results ~= UIMDropdownButton.toVue3(target);
 	results ~= UIMDropdownDivider.toVue3(target);
 	results ~= UIMDropdownHeader.toVue3(target);
-	results ~= UIMDropdownTogglelink.toVue3(target);
+	results ~= UIMDropdownToggle.toVue3(target);
+	results ~= UIMDropdownToggleLink.toVue3(target);
 
   return results.join(";")~";";
 } 

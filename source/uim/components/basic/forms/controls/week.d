@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.forms.controls.week;
 
-import uim.components; 
+import uim.components;
+
+@safe: 
 
 class DUIMInputWeek : DUIMComponent {
 	mixin(H5This!("uim-input-week"));

@@ -2,6 +2,8 @@ module uim.components.demos.components.closebuttons;
 
 import uim.components;
 
+@safe:
+@safe: 
 static this() {
 	demoUIMComps.pages("basic/components/closebuttons", new class DH5AppPage {
 		this() { 
@@ -18,7 +20,7 @@ static this() {
           `vue.mount('#app');`]);
 		} 
 			
-    override string content() { 
+    override string content(STRINGAA reqParameters = null) { 
 
 auto defaultExample = demoUIMExample("default", "Default", 
   H5Div(

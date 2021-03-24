@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMModalFooter : DUIMComponent {
 	mixin(H5This!("uim-modal-footer"));
 

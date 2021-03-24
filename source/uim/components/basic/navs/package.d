@@ -2,6 +2,8 @@
 
 public import uim.components;
 
+@safe:
+
 public import uim.components.basic.navs.item;
 public import uim.components.basic.navs.nav;
 public import uim.components.basic.navs.link;

@@ -2,6 +2,8 @@ module uim.components.complex.calendars.week;
 
 import uim.components;
 
+@safe:
+
 /// Component for presenting a calender week including events
 class DUIMCalendarWeek : DUIMComponent {
 	mixin(H5This!("uim-calendar-week"));

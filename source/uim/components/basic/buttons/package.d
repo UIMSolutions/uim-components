@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.buttons;
 
 public import uim.components;
+
+@safe:
 public import uim.components.basic.buttons.buttonobj;
 public import uim.components.basic.buttons.button;
 public import uim.components.basic.buttons.link;

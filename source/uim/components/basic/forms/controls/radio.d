@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.forms.controls.radio;
 
-import uim.components; 
+import uim.components;
+
+@safe: 
 
 class DUIMRadio : DUIMComponent {
 	mixin(H5This!("uim-radio"));

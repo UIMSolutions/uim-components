@@ -2,6 +2,8 @@ module uim.components.complex.chats.chat;
 
 import uim.components;
 
+@safe:
+
 class DUIMChat : DUIMComponent {
 	mixin(H5This!("uim-chat"));
 

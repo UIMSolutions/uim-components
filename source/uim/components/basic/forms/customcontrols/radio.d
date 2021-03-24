@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMCustomRadio : DUIMComponent {
 	mixin(H5This!("uim-custom-radio"));
 

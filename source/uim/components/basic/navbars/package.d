@@ -2,6 +2,8 @@
 
 public import uim.components;
 
+@safe:
+
 public import uim.components.basic.navbars.brand;
 public import uim.components.basic.navbars.navbar;
 public import uim.components.basic.navbars.toggler;

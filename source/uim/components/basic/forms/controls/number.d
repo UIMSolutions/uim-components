@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.forms.controls.number;
 
-import uim.components; 
+import uim.components;
+
+@safe: 
 
 class DUIMInputNumber : DUIMComponent {
 	mixin(H5This!("uim-input-number"));	

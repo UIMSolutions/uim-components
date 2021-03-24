@@ -2,6 +2,8 @@ module uim.components.complex.calendars.day;
 
 import uim.components;
 
+@safe:
+
 class DUIMCalendarDay : DUIMComponent {
 	mixin(H5This!("uim-calendar-day"));
 

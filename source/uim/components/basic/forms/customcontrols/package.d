@@ -2,6 +2,8 @@
 
 public import uim.components;
 
+@safe:
+
 public import uim.components.basic.forms.customcontrols.control;
 public import uim.components.basic.forms.customcontrols.checkbox;
 public import uim.components.basic.forms.customcontrols.input;

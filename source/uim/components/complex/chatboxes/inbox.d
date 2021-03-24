@@ -2,6 +2,8 @@ module uim.components.complex.chatboxes.inbox;
 
 import uim.components;
 
+@safe:
+
 class DUIMChatboxInbox : DUIMComponent {
 	mixin(H5This!("uim-chatbox-inbox"));
 

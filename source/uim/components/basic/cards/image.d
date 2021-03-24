@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMCardImage : DUIMComponent { // default top
 	mixin(H5This!("uim-card-image"));
 

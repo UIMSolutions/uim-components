@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 /* public import uim.components.basic.forms.controls;
 public import uim.components.basic.forms.customcontrols;
 public import uim.components.basic.forms.inputgroups;

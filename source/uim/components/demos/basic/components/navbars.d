@@ -2,6 +2,7 @@ module uim.components.demos.components.navbars;
 
 import uim.components;
 
+@safe: 
 static this() {
 	demoUIMComps.pages("basic/components/navbars", new class DH5AppPage {
 		this() { 
@@ -17,7 +18,7 @@ static this() {
           `vue.mount('#app');`]);
 		} 
 			
-    override string content() { 
+    override string content(STRINGAA reqParameters = null) { 
 /* auto linkExample = demoUIMExample("link", "With Link",
   UIMNavbar(["navbar-light", "bg-light"], 
     BS5Container(

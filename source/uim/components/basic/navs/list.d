@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMNavList : DUIMComponent {
 	mixin(H5This!("uim-nav-list"));
 	override public void _init() {

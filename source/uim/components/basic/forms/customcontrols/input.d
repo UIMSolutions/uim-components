@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMCustomInput : DUIMComponent {
 	mixin(H5This!("uim-custom-input"));
 }

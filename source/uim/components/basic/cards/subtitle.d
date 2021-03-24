@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMCardSubtitle : DUIMComponent {
 	mixin(H5This!("uim-card-subtitle"));
 

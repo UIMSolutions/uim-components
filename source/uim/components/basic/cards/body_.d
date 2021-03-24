@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMCardBody : DUIMComponent {
 	mixin(H5This!("uim-card-body"));
 	

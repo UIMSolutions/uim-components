@@ -2,6 +2,7 @@ module uim.components.demos.components.scrollspies;
 
 import uim.components;
 
+@safe: 
 static this() {
 	demoUIMComps.pages("basic/components/scrollspies", new class DH5AppPage {
 		this() { 
@@ -18,7 +19,7 @@ static this() {
           `vue.mount('#app');`]);
 		} 
 			
-    override string content() { 
+    override string content(STRINGAA reqParameters = null) { 
 
 auto exampleExample = demoUIMExample("example", "Example",
   H5Div(

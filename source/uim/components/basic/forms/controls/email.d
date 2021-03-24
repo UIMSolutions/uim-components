@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.forms.controls.email;
 
-import uim.components; 
+import uim.components;
+
+@safe: 
 
 class DUIMInputEmail : DUIMComponent {
 	mixin(H5This!("uim-input-email"));

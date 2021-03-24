@@ -2,6 +2,8 @@
 
 public import uim.components;
 
+@safe:
+
 public import uim.components.basic.modals.body_;
 public import uim.components.basic.modals.button;
 public import uim.components.basic.modals.content;

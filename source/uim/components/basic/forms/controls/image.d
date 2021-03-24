@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.forms.controls.image;
 
-import uim.components; 
+import uim.components;
+
+@safe: 
 
 class DUIMInputImage : DUIMComponent {
 	mixin(H5This!("uim-input-image"));	

@@ -2,6 +2,8 @@ module uim.components.complex.calendars.month;
 
 import uim.components;
 
+@safe:
+
 class DUIMCalendarMonth : DUIMComponent {
 	mixin(H5This!("uim-calendar-month"));
 

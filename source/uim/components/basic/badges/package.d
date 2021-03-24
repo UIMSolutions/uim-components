@@ -1,6 +1,8 @@
 module uim.components.basic.badges;
 
 public import uim.components;
+
+@safe:
 public import uim.components.basic.badges.badge;
 
 string badgesRegistration() {

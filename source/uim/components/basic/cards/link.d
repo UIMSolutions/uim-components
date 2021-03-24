@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMCardLink : DUIMComponent {
 	mixin(H5This!("uim-card-link"));
 

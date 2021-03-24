@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.forms.controls.datetime;
 
-import uim.components; 
+import uim.components;
+
+@safe: 
 
 class DUIMInputDateTime : DUIMComponent {
 	mixin(H5This!("uim-input-datetime"));

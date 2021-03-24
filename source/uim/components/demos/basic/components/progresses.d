@@ -2,6 +2,7 @@ module uim.components.demos.components.progresses;
 
 import uim.components;
 
+@safe: 
 static this() {
 	demoUIMComps.pages("basic/components/progresses", new class DH5AppPage {
 		this() { 
@@ -20,7 +21,7 @@ static this() {
       writeln(this.scripts.map!(a => a.toString));
 		} 
 			
-    override string content() { 
+    override string content(STRINGAA reqParameters = null) { 
 
     writeln("Progress 2 Content -> ", this.scripts.map!(a => a.toString));
 

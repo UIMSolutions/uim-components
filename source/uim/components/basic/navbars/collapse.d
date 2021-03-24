@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMNavbarCollapse : DUIMComponent {
 	mixin(H5This!("uim-navbar-collapse"));
 

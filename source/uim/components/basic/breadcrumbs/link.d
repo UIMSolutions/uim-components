@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMBreadcrumbLink : DUIMComponent {	
 	mixin(H5This!("uim-breadcrumb-link"));
 

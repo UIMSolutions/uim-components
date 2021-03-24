@@ -12,6 +12,8 @@ public import uim.web;
 
 import uim.components; 
 
+@safe: 
+
 DH5App demoUIMComps;
 static this() {
     demoUIMComps = new class DH5App {
@@ -31,7 +33,7 @@ auto demoUIMExample(string id, string title, DH5Obj tabResult, string tabUim = "
           BS5NavItem(["role":"presentation"], 
             BS5NavLink("tab"~id~"-1", ["active"], ["href":"#tab"~id~"-pane-1", "data-bs-toggle":"tab", "role":"tab", "aria-controls":"tab"~id~"-pane-1", "aria-selected":"true"], "Result")),
           BS5NavItem(["role":"presentation"], 
-            BS5NavLink("tab"~id~"-2", ["active"], ["href":"#tab"~id~"-pane-2", "data-bs-toggle":"tab", "role":"tab", "aria-controls":"tab"~id~"-pane-2", "aria-selected":"true"], "UIM")),
+            BS5NavLink("tab"~id~"-2", ["href":"#tab"~id~"-pane-2", "data-bs-toggle":"tab", "role":"tab", "aria-controls":"tab"~id~"-pane-2", "aria-selected":"true"], "UIM")),
           BS5NavItem(["role":"presentation"], 
             BS5NavLink("tab"~id~"-3", ["href":"#tab"~id~"-pane-3", "data-bs-toggle":"tab", "role":"tab", "aria-controls":"tab"~id~"-pane-3", "aria-selected":"true"], "Vue")),
           BS5NavItem(["role":"presentation"], 

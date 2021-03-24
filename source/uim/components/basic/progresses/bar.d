@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMProgressBar : DUIMComponent {
 	mixin(H5This!("uim-progress-bar"));
 	override public void _init() {

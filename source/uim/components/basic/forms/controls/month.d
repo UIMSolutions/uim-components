@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.forms.controls.month;
 
-import uim.components; 
+import uim.components;
+
+@safe: 
 
 class DUIMInputMonth : DUIMComponent {
 	mixin(H5This!("uim-input-month"));

@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMMediaBody : DUIMComponent {
 	mixin(H5This!("uim-media-body"));
 

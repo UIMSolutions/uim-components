@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMCardColumns : DUIMComponent {
 	mixin(H5This!("uim-card-columns"));
 	

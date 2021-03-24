@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMButtonLink : DUIMComponent {
 	mixin(H5This!("uim-button-link"));
 

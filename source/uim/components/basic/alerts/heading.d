@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMAlertHeading : DUIMComponent {
 	mixin(H5This!("uim-alert-heading")); 
 

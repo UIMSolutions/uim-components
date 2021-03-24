@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMTabContent : DUIMComponent {
 	mixin(H5This!("uim-tab-content"));
 

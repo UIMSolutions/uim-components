@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMButtonObj : DUIMComponent {
 	mixin(H5This!("BUTTON", null, `["type":"button"]`));
 	override public void _init() {

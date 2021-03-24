@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMDropdownLink : DUIMComponent {
 	mixin(H5This!("uim-dropdown-item"));
 	

@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMModalHeader : DUIMComponent {
 	mixin(H5This!("DIV", ["modal-header"]));
 	override public void _init() {

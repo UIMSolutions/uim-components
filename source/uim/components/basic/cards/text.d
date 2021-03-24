@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMCardText : DUIMComponent {
 	mixin(H5This!("uim-card-text"));
 

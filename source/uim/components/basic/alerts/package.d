@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.alerts;
 
 public import uim.components;
+
+@safe:
 public import uim.components.basic.alerts.alert;
 public import uim.components.basic.alerts.heading;
 public import uim.components.basic.alerts.link;

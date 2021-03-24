@@ -2,6 +2,8 @@ module uim.components.complex.blogs.blog;
 
 import uim.components;
 
+@safe:
+
 class DUIMBlog : DUIMComponent {
 	mixin(H5This!("uim-blog"));
 

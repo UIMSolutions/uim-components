@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMPagination : DUIMComponent {
 	mixin(H5This!("uim-pagination"));
 	override public void _init() {

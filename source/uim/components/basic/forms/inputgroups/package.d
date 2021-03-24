@@ -2,6 +2,8 @@
 
 public import uim.components;
 
+@safe:
+
 public import uim.components.basic.forms.inputgroups.append;
 public import uim.components.basic.forms.inputgroups.group;
 public import uim.components.basic.forms.inputgroups.text;

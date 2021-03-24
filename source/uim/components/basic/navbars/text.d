@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMNavbarText : DUIMComponent {
 	mixin(H5This!("uim-navbar-text"));
 

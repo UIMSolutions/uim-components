@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMPageItem : DUIMComponent {
 	mixin(H5This!("uim-page-item"));
 	override public void _init() {

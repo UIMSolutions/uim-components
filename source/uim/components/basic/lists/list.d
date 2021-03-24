@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMList : DUIMComponent {
 	mixin(H5This!("uim-list"));
 

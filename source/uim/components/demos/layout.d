@@ -3,6 +3,7 @@ module uim.components.demos.layout;
 import uim.components;
 
 /// Standard Bootstrap 5 Layout 
+@safe: 
 static this() {
   demoUIMComps.layout(new class DH5AppLayout {
   /// Basic Constructor

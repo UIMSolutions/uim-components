@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMTabList : DUIMComponent {
 	mixin(H5This!("uim-tab-list"));
 	override public void _init() {

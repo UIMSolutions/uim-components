@@ -2,6 +2,10 @@ module uim.components.demos.components.modals;
 
 import uim.components;
 
+@safe: 
+
+
+@safe: 
 static this() {
 	demoUIMComps.pages("basic/components/modals", new class DH5AppPage {
 		this() { 
@@ -17,7 +21,7 @@ static this() {
           `vue.mount('#app');`]);
 		} 
 			
-    override string content() { 
+    override string content(STRINGAA reqParameters = null) { 
 
 auto staticExample = demoUIMExample("static", "Static",  
   H5Div(

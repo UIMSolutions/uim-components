@@ -2,6 +2,8 @@ module uim.components.basic.accordions.collapse;
 
 import uim.components;
 
+@safe:
+
 class DUIMAccordionCollapse : DUIMComponent {
 	mixin(H5This!("uim-accordion-collapse"));
 

@@ -2,6 +2,8 @@
 
 public import uim.components;
 
+@safe:
+
 public import uim.components.basic.paginations.item;
 public import uim.components.basic.paginations.link;
 public import uim.components.basic.paginations.pagination;

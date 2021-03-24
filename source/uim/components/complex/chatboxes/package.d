@@ -2,6 +2,8 @@ module uim.components.complex.chatboxes;
 
 import uim.components;
 
+@safe:
+
 public import uim.components.complex.chatboxes.chatbox;
 public import uim.components.complex.chatboxes.inbox;
 

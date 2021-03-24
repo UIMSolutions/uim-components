@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.forms.controls.range;
 
-import uim.components; 
+import uim.components;
+
+@safe: 
 
 class DUIMInputRange : DUIMComponent {
 	mixin(H5This!("uim-input-range"));

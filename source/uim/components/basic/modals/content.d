@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMModalContent : DUIMComponent {
 	mixin(H5This!("uim-modal-content"));
 	override public void _init() {

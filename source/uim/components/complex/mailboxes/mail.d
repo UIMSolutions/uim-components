@@ -2,6 +2,8 @@ module uim.components.complex.mailboxes.mail;
 
 import uim.components;
 
+@safe:
+
 class DUIMMail : DUIMComponent {
 	mixin(H5This!("uim-mail"));
 

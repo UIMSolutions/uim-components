@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMTableRow : DUIMComponent {
 	mixin(H5This!("uim-table-row"));
 

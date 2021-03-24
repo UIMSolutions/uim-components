@@ -2,6 +2,8 @@ module uim.components.complex.invoices.invoices2.item;
 
 import uim.components;
 
+@safe:
+
 class DUIMInvoiceItem : DUIMComponent {
 	mixin(H5This!("uim-invoice-item"));
 

@@ -2,6 +2,8 @@ module uim.components.basic.accordions.accordion;
 
 import uim.components;
 
+@safe:
+
 class DUIMAccordion : DUIMComponent {
 	mixin(H5This!("uim-accordion"));
 

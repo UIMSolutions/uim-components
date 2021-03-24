@@ -2,6 +2,8 @@ module uim.components.basic.tables;
 
 public import uim.components;
 
+@safe:
+
 public import uim.components.basic.tables.table;
 public import uim.components.basic.tables.body_;
 public import uim.components.basic.tables.header;

@@ -2,6 +2,8 @@
 
 public import uim.components;
 
+@safe:
+
 public import uim.components.basic.progresses.progress;
 public import uim.components.basic.progresses.bar;
 

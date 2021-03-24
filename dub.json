@@ -1,14 +1,12 @@
 {
-	"authors": [
-		"uim"
-	],
-	"description": "A minimal D application.",
 	"name": "uim-components",
-	"copyright": "Copyright © 2019, UI Manufaktur UG",
-	"license": "Apache 2.0",
-    "targetType": "library",
-	"dependencies": {
-		"vibe-d": "==0.8.6"
+	"description": "UIM UI Kit 4",
+	"authors": ["UI Manufaktur Team"],
+	"copyright": "Copyright © 2017-2021, UI Manufaktur UG",
+	"license": "MIT",
+	"targetType": "library",
+"dependencies": {
+		"vibe-d": "==0.9.3"
 	},
 	"sourcePaths": [
 		"../uim-core",

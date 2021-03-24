@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMCardFooter : DUIMComponent {
 	mixin(H5This!("uim-card-footer"));
 

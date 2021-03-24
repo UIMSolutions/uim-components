@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 public import uim.components.basic.accordions.accordion;
 public import uim.components.basic.accordions.body_;
 public import uim.components.basic.accordions.button;

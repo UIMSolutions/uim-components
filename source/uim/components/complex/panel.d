@@ -2,6 +2,8 @@ module uim.components.complex.panel;
 
 import uim.components;
 
+@safe:
+
 /// Collapsible panel component
 class DUIMPanel : DUIMComponent {
 	mixin(H5This!("uim-panel"));

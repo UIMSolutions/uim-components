@@ -2,6 +2,7 @@ module uim.components.demos.components.spinners;
 
 import uim.components;
 
+@safe: 
 static this() {
 	demoUIMComps.pages("basic/components/spinners", new class DH5AppPage {
 		this() { 
@@ -17,7 +18,7 @@ static this() {
           `vue.mount('#app');`]);
 		} 
 			
-    override string content() { 
+    override string content(STRINGAA reqParameters = null) { 
 
 /* auto borderExample = demoUIMExample("border", "Border spinner", 
   H5Div(

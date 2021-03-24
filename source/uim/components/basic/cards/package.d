@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.cards;
 
 public import uim.components;
+
+@safe:
 public import uim.components.basic.cards.card;
 public import uim.components.basic.cards.block;
 public import uim.components.basic.cards.body_;

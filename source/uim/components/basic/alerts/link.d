@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMAlertLink : DUIMComponent {
 	mixin(H5This!("uim-alert-link"));
 	

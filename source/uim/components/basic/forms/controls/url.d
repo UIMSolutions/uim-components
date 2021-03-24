@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.forms.controls.url;
 
-import uim.components; 
+import uim.components;
+
+@safe: 
 
 class DUIMInputUrl : DUIMComponent {
 	mixin(H5This!("uim-input-url"));	

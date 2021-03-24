@@ -2,6 +2,7 @@ module uim.components.demos.demos.helpers.texttruncation;
 
 import uim.components;
 
+@safe: 
 static this() {
 	demoUIMComps.pages("basic/helpers/texttruncation", new class DH5AppPage {
 		this() { 
@@ -18,7 +19,7 @@ static this() {
           `vue.mount('#app');`]);
 		} 
 			
-       override string content() { 
+       override string content(STRINGAA reqParameters = null) { 
       return 
 H5Main("app", ["style":"margin-top:70px;"],
   H5Div(["container-fluid", "mt-3", "bg-light"],

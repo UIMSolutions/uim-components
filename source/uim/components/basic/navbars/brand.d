@@ -2,6 +2,8 @@
 
 import uim.components;
 
+@safe:
+
 class DUIMNavbarBrand : DUIMComponent {
 	mixin(H5This!("uim-navbar-brand"));
 

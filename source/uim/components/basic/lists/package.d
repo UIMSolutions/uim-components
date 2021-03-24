@@ -2,6 +2,8 @@
 
 public import uim.components;
 
+@safe:
+
 public import uim.components.basic.lists.button;
 public import uim.components.basic.lists.inline;
 public import uim.components.basic.lists.inlineitem;

@@ -2,6 +2,8 @@ module uim.components.component;
 
 import uim.components;
 
+@safe:
+
 class DUIMComponent : DH5Obj {
 	mixin(H5This!("uim-div"));
 

@@ -2,6 +2,8 @@ module uim.components.basic.alerts.alert;
 
 import uim.components;
 
+@safe:
+
 ///Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
 class DUIMAlert : DUIMComponent {
 	mixin(H5This!("uim-alert"));

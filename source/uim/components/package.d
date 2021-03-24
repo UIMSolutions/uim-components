@@ -269,7 +269,7 @@ unittest {
   f.write(UIMDropdownHeader.toVUEComponent.toString);
   f.write(UIMDropdownLink.toVUEComponent.toString);
   f.write(UIMDropdownMenu.toVUEComponent.toString);
-  f.write(UIMDropdownTogglelink.toVUEComponent.toString);
+  // f.write(UIMDropdownTogglelink.toVUEComponent.toString);/*  */
   f.write(UIMFormCheckbox.toVUEComponent.toString);
   f.write(UIMFormCheckInput.toVUEComponent.toString);
   f.write(UIMFormCheckLabel.toVUEComponent.toString);

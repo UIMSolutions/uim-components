@@ -2,6 +2,8 @@
 
 public import uim.components;
 
+@safe:
+
 public import uim.components.basic.medias.media;
 public import uim.components.basic.medias.body_;
 

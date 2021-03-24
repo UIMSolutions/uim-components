@@ -1,6 +1,8 @@
 ﻿module uim.components.basic.forms.controls.select;
 
-import uim.components; 
+import uim.components;
+
+@safe: 
 
 class DUIMInputSelect : DUIMComponent {
 	mixin(H5This!("uim-input-select"));	
