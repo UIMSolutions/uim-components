@@ -25,11 +25,14 @@ class DUIMComponent : DH5Obj {
 	auto toAngular() {
 		return null;
 	}
+	auto toJavaScript() {
+		return "";
+	}
 	auto toReact() {
 		return null;
 	}
-	auto toWeb() {
-		return null;
+	auto toWebComponent() {
+		return "";
 	}
 
 	/// Root obj for template

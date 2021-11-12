@@ -13,8 +13,7 @@ class DUIMAlert : DUIMComponent {
 	O dismissible(this O)(bool show = true, string icon = "&times;") { 
 		if (show) {
 			this.content(`<button type="button" class="close" data-dismiss="alert">`~icon~`</button>`);
-			this.classes("alert-dismissible"); 
-		}
+			this.classes("alert-dismissible"); }
 		return cast(O)this; }
 
 	mixin(MyContent!("heading", "UIMAlertHeading"));
@@ -27,6 +26,14 @@ class DUIMAlert : DUIMComponent {
 		.props("color", "String", "'primary'")
 		.computed("classes", `return ['alert-'+this.color]`);
 	}
+
+/* 	override auto toWebComponent() {
+		string result;
+		result ~= "class % extends %s { constructor() { super(); }".format("UIMAlert", "HTMLDivElement");
+		result ~= "window.customElements.define('%s', %s);".format("uim-alert", "UIMAlert");
+		return null;
+	} */
+
 }
 mixin(UIMShort!("Alert"));
 ///

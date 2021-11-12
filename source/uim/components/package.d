@@ -8,16 +8,14 @@ public import uim.oop;
 public import uim.html;
 public import uim.javascript;
 public import uim.bootstrap;
-public import uim.vue;
+// public import uim.vue;
 
 public import uim.components.apps;
 public import uim.components.classes;
-public import uim.components.demos;
 public import uim.components.snippets;
 public import uim.components.complex;
 public import uim.components.basic;
 public import uim.components.layout;
-public import uim.components.demos;
 
 public import uim.components.mixins;
 public import uim.components.component;
