@@ -7,13 +7,17 @@ import uim.components;
 class DUIMInputTel : DUIMComponent {
 	mixin(H5This!("uim-input-tel"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5InputTel();
 		return super.toVUEComponent		
 		.name("uim-input-tel");
-	}	
+	}	 */
 }
 mixin(UIMShort!("InputTel"));
 

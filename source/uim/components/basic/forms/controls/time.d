@@ -7,13 +7,17 @@ import uim.components;
 class DUIMInputTime : DUIMComponent {
 	mixin(H5This!("uim-input-time"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5InputTime();
 		return super.toVUEComponent		
 		.name("uim-input-time");
-	}	
+	}	 */
 }
 mixin(UIMShort!("InputTime"));
 

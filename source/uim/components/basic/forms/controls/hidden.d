@@ -7,14 +7,14 @@ import uim.components;
 class DUIMInputHidden : DUIMComponent {
 	mixin(H5This!("uim-input-hidden"));	
 	
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5InputHidden();
 		return super.toVUEComponent		
 		.name("uim-input-hidden")
 		;
-	}
+	} */
 }
 mixin(UIMShort!("InputHidden"));
 

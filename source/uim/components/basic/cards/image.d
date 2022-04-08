@@ -7,7 +7,11 @@ import uim.components;
 class DUIMCardImage : DUIMComponent { // default top
 	mixin(H5This!("uim-card-image"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
 		_templateObj =  BS5CardImage("<slot />");
@@ -15,7 +19,7 @@ class DUIMCardImage : DUIMComponent { // default top
 		.name("uim-card-image")
     .props("position", `type:String,default:"top",validator:value => ["top","bottom"].indexOf(value) >= 0`)
     .computed("classes", `return [this.position==="top"?'card-img-top':'card-img-bottom'];`);
-	}
+	} */
 }
 mixin(UIMShort!"CardImage");
 unittest {

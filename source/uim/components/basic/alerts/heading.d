@@ -7,17 +7,21 @@ import uim.components;
 class DUIMAlertHeading : DUIMComponent {
 	mixin(H5This!("uim-alert-heading")); 
 
+	override void initialize() {
+		super.initialize;
+	}
+
 	O size(this O)(int size) {
 		if ((size > 0) && (size < 7)) _tag = "h"~to!string(size);
 		return cast(O)this;
 	}
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		_templateObj =  BS5AlertHeading("<slot />");
 		return super.toVUEComponent
     .name("uim-alert-heading")
 		;
-	}
+	} */
 }
 mixin(UIMShort!("AlertHeading"));
 

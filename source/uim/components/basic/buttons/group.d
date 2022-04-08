@@ -7,6 +7,10 @@ import uim.components;
 class DUIMButtonGroup : DUIMComponent {
 	mixin(H5This!("uim-button-group"));
 
+	override void initialize() {
+		super.initialize;
+	}
+
 	mixin(MyAttribute!("label", "aria-label"));
 	unittest {
 		assert(Assert(UIMButtonGroup.label("test"), `<uim-button-group aria-label="test"></uim-button-group>`));
@@ -20,7 +24,7 @@ class DUIMButtonGroup : DUIMComponent {
 	unittest {
 	}
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
 		_templateObj =  BS5ButtonGroup("<slot />");
@@ -32,7 +36,7 @@ class DUIMButtonGroup : DUIMComponent {
     this.orientation === "horizontal" ? "btn-group" : "btn-group-vertical",
     this.size !== "normal" ? 'btn-group-'+this.size : ""];`)
     ;
-	}
+	} */
 
 }
 mixin(UIMShort!"ButtonGroup");

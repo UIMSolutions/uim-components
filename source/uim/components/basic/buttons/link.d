@@ -7,7 +7,11 @@ import uim.components;
 class DUIMButtonLink : DUIMComponent {
 	mixin(H5This!("uim-button-link"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		_templateObj =  BS5ButtonLink([":class":"this.classes", ":style": "this.styles", ":href":"this.href"], "<slot />");
 		return super.toVUEComponent
@@ -27,7 +31,7 @@ class DUIMButtonLink : DUIMComponent {
     this.outline !== "none" ? 'btn-outline-'+this.outline : '',
     this.size !== "normal" ? 'btn-'+this.size : ""];`)
     ;
-	}
+	} */
 }
 mixin(UIMShort!"ButtonLink");
 

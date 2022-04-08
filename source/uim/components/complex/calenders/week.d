@@ -8,7 +8,7 @@ import uim.components;
 class DUIMCalendarWeek : DUIMComponent {
 	mixin(H5This!("uim-calendar-week"));
 
-	override DVUEComponent toVUEComponent() {
+	/* override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj = BS5CardColumns(["uim-calendar-week"], 
@@ -39,12 +39,12 @@ case 5: return 'Fr';
 case 6: return 'Sa';
 default: return 'XX';
 		}");
-	}
+	} */
 }
 mixin(UIMShort!"CalendarWeek");
 unittest {
 	assert(Assert(UIMCalendarWeek, `<uim-calendar-week></uim-calendar-week>`));
 	
 	auto f = File("./public/js/uim/components/complex/"~"CalendarWeek".toLower~".js", "w"); 
-  f.write(UIMCalendarWeek.toVUEComponent.toString);
+  // f.write(UIMCalendarWeek.toVUEComponent.toString);
 }

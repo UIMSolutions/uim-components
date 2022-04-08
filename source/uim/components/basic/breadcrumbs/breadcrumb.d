@@ -7,18 +7,22 @@ import uim.components;
 class DUIMBreadcrumb : DUIMComponent {
 	mixin(H5This!("uim-breadcrumb"));
 
+	override void initialize() {
+		super.initialize;
+	}
+
 	mixin(MyContent!("item", "UIMBreadcrumbItem"));
 	//O item(string url, string title) { }
 	mixin(MyContent!("link", "UIMBreadcrumbLink"));
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5Breadcrumb("<slot />");
 		return super.toVUEComponent		
 		.name("uim-breadcrumb")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"Breadcrumb");
 

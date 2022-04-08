@@ -7,6 +7,10 @@ import uim.components;
 class DUIMModalDialog : DUIMComponent {
 	mixin(H5This!("uim-modal-dialog"));
 
+	override void initialize() {
+		super.initialize;
+	}
+
 	unittest {
 		assert(Assert(UIMModalDialog, `<uim-modal-dialog></uim-modal-dialog>`));
 	}
@@ -26,14 +30,14 @@ class DUIMModalDialog : DUIMComponent {
 		assert(Assert(UIMModalDialog.centered, `<uim-modal-dialog class="modal-dialog-centered"></uim-modal-dialog>`));
 	}
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5ModalDialog("<slot />");
 		return super.toVUEComponent		
 		.name("uim-modal-dialog")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"ModalDialog");
 

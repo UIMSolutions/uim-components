@@ -7,13 +7,13 @@ import uim.components;
 class DUIMCardDeckwrapper : DUIMComponent {
 	mixin(H5This!("uim-card-deckwrapper"));
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj = BS5CardDeckwrapper("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card-deckwrapper");
-	}
+	} */
 }
 mixin(UIMShort!"CardDeckwrapper");
 

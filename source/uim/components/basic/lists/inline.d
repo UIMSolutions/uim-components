@@ -7,13 +7,17 @@ import uim.components;
 class DUIMListInline : DUIMComponent {
 	mixin(H5This!("uim-list-inline"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5ListInline("<slot />");
 		return super.toVUEComponent		
 		.name("uim-list-inline");
-	}
+	} */
 }
 mixin(UIMShort!"ListInline");
 

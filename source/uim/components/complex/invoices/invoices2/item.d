@@ -7,7 +7,7 @@ import uim.components;
 class DUIMInvoiceItem : DUIMComponent {
 	mixin(H5This!("uim-invoice-item"));
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj = BS5TableRow(["uim-invoice-item"])
@@ -22,7 +22,7 @@ class DUIMInvoiceItem : DUIMComponent {
 		return super.toVUEComponent		
 		.name("uim-invoice-item")
 		.props("invoiceItem", "Object", "return {};");
-	}
+	} */
 }
 mixin(UIMShort!"InvoiceItem");
 unittest {

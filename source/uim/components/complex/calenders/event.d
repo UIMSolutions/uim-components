@@ -7,7 +7,7 @@ import uim.components;
 class DUIMCalendarEvent : DUIMComponent {
 	mixin(H5This!("uim-calendar-event"));
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj = BS5ListItem(["uim-calendar-event"], 
@@ -21,11 +21,11 @@ class DUIMCalendarEvent : DUIMComponent {
 		return super.toVUEComponent		
 		.name("uim-calendar-event")
 		.props("event", `type:Object, default:null`);
-	}
+	} */
 }
 mixin(UIMShort!"CalendarEvent");
 unittest {
 	assert(Assert(UIMCalendarEvent, `<uim-calendar-event></uim-calendar-event>`));
 	auto f = File("./public/js/uim/components/complex/"~"CalendarEvent".toLower~".js", "w"); 
-  f.write(UIMCalendarEvent.toVUEComponent.toString);
+  // f.write(UIMCalendarEvent.toVUEComponent.toString);
 }

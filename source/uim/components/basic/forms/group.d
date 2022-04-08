@@ -7,6 +7,10 @@ import uim.components;
 class DUIMFormGroup : DUIMComponent {
 	mixin(H5This!("uim-form-group"));
 
+	override void initialize() {
+		super.initialize;
+	}
+	
 	mixin(MyAttribute!("readOnly", "readonly"));
 	mixin(MyAttribute!("value", "value"));
 	mixin(MyAttribute!("placeHolder", "placeholder"));
@@ -44,14 +48,14 @@ class DUIMFormGroup : DUIMComponent {
 	mixin(MyContent!("inputUrl", "UIMInputUrl"));
 	mixin(MyContent!("inputWeek", "UIMInputWeek"));
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5FormGroup("<slot />");
 		return super.toVUEComponent		
 		.name("uim-form-group")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"FormGroup");
 

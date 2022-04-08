@@ -41,13 +41,13 @@ class DUIMIconbarHorizontal : DUIMComponent {
     `<uim-iconbar-horizontal><a class="active" href="#"><i class="fa fa-home"></i></a><a href="#"><i class="fa fa-search"></i></a></uim-iconbar-horizontal>`));
   }
 
-  override DVUEComponent toVUEComponent() {
+/*   override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
 		_templateObj = H5Div(["icon-bar-horizontal"], "<slot />");
 		return super.toVUEComponent
 		.name("UIMIconbarHorizontal");
-	}
+	} */
 }
 mixin(UIMShort!"IconbarHorizontal");
 

@@ -7,13 +7,13 @@ import uim.components;
 class DUIMInvoice : DUIMComponent {
 	mixin(H5This!("uim-invoice"));
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj = BS5TableHeader(["uim-invoice"]).row(H5Slot);
 		return super.toVUEComponent		
 		.name("uim-invoice");
-	}
+	} */
 }
 mixin(UIMShort!"Invoice");
 unittest {

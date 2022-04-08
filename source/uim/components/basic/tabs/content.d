@@ -7,17 +7,22 @@ import uim.components;
 class DUIMTabContent : DUIMComponent {
 	mixin(H5This!("uim-tab-content"));
 
+	override void initialize() {
+		super.initialize;
+	}
+
 	mixin(MyContent!("pane", "UIMTabPane"));
 	unittest {
 		assert(Assert(UIMTabContent.pane, `<uim-tab-content><uim-tab-pane></uim-tab-pane></uim-tab-content>`));
 	}
-	override DVUEComponent toVUEComponent() {
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5TabContent("<slot />");
 		return super.toVUEComponent		
 		.name("uim-tab-content");
-	}
+	} */
 }
 mixin(UIMShort!"TabContent");
 

@@ -7,14 +7,18 @@ import uim.components;
 class DUIMAccordion : DUIMComponent {
 	mixin(H5This!("uim-accordion"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
 		_templateObj = BS5Accordion("<slot />");
 		return super.toVUEComponent		
 		.name("uim-accordion")
     .computed("classes", `return [""];`);
-	}
+	} */
 }
 mixin(UIMShort!"Accordion");
 

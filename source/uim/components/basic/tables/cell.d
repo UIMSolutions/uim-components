@@ -7,14 +7,18 @@ import uim.components;
 class DUIMTableCell : DUIMComponent {
 	mixin(H5This!("uim-table-cell"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5TableCell("<slot />");
 		return super.toVUEComponent		
 		.name("uim-TableCell")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"TableCell");
 

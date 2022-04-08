@@ -7,7 +7,11 @@ import uim.components;
 class DUIMButton :DUIMComponent {
 	mixin(H5This!("uim-button"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		_templateObj =  BS5Button([":class":"this.classes", ":style":"this.styles", "@click":"click", ":aria-pressed":"this.active"], "<slot />");
 		return super.toVUEComponent
@@ -27,7 +31,7 @@ class DUIMButton :DUIMComponent {
     this.disabled ? 'disabled':'',
     this.outline !== "none"?'btn-outline-'+this.outline:'',
     this.size !== "normal"?'btn-'+this.size:""];`);
-	}
+	} */
 }
 mixin(UIMShort!"Button");
 

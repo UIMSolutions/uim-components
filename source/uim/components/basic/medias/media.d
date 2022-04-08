@@ -7,14 +7,18 @@ import uim.components;
 class DUIMMedia : DUIMComponent {
 	mixin(H5This!("uim-media"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5Media("<slot />");
 		return super.toVUEComponent		
 		.name("uim-media")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"Media");
 

@@ -7,13 +7,13 @@ import uim.components;
 class DUIMCardBlock : DUIMComponent {
 	mixin(H5This!("uim-card-block"));
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
 		_templateObj =  BS5CardBlock("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card-block");
-	}
+	} */
 }
 mixin(UIMShort!"CardBlock");
 unittest {

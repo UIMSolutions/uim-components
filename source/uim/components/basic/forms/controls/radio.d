@@ -7,14 +7,18 @@ import uim.components;
 class DUIMRadio : DUIMComponent {
 	mixin(H5This!("uim-radio"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5Radio();
 		return super.toVUEComponent		
 		.name("uim-radio")
 		;
-	}	
+	} */	
 }
 mixin(UIMShort!("Radio"));
 

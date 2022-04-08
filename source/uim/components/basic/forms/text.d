@@ -7,14 +7,18 @@ import uim.components;
 class DUIMFormText : DUIMComponent {
 	mixin(H5This!("uim-form-text"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5FormText();
 		return super.toVUEComponent		
 		.name("uim-form-text")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"FormText");
 

@@ -7,14 +7,18 @@ import uim.components;
 class DUIMAccordionHeader : DUIMComponent {
 	mixin(H5This!("uim-accordion-header"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
 		_templateObj = BS5AccordionHeader("<slot />");
 		return super.toVUEComponent		
 		.name("uim-accordion-header")
     .computed("classes", `return [""];`);
-	}
+	} */
 }
 mixin(UIMShort!"AccordionHeader");
 

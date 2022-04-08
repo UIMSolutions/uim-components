@@ -6,18 +6,19 @@ import uim.components;
 
 class DUIMListInlineItem : DUIMComponent {
 	mixin(H5This!("uim-list-inlineitem"));
-	override public void _init() {
-		super._init;
+	
+	override void initialize() {
+		super.initialize;
 	}
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5ListInlineItem("<slot />");
 		return super.toVUEComponent		
 		.name("uim-list-inlineitem")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"ListInlineItem");
 

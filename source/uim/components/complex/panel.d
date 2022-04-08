@@ -8,7 +8,11 @@ import uim.components;
 class DUIMPanel : DUIMComponent {
 	mixin(H5This!("uim-panel"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj = UIMCol(["uim-panel", "mb-1"])(
@@ -30,7 +34,7 @@ class DUIMPanel : DUIMComponent {
 		.props("id", `type:String, default:''`)
 		.props("title", `type:String, default:''`)
 		.methods("toogle()", "this.isOpen = !this.isOpen");
-	}
+	} */
 }
 mixin(UIMShort!"Panel");
 unittest {

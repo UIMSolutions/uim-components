@@ -7,13 +7,13 @@ import uim.components;
 class DUIMCardColumns : DUIMComponent {
 	mixin(H5This!("uim-card-columns"));
 	
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5CardColumns("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card-columns");
-	}
+	} */
 }
 mixin(UIMShort!"CardColumns");
 unittest {

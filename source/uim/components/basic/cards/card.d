@@ -7,6 +7,10 @@ import uim.components;
 class DUIMCard : DUIMComponent {
 	mixin(H5This!("uim-card"));
 
+	override void initialize() {
+		super.initialize;
+	}
+
 	O block(this O)() { return this.classes("card-block"); }
 	O inverse(this O)() { return this.classes("card-inverse"); }
 
@@ -28,13 +32,13 @@ class DUIMCard : DUIMComponent {
 		assert(Assert(UIMCard.footer, `<uim-card><uim-card-footer></uim-card-footer></uim-card>`));
 	}
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
 		_templateObj =  BS5Card("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card");
-	}
+	} */
 }
 mixin(UIMShort!"Card");
 

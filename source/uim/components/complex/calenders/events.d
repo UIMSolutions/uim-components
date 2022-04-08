@@ -7,13 +7,13 @@ import uim.components;
 class DUIMCalendarEvents : DUIMComponent {
 	mixin(H5This!("uim-calendar-events"));
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj = H5Div(["uim-calendar-events"], "<slot />");
 		return super.toVUEComponent		
 		.name("uim-calendar-events");
-	}
+	} */
 }
 mixin(UIMShort!"CalendarEvents");
 unittest {

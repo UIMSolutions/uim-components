@@ -7,19 +7,23 @@ import uim.components;
 class DUIMTableBody : DUIMComponent {
 	mixin(H5This!("uim-table-body"));
 
+	override void initialize() {
+		super.initialize;
+	}
+	
 	mixin(MyContent!("row", "UIMTableRow"));
 	unittest {
 		assert(Assert(UIMTableBody.row, `<uim-table-body><uim-table-row></uim-table-row></uim-table-body>`));
 	}	
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5TableBody("<slot />");
 		return super.toVUEComponent		
 		.name("uim-TableBody")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"TableBody");
 

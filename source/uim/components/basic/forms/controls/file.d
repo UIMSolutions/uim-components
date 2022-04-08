@@ -7,14 +7,18 @@ import uim.components;
 class DUIMInputFile : DUIMComponent {
 	mixin(H5This!("uim-input-file"));	
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5InputFile();
 		return super.toVUEComponent		
 		.name("uim-input-file")
 		;
-	}
+	} */
 }
 mixin(UIMShort!("InputFile"));
 

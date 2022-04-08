@@ -7,6 +7,9 @@ import uim.components;
 class DUIMComponent : DH5Obj {
 	mixin(H5This!("uim-div"));
 
+	// Hook for adding code on initialization
+	void initialize() {} 
+
 	O margin(this O)(string aMargin) { this.classes("m"~aMargin); return cast(O)this; }
 	unittest {
 		assert(Assert(UIMComponent.margin("t-2"), `<uim-div class="mt-2"></uim-div>`));
@@ -46,7 +49,7 @@ class DUIMComponent : DH5Obj {
 	* Export component to VueComponent 
 	* _vueComponent - cache for toVUEComponent
 	*/ 
-	protected DVUEComponent _vueComponent;
+/* 	protected DVUEComponent _vueComponent;
 	DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
@@ -59,7 +62,7 @@ class DUIMComponent : DH5Obj {
 			_vueComponent.template_(_templateObj.toString);
 		}
 		return _vueComponent;
-	}
+	} */
 
 	/// toString - export to string
 	override string toString() {

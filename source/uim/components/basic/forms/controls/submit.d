@@ -7,14 +7,18 @@ import uim.components;
 class DUIMInputSubmit : DUIMComponent {
 	mixin(H5This!("uim-input-submit"));	
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5InputButton();
 		return super.toVUEComponent		
 		.name("uim-input-button");
-	}
-}
+	}*/ 
+} 
 mixin(UIMShort!("InputSubmit"));
 
 unittest {

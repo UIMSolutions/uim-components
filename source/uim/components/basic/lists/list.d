@@ -7,17 +7,21 @@ import uim.components;
 class DUIMList : DUIMComponent {
 	mixin(H5This!("uim-list"));
 
+	override void initialize() {
+		super.initialize;
+	}
+
 	mixin(MyContent!("link", "UIMListLink"));
 	mixin(MyContent!("button", "UIMListButton"));
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5List("<slot />");
 		return super.toVUEComponent		
 		.name("uim-list")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"List");
 

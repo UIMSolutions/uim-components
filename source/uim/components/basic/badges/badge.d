@@ -7,12 +7,16 @@ import uim.components;
 class DUIMBadge : DUIMComponent {
 	mixin(H5This!("uim-badge"));
 
+	override void initialize() {
+		super.initialize;
+	}
+
 	O color(this O)(string name) { return this.classes("badge-"~name); };
 	O pill(this O)(bool mode = true) { 
 		if (mode) this.classes("badge-pill"); 
 		return cast(O)this; }
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5Badge("<slot />");
@@ -26,7 +30,7 @@ class DUIMBadge : DUIMComponent {
 		this.pill ? 'badge-pill' : ''
 		];`)
 		;
-	}
+	} */
 }
 mixin(UIMShort!("Badge"));
 

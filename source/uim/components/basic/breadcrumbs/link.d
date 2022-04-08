@@ -7,6 +7,10 @@ import uim.components;
 class DUIMBreadcrumbLink : DUIMComponent {	
 	mixin(H5This!("uim-breadcrumb-link"));
 
+	override void initialize() {
+		super.initialize;
+	}
+
 	mixin(MyClassAttribute!("active"));
 	mixin(MyClassAttribute!("disabled"));	
 
@@ -17,14 +21,14 @@ class DUIMBreadcrumbLink : DUIMComponent {
 
 	mixin(TProperty!("string", "url"));
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
 		_templateObj =  BS5BreadcrumbLink([":class":"this.classes", ":style": "this.styles", ":href":"this.href"], "<slot />");
 		return super.toVUEComponent		
 		.name("uim-breadcrumb-link")
     	.props("href", `type:String,default:'#'`);
-	}
+	} */
 }
 mixin(UIMShort!"BreadcrumbLink");
 

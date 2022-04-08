@@ -7,10 +7,14 @@ import uim.components;
 class DUIMBreadcrumbItem : DUIMComponent {
 	mixin(H5This!("uim-breadcrumb-item"));
 
+	override void initialize() {
+		super.initialize;
+	}
+
 	mixin(MyClassAttribute!("active"));
 	mixin(MyClassAttribute!("disabled"));
 	
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5BreadcrumbItem("<slot />");
@@ -23,7 +27,7 @@ class DUIMBreadcrumbItem : DUIMComponent {
       this.disabled ? 'disabled' : ''
       ]`)
     ;
-	}
+	} */
 }
 mixin(UIMShort!"BreadcrumbItem");
 

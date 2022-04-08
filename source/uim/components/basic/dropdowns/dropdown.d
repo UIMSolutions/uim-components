@@ -7,17 +7,21 @@ import uim.components;
 class DUIMDropdown : DUIMComponent {
 	mixin(H5This!("uim-dropdown"));
 
+	override void initialize() {
+		super.initialize;
+	}
+	
 	mixin(MyContent!("menu", "UIMDropdownMenu"));
 	mixin(MyContent!("toggleLink", "UIMToggleLink"));
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5Dropdown(_id, _classes, _attributes, "<slot />");
 		return super.toVUEComponent		
 		.name("uim-dropdown")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"Dropdown");
 

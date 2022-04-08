@@ -7,13 +7,17 @@ import uim.components;
 class DUIMInputText : DUIMComponent {
 	mixin(H5This!("uim-input-text"));	
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5InputText();
 		return super.toVUEComponent		
 		.name("uim-input-text");
-	}
+	} */
 }
 mixin(UIMShort!("InputText"));
 

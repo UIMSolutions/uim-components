@@ -7,13 +7,17 @@ import uim.components;
 class DUIMCardText : DUIMComponent {
 	mixin(H5This!("uim-card-text"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj = BS5CardText("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card-text");
-	}
+	} */
 }
 mixin(UIMShort!"CardText");
 unittest {

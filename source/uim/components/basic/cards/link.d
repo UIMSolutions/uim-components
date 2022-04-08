@@ -7,13 +7,17 @@ import uim.components;
 class DUIMCardLink : DUIMComponent {
 	mixin(H5This!("uim-card-link"));
 
-	override DVUEComponent toVUEComponent() {	
+	override void initialize() {
+		super.initialize;
+	}
+
+/* 	override DVUEComponent toVUEComponent() {	
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5CardLink("<slot />");
 		return super.toVUEComponent		
 		.name("uim-card-link");
-	}
+	} */
 }
 mixin(UIMShort!"CardLink");
 

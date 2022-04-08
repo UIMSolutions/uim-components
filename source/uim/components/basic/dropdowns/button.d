@@ -7,7 +7,11 @@ import uim.components;
 class DUIMDropdownButton : DUIMComponent {
 	mixin(H5This!("uim-dropdown-button"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj = BS5DropdownButton([":class":"this.classes"], "<slot />");		
@@ -21,7 +25,7 @@ class DUIMDropdownButton : DUIMComponent {
 				"disabled?'disabled':''",
 				"color !== 'None'?'btn-'+this.color:''",
 			].toJS~`;`);
-	}
+	} */
 }
 mixin(UIMShort!"DropdownButton");
 

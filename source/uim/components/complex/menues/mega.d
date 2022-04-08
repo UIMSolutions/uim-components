@@ -17,7 +17,7 @@ import uim.components;
 class DUIMMenuMega : DUIMComponent {
 	mixin(H5This!("uim-menu-mega"));
 
-	override DVUEComponent toVUEComponent() {
+	/* override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj = H5Li(["nav-item", "dropdown", "uim-megamenu"],
@@ -44,7 +44,7 @@ class DUIMMenuMega : DUIMComponent {
 		return super.toVUEComponent		
 		.name("uim-menu-mega")
 		.props("groups", `type:Object,default(){return{}}`);
-	}
+	} */
 }
 mixin(UIMShort!"MenuMega");
 unittest {

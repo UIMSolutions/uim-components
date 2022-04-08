@@ -1,8 +1,7 @@
 module uim.components.complex.timelines.item;
 
-import uim.components;
-
 @safe:
+import uim.components;
 
 /**
  * Timelime item component
@@ -27,7 +26,7 @@ class DUIMTimelineItem : DUIMComponent {
     string description() { return _description; }
     O description(this O)(string newDescription) { _description = newDescription; return cast(O)this; }
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj = H5Li(["timeline-item", "bg-white", "rounded", "ml-3", "p-4", "shadow"], ["v-for":"item in timeline", ":key":"item.id"],
@@ -39,7 +38,7 @@ class DUIMTimelineItem : DUIMComponent {
 		return super.toVUEComponent		
 		.name("uim-timeline-item")
         .props("item", "type:Object,return{}");
-	}
+	} */
 }
 mixin(UIMShort!"TimelineItem");
 unittest {

@@ -7,7 +7,11 @@ import uim.components;
 class DUIMDropdownHeader : DUIMComponent {
 	mixin(H5This!("uim-dropdown-header"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5DropdownHeader("<slot />");
@@ -15,6 +19,7 @@ class DUIMDropdownHeader : DUIMComponent {
 		.name("uim-dropdown-header")
 		;
 	}
+ */
 }
 mixin(UIMShort!"DropdownHeader");
 

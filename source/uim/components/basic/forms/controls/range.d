@@ -7,13 +7,17 @@ import uim.components;
 class DUIMInputRange : DUIMComponent {
 	mixin(H5This!("uim-input-range"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5InputRange();
 		return super.toVUEComponent		
 		.name("uim-input-range");
-	}	
+	}	 */
 }
 mixin(UIMShort!("InputRange"));
 

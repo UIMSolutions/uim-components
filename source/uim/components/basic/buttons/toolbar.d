@@ -7,17 +7,21 @@ import uim.components;
 class DUIMButtonToolbar : DUIMComponent {
 	mixin(H5This!("uim-button-toolbar"));
 
+	override void initialize() {
+		super.initialize;
+	}
+
 	mixin(MyAttribute!("label", "aria-label"));
 	mixin(MyContent!("group", "UIMButtonGroup"));
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
 		_templateObj = BS5ButtonToolbar("<slot />");
 		return super.toVUEComponent		
 		.name("uim-button-toolbar")
     .computed("classes", `return [""];`);
-	}
+	} */
 }
 mixin(UIMShort!"ButtonToolbar");
 

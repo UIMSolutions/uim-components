@@ -8,6 +8,10 @@ import uim.components;
 class DUIMAlert : DUIMComponent {
 	mixin(H5This!("uim-alert"));
 
+	override void initialize() {
+		super.initialize;
+	}
+
 	O color(this O)(string name) { return this.classes("alert-"~name); };
 	O link(this O)(string content, string url = "#") { this.content(`<a href="`~url~`" class="alert-link">`~content~`</a>`); return cast(O)this; }
 	O dismissible(this O)(bool show = true, string icon = "&times;") { 
@@ -18,14 +22,14 @@ class DUIMAlert : DUIMComponent {
 
 	mixin(MyContent!("heading", "UIMAlertHeading"));
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		_templateObj =  BS5Alert("<slot />");
 		return super.toVUEComponent
 		.name("uim-alert")
 		.props("color", "String", "'primary'")
 		.computed("classes", `return ['alert-'+this.color]`);
-	}
+	} */
 
 /* 	override auto toWebComponent() {
 		string result;

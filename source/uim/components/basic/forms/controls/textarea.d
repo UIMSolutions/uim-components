@@ -7,6 +7,10 @@ import uim.components;
 class DUIMInputTextarea : DUIMComponent {
 	mixin(H5This!("uim-input-textarea"));
 
+	override void initialize() {
+		super.initialize;
+	}
+
 	mixin(MyAttribute!"rows");
 	unittest {
 		assert(Assert(UIMInputTextarea.rows("8"), `<uim-input-textarea rows="8"></uim-input-textarea>`));	
@@ -22,13 +26,13 @@ class DUIMInputTextarea : DUIMComponent {
 		assert(Assert(UIMInputTextarea.size("10", "5"), `<uim-input-textarea cols="5" rows="10"></uim-input-textarea>`));	
 	}
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5InputTextarea("<slot />");
 		return super.toVUEComponent		
 		.name("uim-input-textarea");
-	}
+	} */
 }
 mixin(UIMShort!("InputTextarea"));
 

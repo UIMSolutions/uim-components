@@ -7,14 +7,18 @@ import uim.components;
 class DUIMCustomCheckbox : DUIMComponent {
 	mixin(H5This!("uim-custom-checkbox"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5CustomCheckbox();
 		return super.toVUEComponent		
 		.name("uim-custom-checkbox")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"CustomCheckbox");
 

@@ -7,12 +7,16 @@ import uim.components;
 class DUIMListButton : DUIMComponent {
 	mixin(H5This!("uim-list-button"));
 
+	override void initialize() {
+		super.initialize;
+	}
+	
 	O active(this O)(bool value = true) { this.classes("active"); return cast(O)this; }
 	O disabled(this O)(bool value = true) { _attributes["disabled"] = "true"; return cast(O)this; }
 
 	O color(this O)(string aColor) { this.classes("list-group-item-"~aColor); return cast(O)this; }
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4ListButton("<slot />");
@@ -27,7 +31,7 @@ class DUIMListButton : DUIMComponent {
 			"color !== 'None'? 'btn-'+this.color:''",
 		].toJS~`;`)
 		;
-	}
+	} */
 }
 mixin(UIMShort!"ListButton");
 

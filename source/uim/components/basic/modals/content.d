@@ -6,19 +6,21 @@ import uim.components;
 
 class DUIMModalContent : DUIMComponent {
 	mixin(H5This!("uim-modal-content"));
-	override public void _init() {
-		super._init;
+
+	override void initialize() {
+		super.initialize;
 	}
+	
 	O fade(this O)(bool mode = true) { return this.classes("fade"); }
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5ModalContent("<slot />");
 		return super.toVUEComponent		
 		.name("uim-modal-content")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"ModalContent");
 

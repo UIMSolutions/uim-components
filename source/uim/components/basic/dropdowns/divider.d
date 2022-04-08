@@ -7,14 +7,18 @@ import uim.components;
 class DUIMDropdownDivider : DUIMComponent {
 	mixin(H5This!("uim-dropdown-divider"));
 	
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5DropdownDivider("<slot />");
 		return super.toVUEComponent		
 		.name("uim-dropdown-divider")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"DropdownDivider");
 

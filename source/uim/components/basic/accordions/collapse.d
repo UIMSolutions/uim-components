@@ -7,14 +7,18 @@ import uim.components;
 class DUIMAccordionCollapse : DUIMComponent {
 	mixin(H5This!("uim-accordion-collapse"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 
 		_templateObj = BS5AccordionCollapse("<slot />");
 		return super.toVUEComponent		
 		.name("uim-accordion-collapse")
     .computed("classes", `return [""];`);
-	}
+	} */
 }
 mixin(UIMShort!"AccordionCollapse");
 
