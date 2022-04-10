@@ -7,16 +7,20 @@ import uim.components;
 class DUIMNav : DUIMComponent {
 	mixin(H5This!("uim-nav"));
 
+	override void initialize() {
+		super.initialize;
+	}
+	
 	mixin(MyContent!("link", "UIMNavLink"));
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5Nav("<slot />");
 		return super.toVUEComponent		
 		.name("uim-nav")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"Nav");
 

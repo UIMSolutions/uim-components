@@ -7,14 +7,18 @@ import uim.components;
 class DUIMModalFooter : DUIMComponent {
 	mixin(H5This!("uim-modal-footer"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5ModalFooter("<slot />");
 		return super.toVUEComponent		
 		.name("uim-modal-footer")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"ModalFooter");
 

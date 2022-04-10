@@ -13,7 +13,7 @@ public import uim.components.basic.modals.header;
 public import uim.components.basic.modals.modal;
 public import uim.components.basic.modals.title;
 
-string modalsRegistration() {
+/* string modalsRegistration() {
   return 
     UIMModal.toVUEComponent.globalRegistration~
     UIMModalBody.toVUEComponent.globalRegistration~
@@ -36,4 +36,4 @@ string modalsVue3(string target) {
 	results ~= UIMModalHeader.toVue3(target);
 
   return results.join(";")~";";
-} 
+}  */

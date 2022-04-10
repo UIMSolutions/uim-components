@@ -28,5 +28,5 @@ unittest {
 	// auto f = File("./public/js/uim/components/basic/accordions/accordion-collapse.js", "w"); 
   // f.write(UIMAccordionCollapse.toVUEComponent.toString);
 
-	vue3components ~= UIMAccordionCollapse.toVue3("vue")~";";
+	// vue3components ~= UIMAccordionCollapse.toVue3("vue")~";";
 }

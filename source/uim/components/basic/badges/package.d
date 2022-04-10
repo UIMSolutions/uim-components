@@ -5,7 +5,7 @@ public import uim.components;
 @safe:
 public import uim.components.basic.badges.badge;
 
-string badgesRegistration() {
+/* string badgesRegistration() {
   return 
     UIMBadge.toVUEComponent.globalRegistration;
 }
@@ -16,4 +16,4 @@ string badgesVue3(string target) {
 	results ~= UIMBadge.toVue3(target);
 
   return results.join(";")~";";
-} 
+}  */

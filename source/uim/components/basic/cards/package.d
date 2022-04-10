@@ -17,7 +17,7 @@ public import uim.components.basic.cards.subtitle;
 public import uim.components.basic.cards.text;
 public import uim.components.basic.cards.title;
 
-string cardsRegistration() {
+/* string cardsRegistration() {
   return 
     UIMCard.toVUEComponent.globalRegistration~
     UIMCardBlock.toVUEComponent.globalRegistration~
@@ -32,9 +32,9 @@ string cardsRegistration() {
     UIMCardSubtitle.toVUEComponent.globalRegistration~
     UIMCardText.toVUEComponent.globalRegistration~
     UIMCardTitle.toVUEComponent.globalRegistration;
-}
+} */
 
-string cardsVue3(string target) {
+/* string cardsVue3(string target) {
   string[] results; 
 
 	results ~= UIMCard.toVue3(target);
@@ -52,4 +52,4 @@ string cardsVue3(string target) {
 	results ~= UIMCardTitle.toVue3(target);
 
   return results.join(";")~";";
-} 
+}  */

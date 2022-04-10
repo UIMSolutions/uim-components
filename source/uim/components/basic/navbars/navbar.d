@@ -7,6 +7,10 @@ import uim.components;
 class DUIMNavbar : DUIMComponent {
 	mixin(H5This!("uim-navbar"));
 
+	override void initialize() {
+		super.initialize;
+	}
+
 	O light(this O)(bool value = true) { if (value) this.classes("navbar-light"); return cast(O)this; }
 	unittest {
 		assert(Assert(UIMNavbar.light, `<uim-navbar class="navbar-light"></uim-navbar>`));
@@ -22,14 +26,14 @@ class DUIMNavbar : DUIMComponent {
 		assert(Assert(UIMNavbar.expand("lg"), `<uim-navbar class="navbar-expand-lg"></uim-navbar>`));
 	}
 	
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5Navbar("<slot />");
 		return super.toVUEComponent		
 		.name("uim-navbar")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"Navbar");
 

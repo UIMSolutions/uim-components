@@ -1,1 +1,0 @@
-Vue.component('uim-chat-message',{computed:{classes:function(){return [];},styles:function(){return [];}},props:{message:{type:Object,default:function(){return{};}}},template:`<div class="uim-chat-message" :class="this.classes" :style="this.styles"><slot></slot></div>`});

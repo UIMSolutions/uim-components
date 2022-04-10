@@ -20,5 +20,5 @@ unittest {
 	assert(Assert(UIMChatboxInbox, `<uim-chatbox-inbox></uim-chatbox-inbox>`));
 
 	auto f = File("./public/js/uim/components/complex/chatboxes/inbox.js", "w"); 
-  f.write(UIMChatboxInbox.toVUEComponent.toString);
+  // f.write(UIMChatboxInbox.toVUEComponent.toString);
 }

@@ -6,22 +6,24 @@ import uim.components;
 
 class DUIMPageItem : DUIMComponent {
 	mixin(H5This!("uim-page-item"));
-	override public void _init() {
-		super._init;
+
+	override void initialize() {
+		super.initialize;
 	}
+	
 	mixin(MyContent!("link", "UIMPageItem"));
 
 	O active(this O)(bool value = true) { this.classes("active"); return cast(O)this; }
 	O disabled(this O)(bool value = true) { this.classes("disabled").attributes("tabindex", "-1"); return cast(O)this; }
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5PageItem("<slot />");
 		return super.toVUEComponent		
 		.name("uim-page-item")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"PageItem");
 

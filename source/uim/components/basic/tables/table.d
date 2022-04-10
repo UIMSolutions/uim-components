@@ -7,6 +7,10 @@ import uim.components;
 class DUIMTable : DUIMComponent {
 	mixin(H5This!("uim-table"));
 
+	override void initialize() {
+		super.initialize;
+	}
+
 	mixin(MyContent!("caption", "H5Caption"));
 	unittest {
 		assert(Assert(UIMTable.caption("test"), `<uim-table><caption>test</caption></uim-table>`));
@@ -32,14 +36,14 @@ class DUIMTable : DUIMComponent {
 		assert(Assert(UIMTable.row, `<uim-table><uim-table-row></uim-table-row></uim-table>`));
 	}	
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5Table("<slot />");
 		return super.toVUEComponent		
 		.name("uim-Table")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"Table");
 

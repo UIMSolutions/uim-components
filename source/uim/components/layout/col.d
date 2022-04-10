@@ -7,13 +7,17 @@ import uim.components;
 class DUIMCol : DUIMComponent {
 	mixin(H5This!("uim-col"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5Col("<slot />");
 		return super.toVUEComponent		
 		.name("uim-col");
-	}
+	} */
 }
 mixin(UIMShort!"Col");
 

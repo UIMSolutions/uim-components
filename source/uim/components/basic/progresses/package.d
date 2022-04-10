@@ -7,7 +7,7 @@ public import uim.components;
 public import uim.components.basic.progresses.progress;
 public import uim.components.basic.progresses.bar;
 
-string progressesRegistration() {
+/* string progressesRegistration() {
   return 
     UIMProgress.toVUEComponent.globalRegistration~
     UIMProgressBar.toVUEComponent.globalRegistration;
@@ -20,4 +20,4 @@ string progressesVue3(string target) {
 	results ~= UIMProgressBar.toVue3(target);
 
   return results.join(";")~";";
-} 
+}  */

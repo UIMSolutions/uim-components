@@ -21,5 +21,5 @@ unittest {
 	assert(Assert(UIMChatContact, `<uim-chat-contact></uim-chat-contact>`));
 		
 	auto f = File("./public/js/uim/components/complex/chats/contact.js", "w"); 
-  f.write(UIMChatContact.toVUEComponent.toString);
+  // f.write(UIMChatContact.toVUEComponent.toString);
 }

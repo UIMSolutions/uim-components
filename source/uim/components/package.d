@@ -24,7 +24,7 @@ public import uim.components.component;
 string globalStyles() {
   return "";
 }
-string globalRegistration() {
+/* string globalRegistration() {
   return alertsRegistration~
     badgesRegistration~
     breadcrumbsRegistration~
@@ -42,7 +42,7 @@ string globalRegistration() {
     tablesRegistration~
     calendarRegistration~
     complexRegistration;
-}
+} */
 
 string uimComponentsCss() {
   string[] cssColors = [			
@@ -221,7 +221,7 @@ void 	uimComponentsGlobalRegistration(HTTPServerRequest req, HTTPServerResponse 
     var diff = date.getDate() - date.getDay() + (date.getDay() === 0 ? -6 : 1);
     return new Date(date.setDate(diff));
   }`;
-  res.writeBody(script~uim.components.globalRegistration, "text/javascript");
+  res.writeBody(/* script~uim.components.globalRegistration */ "", "text/javascript");
 }
 
 void 	uimComponentsGlobalStyles(HTTPServerRequest req, HTTPServerResponse res) {
@@ -233,7 +233,7 @@ void 	uimComponentClasses(HTTPServerRequest req, HTTPServerResponse res) {
   res.writeBody(uimClasses, "text/javascript");
 }
 
-unittest {
+/* unittest {
   auto f = File("./public/js/all.js", "w"); 
   f.write(UIMAlert.toVUEComponent.toString);
   f.write(UIMAlertHeading.toVUEComponent.toString);
@@ -267,7 +267,7 @@ unittest {
   f.write(UIMDropdownHeader.toVUEComponent.toString);
   f.write(UIMDropdownLink.toVUEComponent.toString);
   f.write(UIMDropdownMenu.toVUEComponent.toString);
-  // f.write(UIMDropdownTogglelink.toVUEComponent.toString);/*  */
+  // f.write(UIMDropdownTogglelink.toVUEComponent.toString);
   f.write(UIMFormCheckbox.toVUEComponent.toString);
   f.write(UIMFormCheckInput.toVUEComponent.toString);
   f.write(UIMFormCheckLabel.toVUEComponent.toString);
@@ -362,6 +362,6 @@ string toVue3() {
   result ~= UIMAlertLink.toVue3("vue")~";";
 
   return result;
-}
+} */
 
 string vue3components;

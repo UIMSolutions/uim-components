@@ -12,10 +12,10 @@ public import uim.components.basic.forms.customcontrols.radio;
 string formsCustomVue3(string target) {
   string[] results; 
 
-	results ~= UIMCustomCheckbox.toVue3(target);
+/* 	results ~= UIMCustomCheckbox.toVue3(target);
 	results ~= UIMCustomControl.toVue3(target);
 	results ~= UIMCustomInput.toVue3(target);
-	results ~= UIMCustomRadio.toVue3(target);
+	results ~= UIMCustomRadio.toVue3(target); */
 
   return results.join(";")~";";
 } 

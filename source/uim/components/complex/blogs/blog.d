@@ -20,5 +20,5 @@ unittest {
 	assert(Assert(UIMBlog, `<uim-blog></uim-blog>`));
 
 	auto f = File("./public/js/uim/components/complex/"~"Blog".toLower~".js", "w"); 
-  f.write(UIMBlog.toVUEComponent.toString);
+  // f.write(UIMBlog.toVUEComponent.toString);
 }

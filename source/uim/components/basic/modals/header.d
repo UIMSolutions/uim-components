@@ -6,18 +6,19 @@ import uim.components;
 
 class DUIMModalHeader : DUIMComponent {
 	mixin(H5This!("DIV", ["modal-header"]));
-	override public void _init() {
-		super._init;
+
+	override void initialize() {
+		super.initialize;
 	}
 	
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5ModalHeader("<slot />");
 		return super.toVUEComponent		
 		.name("uim-modal-header")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"ModalHeader");
 

@@ -13,7 +13,7 @@ public import uim.components.basic.dropdowns.header;
 public import uim.components.basic.dropdowns.toggle;
 public import uim.components.basic.dropdowns.togglelink;
 
-string dropdownsRegistration() {
+/* string dropdownsRegistration() {
   return 
     UIMDropdown.toVUEComponent.globalRegistration~
     UIMDropdownMenu.toVUEComponent.globalRegistration~
@@ -37,4 +37,4 @@ string dropdownsVue3(string target) {
 	results ~= UIMDropdownToggleLink.toVue3(target);
 
   return results.join(";")~";";
-} 
+}  */

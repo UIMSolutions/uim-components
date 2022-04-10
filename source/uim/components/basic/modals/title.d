@@ -7,14 +7,18 @@ import uim.components;
 class DUIMModalTitle : DUIMComponent {
 	mixin(H5This!("uim-modal-title"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5ModalTitle("<slot />");
 		return super.toVUEComponent		
 		.name("uim-modal-title")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"ModalTitle");
 

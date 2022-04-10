@@ -39,7 +39,7 @@ class DUIMComponent : DH5Obj {
 	}
 
 	/// Root obj for template
-	DH5Obj _templateObj = H5Div(new DH5Slot);
+	DH5Obj _templateObj; // = H5Div(new DH5Slot);
 	O templateObj(this O)(DH5Obj anObj) { _templateObj = anObj; return cast(O)this; } 
 
 	/* 	auto toWeb() {
@@ -68,9 +68,9 @@ class DUIMComponent : DH5Obj {
 	override string toString() {
 		return super.toString;
 	} 
-	string toVue3(string target) {
+/* 	string toVue3(string target) {
 		return toVUEComponent.toVue3(target);
-	} 
+	}  */
 }
 mixin(UIMShort!"Component");
 

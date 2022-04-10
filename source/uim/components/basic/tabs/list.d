@@ -6,8 +6,9 @@ import uim.components;
 
 class DUIMTabList : DUIMComponent {
 	mixin(H5This!("uim-tab-list"));
-	override public void _init() {
-		super._init;
+
+	override void initialize() {
+		super.initialize;
 	}
 
 	mixin(MyContent!("item", "UIMNavItem"));
@@ -34,7 +35,7 @@ class DUIMTabList : DUIMComponent {
 		assert(Assert(UIMTabList.justified, `<uim-tab-list class="nav-justified"></uim-tab-list>`));
 	}
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj = BS5NavItem("<slot />");
@@ -45,7 +46,7 @@ class DUIMTabList : DUIMComponent {
 		.props("pills", `type:Boolean,default:false`)
 		.props("tabs", `type:Boolean,default:false`)
 		.props("vertical", `type:Boolean,default:false`);
-	}
+	} */
 }
 mixin(UIMShort!"TabList");
 

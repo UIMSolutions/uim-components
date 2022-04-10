@@ -8,7 +8,7 @@ public import uim.components.complex.calendars.calendar;
 public import uim.components.complex.calendars.events;
 public import uim.components.complex.calendars.event;
 
-string calendarRegistration() {
+/* string calendarRegistration() {
   return 
     UIMCalendar.toVUEComponent.globalRegistration~
     UIMCalendarDay.toVUEComponent.globalRegistration~
@@ -17,4 +17,4 @@ string calendarRegistration() {
     UIMCalendarYear.toVUEComponent.globalRegistration~
     UIMCalendarEvent.toVUEComponent.globalRegistration~
     UIMCalendarEvents.toVUEComponent.globalRegistration;
-}
+} */

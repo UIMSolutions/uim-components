@@ -12,7 +12,7 @@ public import uim.components.basic.lists.links;
 public import uim.components.basic.lists.item;
 public import uim.components.basic.lists.link;
 
-string listsRegistration() {
+/* string listsRegistration() {
   return 
   UIMListButton.toVUEComponent.globalRegistration~
   UIMList.toVUEComponent.globalRegistration~
@@ -35,4 +35,4 @@ string listsVue3(string target) {
 	results ~= UIMListLink.toVue3(target);
 
   return results.join(";")~";";
-} 
+}  */

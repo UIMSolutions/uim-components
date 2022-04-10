@@ -6,9 +6,11 @@ import uim.components;
 
 class DUIMProgressBar : DUIMComponent {
 	mixin(H5This!("uim-progress-bar"));
-	override public void _init() {
-		super._init;
+
+	override void initialize() {
+		super.initialize;
 	}
+	
 	O valueNow(this O)(string value) { return this.attributes(["aria-valuenow":value]); }
 	O valueMin(this O)(string value) { return this.attributes(["aria-valuemin":value]); }
 	O valueMax(this O)(string value) { return this.attributes(["aria-valuemax":value]); }
@@ -16,14 +18,14 @@ class DUIMProgressBar : DUIMComponent {
 	O striped(this O)(bool mode = true) { return this.classes("progress-bar-striped"); }
 	O animated(this O)(bool mode = true) { return this.classes("progress-bar-animated"); }
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5ProgressBar("<slot />");
 		return super.toVUEComponent		
 		.name("uim-progress-bar")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"ProgressBar");
 

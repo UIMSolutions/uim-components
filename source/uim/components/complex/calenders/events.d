@@ -20,5 +20,5 @@ unittest {
 	assert(Assert(UIMCalendarEvents, `<uim-calendar-events></uim-calendar-events>`));
 
 	auto f = File("./public/js/uim/components/complex/"~"CalendarEvents".toLower~".js", "w"); 
-  f.write(UIMCalendarEvents.toVUEComponent.toString);
+  // f.write(UIMCalendarEvents.toVUEComponent.toString);
 }

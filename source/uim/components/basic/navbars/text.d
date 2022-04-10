@@ -7,14 +7,18 @@ import uim.components;
 class DUIMNavbarText : DUIMComponent {
 	mixin(H5This!("uim-navbar-text"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5NavbarText("<slot />");
 		return super.toVUEComponent		
 		.name("uim-navbar-text")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"NavbarText");
 

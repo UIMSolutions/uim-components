@@ -12,7 +12,7 @@ public import uim.components.basic.navbars.collapse;
 public import uim.components.basic.navbars.nav;
 public import uim.components.basic.navbars.text;
 
-string navbarsRegistration() {
+/* string navbarsRegistration() {
   return 
     UIMNavbar.toVUEComponent.globalRegistration~
     UIMNavbarBrand.toVUEComponent.globalRegistration~
@@ -33,4 +33,4 @@ string navbarsVue3(string target) {
 	results ~= UIMNavbarNav.toVue3(target);
 
   return results.join(";")~";";
-} 
+}  */

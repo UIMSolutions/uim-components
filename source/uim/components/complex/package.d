@@ -12,8 +12,8 @@ public import uim.components.complex.wikis;
 
 public import uim.components.complex.panel;
 
-string complexRegistration() {
+/* string complexRegistration() {
   return     
     UIMMenuMega.toVUEComponent.globalRegistration~
     UIMPanel.toVUEComponent.globalRegistration;
-}
+} */

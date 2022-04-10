@@ -11,7 +11,7 @@ public import uim.components.basic.tables.footer;
 public import uim.components.basic.tables.cell;
 public import uim.components.basic.tables.row;
 
-string tablesRegistration() {
+/* string tablesRegistration() {
   return 
     UIMTable.toVUEComponent.globalRegistration~
     UIMTableBody.toVUEComponent.globalRegistration~
@@ -30,4 +30,4 @@ string tablesVue3(string target) {
     UIMTableFooter,
     UIMTableHeader
   ].map!(a => a.toVue3(target)~";").join("");
-} 
+}  */

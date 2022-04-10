@@ -33,7 +33,7 @@ public import uim.components.basic.forms.controls.week;
 string formsControlsVue3(string target) {
   string[] results; 
 
-	results ~= UIMInputButton.toVue3(target);
+/* 	results ~= UIMInputButton.toVue3(target);
 	results ~= UIMCheckbox.toVue3(target);
 	results ~= UIMInputColor.toVue3(target);
 	results ~= UIMInputDate.toVue3(target);
@@ -57,7 +57,7 @@ string formsControlsVue3(string target) {
 	results ~= UIMInputTextarea.toVue3(target);
 	results ~= UIMInputTime.toVue3(target);
 	results ~= UIMInputUrl.toVue3(target);
-	results ~= UIMInputWeek.toVue3(target);
+	results ~= UIMInputWeek.toVue3(target); */
 
   return results.join(";")~";";
 } 

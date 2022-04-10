@@ -7,13 +7,17 @@ import uim.components;
 class DUIMTableSortableHeader : DUIMComponent {
 	mixin(H5This!("uim-table-sortable-header"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj = H5Div(["uim-table-sortable-header"], H5Slot);
 		return super.toVUEComponent		
 		.name("uim-table-sortable-header");
-	}
+	} */
 }
 mixin(UIMShort!"TableSortableHeader");
 unittest {

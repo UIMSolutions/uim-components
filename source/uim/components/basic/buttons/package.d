@@ -9,7 +9,7 @@ public import uim.components.basic.buttons.link;
 public import uim.components.basic.buttons.group;
 public import uim.components.basic.buttons.toolbar;
 
-string buttonsRegistration() {
+/* string buttonsRegistration() {
   return 
     UIMButton.toVUEComponent.globalRegistration~
     UIMButtonLink.toVUEComponent.globalRegistration~
@@ -26,4 +26,4 @@ string buttonsVue3(string target) {
 	results ~= UIMButtonToolbar.toVue3(target);
 
   return results.join(";")~";";
-} 
+}  */

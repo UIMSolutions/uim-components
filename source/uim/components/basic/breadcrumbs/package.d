@@ -7,7 +7,7 @@ public import uim.components.basic.breadcrumbs.breadcrumb;
 public import uim.components.basic.breadcrumbs.item;
 public import uim.components.basic.breadcrumbs.link;
 
-string breadcrumbsRegistration() {
+/* string breadcrumbsRegistration() {
   return 
     UIMBreadcrumb.toVUEComponent.globalRegistration~
     UIMBreadcrumbItem.toVUEComponent.globalRegistration~
@@ -22,4 +22,4 @@ string breadcrumbsVue3(string target) {
 	results ~= UIMBreadcrumbLink.toVue3(target);
 
   return results.join(";")~";";
-} 
+}  */

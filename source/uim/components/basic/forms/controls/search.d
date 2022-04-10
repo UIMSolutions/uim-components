@@ -7,13 +7,17 @@ import uim.components;
 class DUIMInputSearch : DUIMComponent {
 	mixin(H5This!("uim-input-search"));	
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5InputSearch();
 		return super.toVUEComponent		
 		.name("uim-input-search");
-	}
+	} */
 }
 mixin(UIMShort!("InputSearch"));
 

@@ -21,12 +21,12 @@ string accordionsRegistration() {
 string accordionsVue3(string target) {
   string[] results; 
 
-	results ~= UIMAccordion.toVue3(target);
+/* 	results ~= UIMAccordion.toVue3(target);
 	results ~= UIMAccordionBody.toVue3(target);
 	results ~= UIMAccordionButton.toVue3(target);
 	results ~= UIMAccordionCollapse.toVue3(target);
 	results ~= UIMAccordionHeader.toVue3(target);
-	results ~= UIMAccordionItem.toVue3(target);
+	results ~= UIMAccordionItem.toVue3(target); */
 
   return results.join(";")~";";
 } 

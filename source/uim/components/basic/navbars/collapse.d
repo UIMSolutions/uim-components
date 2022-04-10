@@ -7,14 +7,18 @@ import uim.components;
 class DUIMNavbarCollapse : DUIMComponent {
 	mixin(H5This!("uim-navbar-collapse"));
 
-		override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 		override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5NavbarCollapse("<slot />");
 		return super.toVUEComponent		
 		.name("uim-navbar-collapse")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"NavbarCollapse");
 

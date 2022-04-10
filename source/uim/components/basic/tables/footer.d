@@ -7,14 +7,18 @@ import uim.components;
 class DUIMTableFooter : DUIMComponent {
 	mixin(H5This!("uim-table-footer"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5TableFooter("<slot />");
 		return super.toVUEComponent		
 		.name("uim-TableFooter")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"TableFooter");
 

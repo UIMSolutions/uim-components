@@ -8,17 +8,21 @@ import uim.components;
 class DUIMNavbarToggler : DUIMComponent {
 	mixin(H5This!("uim-navbar-toggler"));
 
+	override void initialize() {
+		super.initialize;
+	}
+
 	O position(this O)(string value) { return this.classes("navbar-toggler-"~position); }
 	O target(this O)(string targetId) { return attributes(["data-target":"#"~targetId]); }
 
-	override DVUEComponent toVUEComponent() {
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5NavbarToggler("<slot />");
 		return super.toVUEComponent		
 		.name("uim-navbar-toggler")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"NavbarToggler");
 

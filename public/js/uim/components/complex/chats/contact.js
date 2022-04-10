@@ -1,1 +1,0 @@
-Vue.component('uim-chat-contact',{computed:{classes:function(){return [];},styles:function(){return [];}},props:{contact:{type:Object,default:function(){return{};}}},template:`<div class="uim-chat-contact" :class="this.classes" :style="this.styles"><slot></slot></div>`});

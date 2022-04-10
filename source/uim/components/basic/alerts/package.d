@@ -7,7 +7,7 @@ public import uim.components.basic.alerts.alert;
 public import uim.components.basic.alerts.heading;
 public import uim.components.basic.alerts.link;
 
-string alertsRegistration() {
+/* string alertsRegistration() {
   return 
     UIMAlert.toVUEComponent.globalRegistration~
     UIMAlertHeading.toVUEComponent.globalRegistration~
@@ -22,4 +22,4 @@ string alertsVue3(string target) {
 	results ~= UIMAlertLink.toVue3(target);
 
   return results.join(";")~";";
-} 
+}  */

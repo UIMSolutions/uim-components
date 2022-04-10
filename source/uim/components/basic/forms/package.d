@@ -15,7 +15,7 @@ public import uim.components.basic.forms.text;
 public import uim.components.basic.forms.form;
 public import uim.components.basic.forms.group;
 
-string formsRegistration() {
+/* string formsRegistration() {
   return 
     UIMFormCheckbox.toVUEComponent.globalRegistration~
     UIMFormCheckInput.toVUEComponent.globalRegistration~
@@ -39,4 +39,4 @@ string formsVue3(string target) {
 	results ~= UIMFormText.toVue3(target);
 
   return results.join(";")~";";
-} 
+}  */

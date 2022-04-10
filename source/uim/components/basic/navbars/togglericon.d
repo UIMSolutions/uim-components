@@ -6,14 +6,19 @@ import uim.components;
 
 class DUIMNavbarTogglericon : DUIMComponent {
 	mixin(H5This!("uim-navbar-togglericon"));
-	override DVUEComponent toVUEComponent() {
+
+	override void initialize() {
+		super.initialize;
+	}
+
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5NavbarTogglerIcon("<slot />");
 		return super.toVUEComponent		
 		.name("uim-navbar-togglericon")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"NavbarTogglericon");
 

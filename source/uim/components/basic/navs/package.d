@@ -9,7 +9,7 @@ public import uim.components.basic.navs.nav;
 public import uim.components.basic.navs.link;
 public import uim.components.basic.navs.list;
 
-string navsRegistration() {
+/* string navsRegistration() {
   return 
     UIMNav.toVUEComponent.globalRegistration~
     UIMNavItem.toVUEComponent.globalRegistration~
@@ -26,4 +26,4 @@ string navsVue3(string target) {
 	results ~= UIMNavList.toVue3(target);
 
   return results.join(";")~";";
-} 
+}  */

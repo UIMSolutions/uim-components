@@ -6,21 +6,23 @@ import uim.components;
 
 class DUIMListLink : DUIMComponent {
 	mixin(H5This!("uim-list-link"));
-	override public void _init() {
-		super._init;
+
+	override void initialize() {
+		super.initialize;
 	}
+	
 	O active(this O)(bool value = true) { return this.classes("active"); }
 	O disabled(this O)(bool value = true) { return this.classes("disabled"); }
 	O color(this O)(string aColor) { return this.classes("list-group-item-"~aColor); }
 
-	override DVUEComponent toVUEComponent() {
+	/* override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS4ListLink("<slot />");
 		return super.toVUEComponent		
 		.name("uim-list-link")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"ListLink");
 

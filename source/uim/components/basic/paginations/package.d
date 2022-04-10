@@ -8,7 +8,7 @@ public import uim.components.basic.paginations.item;
 public import uim.components.basic.paginations.link;
 public import uim.components.basic.paginations.pagination;
 
-string paginationsRegistration() {
+/* string paginationsRegistration() {
   return 
     UIMPagination.toVUEComponent.globalRegistration~
     UIMPageItem.toVUEComponent.globalRegistration~
@@ -23,4 +23,4 @@ string paginationsVue3(string target) {
 	results ~= UIMPageLink.toVue3(target);
 
   return results.join(";")~";";
-} 
+}  */

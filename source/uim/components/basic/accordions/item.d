@@ -28,5 +28,5 @@ unittest {
 	// auto f = File("./public/js/uim/components/basic/accordions/accordion-item.js", "w"); 
   // f.write(UIMAccordionItem.toVUEComponent.toString);
 
-	vue3components ~= UIMAccordionItem.toVue3("vue")~";";
+	// vue3components ~= UIMAccordionItem.toVue3("vue")~";";
 }

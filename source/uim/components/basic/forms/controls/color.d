@@ -7,14 +7,18 @@ import uim.components;
 class DUIMInputColor : DUIMComponent {
 	mixin(H5This!("uim-input-color"));	
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5InputColor();
 		return super.toVUEComponent		
 		.name("uim-input-color")
 		;
-	}
+	} */
 }
 mixin(UIMShort!("InputColor"));
 

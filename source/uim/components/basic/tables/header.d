@@ -7,14 +7,18 @@ import uim.components;
 class DUIMTableHeader : DUIMComponent {
 	mixin(H5This!("uim-table-header"));
 
-	override DVUEComponent toVUEComponent() {
+	override void initialize() {
+		super.initialize;
+	}
+	
+/* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		
 		_templateObj =  BS5TableHeader("<slot />");
 		return super.toVUEComponent		
 		.name("uim-TableHeader")
 		;
-	}
+	} */
 }
 mixin(UIMShort!"TableHeader");
 
