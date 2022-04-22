@@ -24,18 +24,25 @@ class DUIMComponent : DH5Obj {
 	unittest {
 		assert(Assert(UIMComponent.text("center"), `<uim-div class="text-center"></uim-div>`));
 	}
+	
+	auto toAngular(STRINGAA options = null) {
+		return null;
+	}
 
-	auto toAngular() {
-		return null;
-	}
-	auto toJavaScript() {
+	auto toJavaScript(STRINGAA options = null) {
 		return "";
 	}
-	auto toReact() {
+
+	auto toReact(STRINGAA options = null) {
 		return null;
 	}
-	auto toWebComponent() {
+
+	auto toWebComponent(STRINGAA options = null) {
 		return "";
+	}
+
+	DH5Obj[] toH5(STRINGAA options = null) {
+		return [];
 	}
 
 	/// Root obj for template

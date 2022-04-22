@@ -15,6 +15,8 @@ class DUIMAlertHeading : DUIMComponent {
 		if ((size > 0) && (size < 7)) _tag = "h"~to!string(size);
 		return cast(O)this;
 	}
+
+	
 /* 	override DVUEComponent toVUEComponent() {
 		if (_vueComponent) return _vueComponent;
 		_templateObj =  BS5AlertHeading("<slot />");
