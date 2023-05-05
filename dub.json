@@ -3,11 +3,11 @@
 	"description": "UIM UI Kit 4",
 	"authors": ["UI Manufaktur Team"],
 	"copyright": "Copyright © 2017-2021, UI Manufaktur UG",
-	"license": "MIT",
+	"license": "Apache-2.0",
 	"targetType": "library",
 	"dependencies": {
 		"colored": "~>0.0.23",
-		"vibe-d": "==0.9.4"
+		"vibe-d": "==0.9.5"
 	},
 	"sourcePaths": [
 		"../uim-core",
